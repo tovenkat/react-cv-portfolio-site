@@ -1,10 +1,10 @@
 import React from 'react';
 import classes from './LabelArea.module.css';
 
-const LabelArea = () => {
+const LabelArea = (props) => {
     return (
-        <div>
-            
+        <div className={classes.Label}>
+            <h2>{props.name}</h2>
         </div>
     );
 };

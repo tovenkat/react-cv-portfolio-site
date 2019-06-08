@@ -1,0 +1,9 @@
+.Form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+ 
+ }
+ .Form input, .Form button, .Form textarea{
+     width:30vw;
+ }

@@ -9,6 +9,7 @@ import Footer from './components/Footer/Footer';
 function App() {
   return (
     <div className="App">
+      <NavBar/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>
@@ -23,8 +24,6 @@ function App() {
        Alex Loian Site
         </a>
       </header>
-
-      <NavBar/>
       <Body/>
       <Footer/>
       

@@ -1,10 +1,10 @@
 import React from 'react';
 import classes from './ExpItem.module.css';
 
-const ExpItem = () => {
+const ExpItem = (props) => {
     return (
-        <div>
-            
+        <div className={classes.ExpItem}>
+             <img src={props.picture} alt={props.alt} href={props.href}/>
         </div>
     );
 };
