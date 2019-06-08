@@ -11,7 +11,7 @@ import ImgSocketChat from '../../../assets/images/alex-loian-pet-ptoject-socket-
 const PetProject = () => {
     return (
         <div className={classes.Container}>
-            <LabelArea name = 'PET Project'/>
+            <LabelArea name = 'PET Projects'/>
             <div className ={classes.Items}>
                 <Card picture={ImgBurger} alt ='React practise Burger SAP' title='Burger React'/>
                 <Card picture={ImgCandyshop} alt ='Practise Bootstrap' title = 'Bootstrap CSS'/>

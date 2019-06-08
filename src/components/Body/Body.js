@@ -14,8 +14,8 @@ const Body = () => {
         <div className = {classes.Body}>
             <TopSlider/>
             <CV/>
-            <Portfolio/>
             <Expirience/>
+            <Portfolio/>
             <PetProject/>
             <ContactMe/>
         </div>
