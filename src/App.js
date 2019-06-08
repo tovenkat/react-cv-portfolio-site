@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import SiteWrapper from './containers/SiteWrapper/SiteWrapper';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         >
        Alex Loian Site
         </a>
+        <SiteWrapper/>
       </header>
     </div>
   );
