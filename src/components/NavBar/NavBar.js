@@ -5,7 +5,7 @@ import NavigationItems from './NavigationItems/NavigationItems';
 
 const NavBar = () => {
     return (
-        <div>
+        <div className={classes.Navbar}>
             <Logo/>
             <NavigationItems/>
         </div>

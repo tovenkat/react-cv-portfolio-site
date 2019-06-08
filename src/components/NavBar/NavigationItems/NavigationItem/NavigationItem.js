@@ -1,10 +1,10 @@
 import React from 'react';
 import classes from './NavigationItem.module.css';
 
-const NavigationItem = () => {
+const NavigationItem = (props) => {
     return (
-        <a href = 'https://google.com.ua' className={classes.Link}>
-            Links
+        <a href = {props.link} className={classes.Link}>
+            {props.name}
         </a>
     );
 };

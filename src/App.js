@@ -1,11 +1,17 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import SiteWrapper from './containers/SiteWrapper/SiteWrapper';
+
+import NavBar from './components/NavBar/NavBar';
+import Body from './components/Body/Body';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
     <div className="App">
+      <NavBar/>
+      <Body/>
+      <Footer/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>
@@ -19,7 +25,10 @@ function App() {
         >
        Alex Loian Site
         </a>
-        <SiteWrapper/>
+        
+
+
+        
       </header>
     </div>
   );
