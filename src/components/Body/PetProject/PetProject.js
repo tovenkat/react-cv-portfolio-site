@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './PetProject.module.css';
 import LabelArea from '../../LabelArea/LabelArea';
-import PetItem from './PetItem/PetItem';
+import Card from '../../Material/Card';
 
 
 import ImgCandyshop from '../../../assets/images/alex-loian-pet-ptoject-bootstrap-candyshop.png';
@@ -13,10 +13,11 @@ const PetProject = () => {
         <div className={classes.Container}>
             <LabelArea name = 'PET Project'/>
             <div className ={classes.Items}>
-                <PetItem picture={ImgBurger} alt='React practise Burger SAP'/>
-                <PetItem picture={ImgCandyshop} alt='Practise Bootstrap'/>
-                <PetItem picture={ImgSocketChat} alt='Node JS with Socket IO online chats'/>
+                <Card picture={ImgBurger} alt ='React practise Burger SAP' title='Burger React'/>
+                <Card picture={ImgCandyshop} alt ='Practise Bootstrap' title = 'Bootstrap CSS'/>
+                <Card picture={ImgSocketChat} alt ='Node JS with Socket IO online chats' title = 'Socket IO Chat'/>
             </div>
+            
             
         </div>
     );

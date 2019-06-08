@@ -1,11 +1,3 @@
 .Container{
     background-color: #ffcc00;
 }
-.Items{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content:space-between;
-    padding-top:50px;
-    padding-bottom: 50px;
-}
