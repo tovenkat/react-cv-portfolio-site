@@ -1,4 +1,10 @@
 .Logo{
     display: inline;
-    width: 100px;
+  
+   
+    box-sizing:border-box;
+    border-radius:5px;
+}
+.Logo img{
+    height: 80px;
 }

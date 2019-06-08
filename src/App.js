@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './assets/images/alex-loian-logo.png';
 import './App.css';
 
 import NavBar from './components/NavBar/NavBar';
@@ -9,9 +9,6 @@ import Footer from './components/Footer/Footer';
 function App() {
   return (
     <div className="App">
-      <NavBar/>
-      <Body/>
-      <Footer/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>
@@ -25,11 +22,12 @@ function App() {
         >
        Alex Loian Site
         </a>
-        
-
-
-        
       </header>
+
+      <NavBar/>
+      <Body/>
+      <Footer/>
+      
     </div>
   );
 }

@@ -4,7 +4,7 @@ import NavigationItem from './NavigationItem/NavigationItem';
 
 const NavigationItems = () => {
     return (
-        <div>
+        <div className={classes.Links}>
             <NavigationItem name='CV' link ='#CV'/>
             <NavigationItem name='Portfolio' link = '#protfolio'/>
             <NavigationItem name='Experience' link ='#experience'/>
