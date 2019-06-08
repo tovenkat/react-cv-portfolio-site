@@ -15,10 +15,10 @@ const Expirience = () => {
         <div className={classes.Container}>
             <LabelArea name = 'Expirience'/>
             <div className={classes.Items}>
-                <ExpItem picture ={Upwork}/>
-                <ExpItem picture ={Caspio}/>
-                <ExpItem picture ={IMT}/>
-                <ExpItem picture ={AmericanEnglishCenter}/>
+                <ExpItem picture ={Upwork} alt='Upwork Freelancer Wordpress Developer'/>
+                <ExpItem picture ={Caspio} alt ='Caspio Help Desk Specialist'/>
+                <ExpItem picture ={IMT} alt = 'Front-End Java Script Developer React Node JS'/>
+                <ExpItem picture ={AmericanEnglishCenter} alt = 'American English Center Bussiness English'/>
             </div>
 
         </div>

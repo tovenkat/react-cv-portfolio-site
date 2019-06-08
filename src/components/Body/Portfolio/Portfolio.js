@@ -17,10 +17,10 @@ const Portfolio = () => {
             <div className={classes.Items}>
                 <PortfolioItem picture={ReporterMarketPlace} alt='Reporter Site'/> 
                 <PortfolioItem picture={Realestatesite} alt='Realestate Wordpress Develpment'/>
-                <PortfolioItem picture={PizzaShop}/>     
-                <PortfolioItem picture={InvestSite}/>
+                <PortfolioItem picture={PizzaShop} alt='Pizza WordPress Site'/>     
+                <PortfolioItem picture={InvestSite} alt='Investment Banking Wordpress Development'/>
                 <p>Comming Soon...</p>        
-                <PortfolioItem picture={FinanceSite}/>
+                <PortfolioItem picture={FinanceSite} alt='Financing Site Develpment'/>
                        
             </div>
             
