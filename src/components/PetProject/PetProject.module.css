@@ -1,0 +1,11 @@
+
+.Container{
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    padding-top:50px;
+    padding-bottom: 50px;
+}

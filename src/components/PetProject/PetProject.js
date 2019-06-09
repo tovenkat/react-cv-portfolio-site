@@ -1,12 +1,12 @@
 import React from 'react';
 import classes from './PetProject.module.css';
-import Paper from '../../Material/Paper';
-import Card from '../../Material/Card';
+
+import Card from '../Material/Card';
 
 
-import ImgCandyshop from '../../../assets/images/alex-loian-pet-ptoject-bootstrap-candyshop.png';
-import ImgBurger from '../../../assets/images/alex-loian-pet-ptoject-react-burger.png';
-import ImgSocketChat from '../../../assets/images/alex-loian-pet-ptoject-socket-chat.png';
+import ImgCandyshop from '../../assets/images/alex-loian-pet-ptoject-bootstrap-candyshop.png';
+import ImgBurger from '../../assets/images/alex-loian-pet-ptoject-react-burger.png';
+import ImgSocketChat from '../../assets/images/alex-loian-pet-ptoject-socket-chat.png';
 
 const PetProject = () => {
     const content = [{ 'key':1,
@@ -27,14 +27,11 @@ const PetProject = () => {
     
     return (
         <div className={classes.Container}>
-            <Paper title = 'PET Projects'/>
-            <div className ={classes.Items}>
+           
                 {content.map((element)=>{
                     return <Card key={element.key} picture={element.picture} alt={element.alt} title={element.title}/> 
                 })}  
-            </div>
-            
-            
+ 
         </div>
     );
 };
