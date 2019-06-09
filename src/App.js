@@ -6,12 +6,15 @@ import NavBar from './components/NavBar/NavBar';
 import Body from './components/Body/Body';
 import Footer from './components/Footer/Footer';
 
+import PageSlider from './components/PageSlider';
+
 
 
 function App() {
   return (
     <div className="App">
-
+      
+      
       <NavBar/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -28,7 +31,8 @@ function App() {
         </a>
       </header>
       <Body/>
-      <Footer/>
+      
+      
       
     </div>
   );

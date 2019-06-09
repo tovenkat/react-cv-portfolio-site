@@ -1,7 +1,8 @@
 import React from 'react';
 import classes from './Portfolio.module.css';
 import LabelArea from '../../LabelArea/LabelArea';
-import PortfolioItem from './PortfolioItem/PortfolioItem';
+
+import Card from '../../Material/Card';
 
 import ReporterMarketPlace from '../../../assets/images/alex-loian-commercial-wordpress-reporter-marketplace.png';
 import Realestatesite from '../../../assets/images/alex-loian-commercial-wordpress-realestatesite.png';
@@ -10,18 +11,25 @@ import InvestSite from '../../../assets/images/alex-loian-commercial-wordpress-i
 import FinanceSite from '../../../assets/images/alex-loian-commercial-wordpress-finance-site.png';
 
 
+
 const Portfolio = () => {
+
+    const content = [{ 'picture':ReporterMarketPlace,
+        'alt':'Reporter Site',
+        'title':'Reporter Site'
+    }]
     return (
         <div className={classes.Container}>
             <LabelArea name = 'Portfolio'/>
             <div className={classes.Items}>
-                <PortfolioItem picture={ReporterMarketPlace} alt='Reporter Site'/> 
-                <PortfolioItem picture={Realestatesite} alt='Realestate Wordpress Develpment'/>
-                <PortfolioItem picture={PizzaShop} alt='Pizza WordPress Site'/>     
-                <PortfolioItem picture={InvestSite} alt='Investment Banking Wordpress Development'/>
-                <p>Comming Soon...</p>        
-                <PortfolioItem picture={FinanceSite} alt='Financing Site Develpment'/>
-                       
+                <Card picture={ReporterMarketPlace} alt='Reporter Site' title='Reporter Site'/> 
+                <Card picture={Realestatesite} alt='Realestate Wordpress Develpment' title='Realestate Wordpress Develpment'/>
+                <Card picture={PizzaShop} alt='Pizza WordPress Site' title='Pizza WordPress Site'/>     
+                <Card picture={InvestSite} alt='Investment Banking Wordpress Development' title='Investment Banking Wordpress Development'/>        
+                <Card picture={FinanceSite} alt='Financing Site Develpment' title ='Investment Banking Wordpress Development'/>
+                {content.map((element)=>{
+                    return <Card picture={element.picture} alt={element.alt} title={element.title}/> 
+                })}       
             </div>
             
         </div>

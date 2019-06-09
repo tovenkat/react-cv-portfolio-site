@@ -13,9 +13,9 @@ const Body = () => {
     return (
         <div className = {classes.Body}>
             <TopSlider/>
-            <CV/>
             <Expirience/>
             <Portfolio/>
+            <CV/>
             <PetProject/>
             <ContactMe/>
         </div>

@@ -17,8 +17,8 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
 import 'react-vertical-timeline-component/style.min.css';
 
 
-
 const Expirience = () => {
+
     return (
         <div className={classes.Container}>
             <LabelArea name = 'Experience Timeline'/>
