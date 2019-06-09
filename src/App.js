@@ -4,7 +4,7 @@ import './App.css';
 
 import NavBar from './components/NavBar/NavBar';
 import Body from './components/Body/Body';
-import Footer from './components/Footer/Footer';
+
 
 import PageSlider from './components/PageSlider';
 
@@ -19,15 +19,21 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>
-          This Site is Under Construction.
+          Alex Loian
         </h1>
+        <h2>
+        Front-End Developer
+        </h2>
+        <h3>
+        Java Script, React, NodeJS, Bootstrap, CSS, HTML
+        </h3>
         <a
           className="App-link"
           href="https://Loian.dev"
           target="_blank"
           rel="noopener noreferrer"
         >
-       Alex Loian Site
+       Site
         </a>
       </header>
       <Body/>

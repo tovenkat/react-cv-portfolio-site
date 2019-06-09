@@ -4,20 +4,24 @@ import classes from './Body.module.css';
 
 import TopSlider from './TopSlider/TopSlider';
 import Portfolio from './Portfolio/Portfolio';
-import CV from './CV/CV';
+
+import Skills from './Skills/Skills';
 import Expirience from './Expirience/Expirience';
 import PetProject from './PetProject/PetProject';
-import ContactMe from './ContactMe/ContactMe';
+import Details from './Details/Details';
+
+import Paper from '../Material/Paper';
 
 const Body = () => {
     return (
         <div className = {classes.Body}>
             <TopSlider/>
+            <Details/>
             <Expirience/>
             <Portfolio/>
-            <CV/>
+            <Skills/>
             <PetProject/>
-            <ContactMe/>
+            
         </div>
     );
 };
