@@ -58,6 +58,7 @@ function NavTabs(props) {
           <LinkTab label="Pet Projects" href="#" />
           <LinkTab label="Skills" href="#" />
           <LinkTab label="Details" href="#" />
+
         </Tabs>
       </AppBar>
       {value === 0 && <Portfolio/>}

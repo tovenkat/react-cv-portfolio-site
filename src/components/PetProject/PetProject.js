@@ -8,8 +8,7 @@ import ImgCandyshop from '../../assets/images/alex-loian-pet-ptoject-bootstrap-c
 import ImgBurger from '../../assets/images/alex-loian-pet-ptoject-react-burger.png';
 import ImgSocketChat from '../../assets/images/alex-loian-pet-ptoject-socket-chat.png';
 
-const PetProject = () => {
-    const content = [{ 'key':1,
+const DataPet = [{ 'key':1,
     'picture':ImgBurger,
         'alt':'React practise Burger SAP',
         'title':'Burger React'
@@ -24,14 +23,16 @@ const PetProject = () => {
     'alt':'Node JS with Socket IO online chats',
     'title':'Socket IO Chat'
     }];
+
+const PetProject = () => {
+    
     
     return (
         <div className={classes.Container}>
-           
-                {content.map((element)=>{
-                    return <Card key={element.key} picture={element.picture} alt={element.alt} title={element.title}/> 
-                })}  
- 
+                {
+                    DataPet.map((item)=>{
+                    return (<Card key={item.key} picture={item.picture} alt={item.alt} title={item.title}/>);
+                })} 
         </div>
     );
 };

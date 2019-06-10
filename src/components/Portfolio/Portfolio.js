@@ -8,14 +8,40 @@ import PizzaShop from '../../assets/images/alex-loian-commercial-wordpress-pizza
 import InvestSite from '../../assets/images/alex-loian-commercial-wordpress-investment-site.png';
 import FinanceSite from '../../assets/images/alex-loian-commercial-wordpress-finance-site.png';
 
+const DATAOBJ =[{
+    title:'Reporter Site',
+    key:1,
+    picture: ReporterMarketPlace,
+},
+{
+    title:'Realestate Wordpress Develpment',
+    key:2,
+    picture: Realestatesite,
+},
+{
+    title:'Pizza WordPress Site',
+    key:3,
+    picture: PizzaShop,
+},
+{
+    title:'Investment Banking Wordpress Developmen',
+    key:4,
+    picture: InvestSite,
+},
+{
+    title:'Financing Site Develpment',
+    key:5,
+    picture: FinanceSite,
+}];
+
 const Portfolio = () => {
     return (
         <div className={classes.Container}>
-                <Card picture={ReporterMarketPlace} alt='Reporter Site' title='Reporter Site'/> 
-                <Card picture={Realestatesite} alt='Realestate Wordpress Develpment' title='Realestate Wordpress Develpment'/>
-                <Card picture={PizzaShop} alt='Pizza WordPress Site' title='Pizza WordPress Site'/>     
-                <Card picture={InvestSite} alt='Investment Banking Wordpress Development' title='Investment Banking Wordpress Development'/>        
-                <Card picture={FinanceSite} alt='Financing Site Develpment' title ='Investment Banking Wordpress Development'/>
+                {DATAOBJ.map((item)=>{
+                    return (
+                        <Card picture={item.picture} alt={item.title} title={item.title} key={item.key}/> 
+                    );
+                })}
         </div>
     );
 };
