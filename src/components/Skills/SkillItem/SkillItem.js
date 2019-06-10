@@ -5,6 +5,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import LazyLoad from 'react-lazy-load';
 
 const useStyles = makeStyles({
   card: {
@@ -20,13 +21,16 @@ function SkillItem(props) {
   return (
     <Card className={classes.card}>
       <CardActionArea>
-        <CardMedia
-          component="img"
-          alt={props.alt}
-          height="240"
-          image={props.picture}
-          title={props.title}
-        />
+        <LazyLoad debounce={false}
+           offsetVertical={500} >
+            <CardMedia
+              component="img"
+              alt={props.alt}
+              height="240"
+              image={props.picture}
+              title={props.title}
+            />
+            </LazyLoad>
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             {props.title}

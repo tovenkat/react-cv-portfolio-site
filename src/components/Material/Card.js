@@ -8,6 +8,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
+import LazyLoad from 'react-lazy-load';
+
 const useStyles = makeStyles({
   card: {
     maxWidth: '600px',
@@ -22,13 +24,16 @@ function ImgMediaCard(props) {
   return (
     <Card className={classes.card}>
       <CardActionArea>
-        <CardMedia
+        <LazyLoad debounce={false}
+           offsetVertical={500} >
+          <CardMedia
           component="img"
           alt={props.alt}
           height="280"
           image={props.picture}
           title={props.title}
-        />
+          />
+        </LazyLoad>
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             {props.title}
