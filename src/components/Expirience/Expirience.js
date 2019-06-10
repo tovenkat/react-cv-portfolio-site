@@ -95,7 +95,7 @@ const ELEMENTS = Object.entries(DataObj).map((element)=>{
             key={element[0]}
             className="vertical-timeline-element--work"
             date={element[1].date}
-            iconStyle={{ background: 'black', color: '#fff' }}
+            iconStyle={{ background: 'navy', color: '#fff' }}
             icon={null}>
             <img className = {classes.Img} src ={element[1].img} alt ={element[1].title}/>
             <h4 className="vertical-timeline-element-title">{element[1].title}</h4>
