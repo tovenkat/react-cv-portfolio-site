@@ -10,7 +10,7 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   card: {
-    maxWidth: '700px',
+    maxWidth: '600px',
     
     margin: '10px',
   },
@@ -25,7 +25,7 @@ function ImgMediaCard(props) {
         <CardMedia
           component="img"
           alt={props.alt}
-          height="200"
+          height="280"
           image={props.picture}
           title={props.title}
         />

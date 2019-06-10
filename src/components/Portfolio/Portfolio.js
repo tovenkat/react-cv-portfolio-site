@@ -21,8 +21,6 @@ const Portfolio = () => {
                 <Card picture={PizzaShop} alt='Pizza WordPress Site' title='Pizza WordPress Site'/>     
                 <Card picture={InvestSite} alt='Investment Banking Wordpress Development' title='Investment Banking Wordpress Development'/>        
                 <Card picture={FinanceSite} alt='Financing Site Develpment' title ='Investment Banking Wordpress Development'/>
-                
-
         </div>
     );
 };
