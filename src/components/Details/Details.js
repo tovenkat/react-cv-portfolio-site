@@ -5,11 +5,6 @@ import Button from '../Material/Button';
 import PDF from '../../assets/images/CV-Alex-Loian-Front-End-Developer-React-Resume.pdf';
 import Box from '@material-ui/core/Box';
 
-
-import Form from './Form';
-
-
-
 const Details = () => {
     return (
 
@@ -28,7 +23,7 @@ const Details = () => {
                     <div>
                     <img width='120px' height='120px' src ={QR} alt ='Caspio Help Desk Specialist'/>
                     </div>
-                    {false && <Form/>}
+                    
                     
         </div>
     );

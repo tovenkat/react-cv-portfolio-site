@@ -6,11 +6,13 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 
+
 //Tabs Component
 import Pet from './PetProject/PetProject';
 import Skills from './Skills/Skills';
 import Portfolio from './Portfolio/Portfolio';
 import Details from './Details/Details';
+
 //
 
 

@@ -127,7 +127,7 @@ const workTimeline = (
                     return (
                       
                       <VerticalTimelineElement
-                          key={element}
+                          key={element.key+'11'}
                           className="vertical-timeline-element--work"
                           date={element.date}
                           iconStyle={{ background: '#3f51b5', color: '#fff' }}
@@ -158,7 +158,7 @@ const studyTimeline = (
                       return (
                         
                         <VerticalTimelineElement
-                            key={element}
+                            key={element.key+12}
                             className="vertical-timeline-element--work"
                             date={element.date}
                             iconStyle={{ background: '#3f51b5', color: '#fff' }}
@@ -187,7 +187,7 @@ const allTimeline = (
                   return (
                     
                       <VerticalTimelineElement
-                          key={element}
+                          key={element.key+13}
                           className="vertical-timeline-element--work"
                           date={element.date}
                           iconStyle={{ background: '#3f51b5', color: '#fff' }}

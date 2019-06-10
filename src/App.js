@@ -3,7 +3,7 @@ import './App.css';
 import ReactGA from 'react-ga';
 
 import Tabs from './components/Tabs';
-import  Expirience from './components/Expirience/Expirience';
+
 import MainScreen from './components/MainScreen/MainScreen';
 import SwitchedTabs from './components/SwitchedExpirience';
 

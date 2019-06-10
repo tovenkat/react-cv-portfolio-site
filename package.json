@@ -11,6 +11,7 @@
     "react-ga": "^2.5.7",
     "react-lazy-load": "^3.0.13",
     "react-scripts": "3.0.1",
+    "react-spring": "^8.0.23",
     "react-vertical-timeline-component": "^2.3.1"
   },
   "scripts": {
