@@ -6,7 +6,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import classes from './Expirience/Expirience.module.css';
-import LazyLoad from 'react-lazy-load';
+
 
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
@@ -125,8 +125,7 @@ const workTimeline = (
               DataObj.map((element)=>{
                  if(element.type==='work'){
                     return (
-                      <LazyLoad debounce={false}
-                      offsetVertical={500} >
+                      
                       <VerticalTimelineElement
                           key={element}
                           className="vertical-timeline-element--work"
@@ -139,7 +138,7 @@ const workTimeline = (
                           <p>{element.body}
                           </p>
                       </VerticalTimelineElement>
-                      </LazyLoad>
+                     
                     );
                  } else{
                    return null;
@@ -157,8 +156,7 @@ const studyTimeline = (
               DataObj.map((element)=>{
                     if(element.type==='study'){
                       return (
-                        <LazyLoad debounce={false}
-                      offsetVertical={500} >
+                        
                         <VerticalTimelineElement
                             key={element}
                             className="vertical-timeline-element--work"
@@ -171,7 +169,7 @@ const studyTimeline = (
                             <p>{element.body}
                             </p>
                         </VerticalTimelineElement>
-                        </LazyLoad>
+                       
                       );
                   } else{
                     return null;
@@ -187,8 +185,7 @@ const allTimeline = (
           {
               DataObj.map((element)=>{
                   return (
-                    <LazyLoad debounce={false}
-                      offsetVertical={500} >
+                    
                       <VerticalTimelineElement
                           key={element}
                           className="vertical-timeline-element--work"
@@ -201,7 +198,7 @@ const allTimeline = (
                           <p>{element.body}
                           </p>
                       </VerticalTimelineElement>
-                      </LazyLoad>
+                      
                   );
               })
           }
