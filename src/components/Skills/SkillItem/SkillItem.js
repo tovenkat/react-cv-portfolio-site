@@ -21,8 +21,6 @@ function SkillItem(props) {
   return (
     <Card className={classes.card}>
       <CardActionArea>
-        <LazyLoad debounce={false}
-           offsetVertical={500} >
             <CardMedia
               component="img"
               alt={props.alt}
@@ -30,7 +28,6 @@ function SkillItem(props) {
               image={props.picture}
               title={props.title}
             />
-            </LazyLoad>
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             {props.title}
