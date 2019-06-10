@@ -55,7 +55,6 @@ function NavTabs(props) {
       <AppBar position="static">
         <Tabs variant="fullWidth" value={value} onChange={handleChange}>
           <LinkTab label="Portfolio" href="#" />
-          
           <LinkTab label="Pet Projects" href="#" />
           <LinkTab label="Skills" href="#" />
           <LinkTab label="Details" href="#" />

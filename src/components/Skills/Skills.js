@@ -1,5 +1,4 @@
 import React from 'react';
-import Paper from '../Material/Paper';
 import SkillItem from './SkillItem/SkillItem';
 import classes from './Skills.module.css';
 
@@ -10,7 +9,7 @@ import English from '../../assets/images/alex-loian-skill-english-level.png';
 import html from '../../assets/images/alex-loian-skill-html5.png';
 import cssLogo from '../../assets/images/alex.loian.skill-css.png';
 
-const Skills = (props) => {
+const Skills = () => {
     return (
             <div  className={classes.Skills}>
                 <SkillItem picture={English} alt='English' title='English'/>
