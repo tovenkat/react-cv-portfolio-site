@@ -238,12 +238,11 @@ function SwitchedExpirience(props) {
   return (
     <div className={classes.root}>
     <AppBar position="static">
+      <h2>Experience Timeline</h2>
       <Tabs variant="fullWidth" value={value} onChange={handleChange}>
-        <LinkTab label="All" href="#" />
-        <LinkTab label="Work" href="#" />
-        <LinkTab label="Study" href="#" />
-
-
+        <LinkTab label="All"/>
+        <LinkTab label="Work"/>
+        <LinkTab label="Study"/>
       </Tabs>
     </AppBar>
     {value === 0 && allTimeline}

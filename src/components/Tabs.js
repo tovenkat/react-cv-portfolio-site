@@ -54,10 +54,10 @@ function NavTabs(props) {
     <div className={classes.root}>
       <AppBar position="static">
         <Tabs variant="fullWidth" value={value} onChange={handleChange}>
-          <LinkTab label="Portfolio" href="#" />
-          <LinkTab label="Pet Projects" href="#" />
-          <LinkTab label="Skills" href="#" />
-          <LinkTab label="Details" href="#" />
+          <LinkTab label="Portfolio"/>
+          <LinkTab label="Pet Projects"/>
+          <LinkTab label="Skills"/>
+          <LinkTab label="Details"/>
 
         </Tabs>
       </AppBar>
