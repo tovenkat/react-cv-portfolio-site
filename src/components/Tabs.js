@@ -6,11 +6,13 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 
-
+//Tabs Component
 import Pet from './PetProject/PetProject';
 import Skills from './Skills/Skills';
 import Portfolio from './Portfolio/Portfolio';
 import Details from './Details/Details';
+//
+
 
 function TabContainer(props) {
   return (
@@ -19,11 +21,9 @@ function TabContainer(props) {
     </Typography>
   );
 }
-
 TabContainer.propTypes = {
   children: PropTypes.node.isRequired,
 };
-
 function LinkTab(props) {
   return (
     <Tab
@@ -35,7 +35,6 @@ function LinkTab(props) {
     />
   );
 }
-
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 4,
@@ -55,11 +54,11 @@ function NavTabs(props) {
     <div className={classes.root}>
       <AppBar position="static">
         <Tabs variant="fullWidth" value={value} onChange={handleChange}>
-          <LinkTab label="Portfolio" href="/drafts" />
+          <LinkTab label="Portfolio" href="#" />
           
-          <LinkTab label="Pet Projects" href="/spam" />
-          <LinkTab label="Skills" href="/trash" />
-          <LinkTab label="Details" href="/spam" />
+          <LinkTab label="Pet Projects" href="#" />
+          <LinkTab label="Skills" href="#" />
+          <LinkTab label="Details" href="#" />
         </Tabs>
       </AppBar>
       {value === 0 && <Portfolio/>}
