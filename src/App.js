@@ -15,7 +15,6 @@ ReactGA.pageview(window.location.pathname + window.location.search);
 function App() {
   return (
     <div className="App">
-
       <MainScreen/>
       <SwitchedTabs/>
       <Tabs/>

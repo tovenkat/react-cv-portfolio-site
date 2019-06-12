@@ -1,6 +1,6 @@
 import React from 'react';
 import SkillItem from './SkillItem/SkillItem';
-import classes from './Skills.module.css';
+
 import Grid from '@material-ui/core/Grid';
 
 import ReactLogo from '../../assets/images/alex-loian-skills-react-logo.svg';
@@ -49,9 +49,9 @@ const DATASKILLSOBJ = [{
 
 const Skills = () => {
     return (
-                <Grid container spacing={3} style={{marginTop:'40px'}}alignContent='center' justify='center'>
+                <Grid container spacing={1} style={{marginTop:'40px',backgroundColor:'whitesmoke'}} alignItems="stretch" justify='center'>
                     {DATASKILLSOBJ.map((item)=>{
-                        return (<Grid item xs={12} sm={6} md={3} lg={2} key={item.key}><SkillItem  picture={item.picture} alt={item.alt} title={item.title}/></Grid>);
+                        return (<Grid item xs={6} sm={4} md={2} lg={2} key={item.key}><SkillItem  picture={item.picture} alt={item.alt} title={item.title}/></Grid>);
                     })}
                 </Grid>
     );

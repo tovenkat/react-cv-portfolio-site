@@ -1,5 +1,4 @@
 import React from 'react';
-import classes from './PetProject.module.css';
 
 import Card from '../Material/Card';
 import Grid from '@material-ui/core/Grid';
@@ -30,10 +29,12 @@ const PetProject = () => {
     
     
     return (
-        <Grid container spacing={3} style={{marginTop:'40px'}}alignContent='center' justify='center'>
+        <Grid container spacing={1} style={{marginTop:'40px',backgroundColor:'whitesmoke'}} alignItems="center" justify='center'>
                 {
                     DataPet.map((item)=>{
-                    return (<Card key={item.key} picture={item.picture} alt={item.alt} title={item.title}/>);
+                    return ( <Grid item xs={12} sm={12} md={4} lg={4} >
+                        <Card key={item.key} picture={item.picture} alt={item.alt} title={item.title}/>
+                        </Grid>);
                 })} 
         </Grid>
     );

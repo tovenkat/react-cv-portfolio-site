@@ -7,6 +7,8 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import classes from './Expirience/Expirience.module.css';
 
+import Details from './Details/Details';
+
 
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
@@ -245,16 +247,19 @@ function SwitchedExpirience(props) {
   return (
     <div className={classes.root}>
     <AppBar position="static">
-      <h2>Experience Timeline</h2>
+      <h2>Experience</h2>
       <Tabs variant="fullWidth" value={value} onChange={handleChange}>
         <LinkTab label="All"/>
         <LinkTab label="Work"/>
         <LinkTab label="Study"/>
+        <LinkTab label="Details"/>
+
       </Tabs>
     </AppBar>
     {value === 0 && allTimeline}
     {value === 1 && workTimeline}
     {value === 2 && studyTimeline}
+    {value === 3 && <Details/>}
 
   </div>
   );

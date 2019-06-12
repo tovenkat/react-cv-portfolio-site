@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './Portfolio.module.css';
+
 import Card from '../Material/Card';
 
 import ReporterMarketPlace from '../../assets/images/alex-loian-commercial-wordpress-reporter-marketplace.png';
@@ -41,13 +41,16 @@ const DATAOBJ =[{
 
 const Portfolio = () => {
     return (
-        <Grid container spacing={3} style={{marginTop:'40px'}}alignContent='center' justify='center'>
+         <Grid container spacing={2} style={{marginTop:'40px',backgroundColor:'whitesmoke'}} alignItems="stretch" justify='center'>
                 {DATAOBJ.map((item)=>{
                     return (
-                        <Card picture={item.picture} alt={item.title} title={item.title} key={item.key} body = {item.body}/> 
+                        <Grid item xs={12} sm={6} md={6} lg={4} key={item.key}>
+                            <Card picture={item.picture} alt={item.title} title={item.title} body = {item.body}/>
+                        </Grid> 
                     );
                 })}
         </Grid>
+       
     );
 };
 
