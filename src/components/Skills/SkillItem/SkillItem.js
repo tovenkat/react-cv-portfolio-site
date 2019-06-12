@@ -7,12 +7,14 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 
 
+
 const useStyles = makeStyles({
   card: {
     maxWidth: '220px',
     
     margin: '10px',
   },
+
 });
 
 function SkillItem(props) {
@@ -20,7 +22,7 @@ function SkillItem(props) {
 
   return (
     <Card className={classes.card}>
-      <CardActionArea>
+      <CardActionArea disableRipple>
             <CardMedia
               component="img"
               alt={props.alt}
@@ -35,6 +37,19 @@ function SkillItem(props) {
           <Typography variant="body2" color="textSecondary" component="p">
             {props.text}
           </Typography>
+
+
+
+
+
+
+
+
+
+
+
+
+
         </CardContent>
       </CardActionArea>
     </Card>

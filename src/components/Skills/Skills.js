@@ -1,6 +1,7 @@
 import React from 'react';
 import SkillItem from './SkillItem/SkillItem';
 import classes from './Skills.module.css';
+import Grid from '@material-ui/core/Grid';
 
 import ReactLogo from '../../assets/images/alex-loian-skills-react-logo.svg';
 import NodeJS from '../../assets/images/alex-loian-skills-NodeJS-logo.png';
@@ -17,14 +18,14 @@ const DATASKILLSOBJ = [{
 },
 {
     picture:ReactLogo,
-    alt:'React Native JSX',
-    title:'Alex Loian Front-End Developer React Native',
+    alt:'Alex Loian Front-End Developer React Native',
+    title:'React',
     key:2,
 },
 {
     picture:JSLogo,
-    alt:'JavaScript Development',
-    title:'Alex Loian Front-End Developer Vanilla JavaScript',
+    alt:'Alex Loian Front-End Developer Vanilla JavaScript',
+    title:'JavaScript',
     key:3,
 },
 {
@@ -48,12 +49,11 @@ const DATASKILLSOBJ = [{
 
 const Skills = () => {
     return (
-            <div  className={classes.Skills}>
-                {
-                    DATASKILLSOBJ.map((item)=>{
-                    return (<SkillItem picture={item.picture} alt={item.alt} title={item.title} key={item.key}/>);
-                })}
-            </div>
+                <Grid container spacing={3} style={{marginTop:'40px'}}alignContent='center' justify='center'>
+                    {DATASKILLSOBJ.map((item)=>{
+                        return (<Grid item xs={12} sm={6} md={3} lg={2} key={item.key}><SkillItem  picture={item.picture} alt={item.alt} title={item.title}/></Grid>);
+                    })}
+                </Grid>
     );
 };
 
