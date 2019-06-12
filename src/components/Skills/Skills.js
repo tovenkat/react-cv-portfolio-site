@@ -49,7 +49,7 @@ const DATASKILLSOBJ = [{
 
 const Skills = () => {
     return (
-                <Grid container spacing={1} style={{marginTop:'40px',backgroundColor:'whitesmoke'}} alignItems="stretch" justify='center'>
+                <Grid container spacing={1} style={{paddingTop:'40px',paddingBottom:'40px',backgroundColor:'whitesmoke'}} alignItems="stretch" justify='center'>
                     {DATASKILLSOBJ.map((item)=>{
                         return (<Grid item xs={6} sm={4} md={2} lg={2} key={item.key}><SkillItem  picture={item.picture} alt={item.alt} title={item.title}/></Grid>);
                     })}

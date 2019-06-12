@@ -40,7 +40,7 @@ const DATAOBJ =[{
 
 const Portfolio = () => {
     return (
-         <Grid container spacing={2} style={{marginTop:'40px',backgroundColor:'whitesmoke'}} alignItems="stretch" justify='center'>
+         <Grid container spacing={2} style={{paddingTop:'40px', paddingBottom:'40px',backgroundColor:'whitesmoke'}} alignItems="stretch" justify='center'>
                 {DATAOBJ.map((item)=>{
                     return (
                         <Grid item xs={11} sm={6} md={6} lg={4} key={item.key}>

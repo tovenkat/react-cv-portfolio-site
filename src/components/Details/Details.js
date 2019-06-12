@@ -8,7 +8,7 @@ import PDF from '../../assets/images/CV-Alex-Loian-Front-End-Developer-React-Res
 const Details = () => {
     return (
             <div style={{backgroundColor:'whitesmoke'}}>
-                <Grid container style={{marginTop:'30px'}} alignContent='center' justify='center'>
+                <Grid container style={{paddingTop:'30px'}} alignContent='center' justify='center'>
                     <Grid item xs={6} sm={6} md={3} lg={3}>
                         <h2>Alex Loian</h2>
                         <h4> Dnipro, Ukraine</h4>
@@ -16,10 +16,10 @@ const Details = () => {
                         <h5> Email: alex@loian.dev</h5>
                     </Grid>
                     <Grid item xs={6} sm={6} md={3} lg={3}>
-                        <img width='120px' height='120px' style={{marginTop:'20px'}} src ={QR} alt ='Caspio Help Desk Specialist'/>
+                        <img width='120px' height='120px' style={{paddingTop:'20px'}} src ={QR} alt ='Caspio Help Desk Specialist'/>
                     </Grid>
                 </Grid>
-                <Grid container spacing={2} style={{marginBottom:'30px', marginTop:'30px'}} alignContent='center' justify='space-around'>
+                <Grid container spacing={2} style={{paddingBottom:'30px', paddingTop:'30px'}} alignContent='center' justify='space-around'>
                     <Grid item xs={6} md={2} lg={2}>
                     <Button color='primary' variant='outlined' fullWidth download href={PDF}>CV</Button>
                     </Grid>

@@ -27,7 +27,7 @@ const PetProject = () => {
     
     
     return (
-        <Grid container spacing={1} style={{marginTop:'40px',backgroundColor:'whitesmoke'}} alignItems="center" justify='center'>
+        <Grid container spacing={1} style={{paddingTop:'40px',paddingBottom:'40px',backgroundColor:'whitesmoke'}} alignItems="center" justify='center'>
                 {
                     DataPet.map((item)=>{
                     return ( <Grid item xs={11} sm={11} md={4} lg={4} key={item.key}>
