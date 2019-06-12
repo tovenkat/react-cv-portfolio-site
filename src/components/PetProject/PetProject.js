@@ -1,8 +1,6 @@
 import React from 'react';
-
 import Card from '../Material/Card';
 import Grid from '@material-ui/core/Grid';
-
 
 import ImgCandyshop from '../../assets/images/alex-loian-pet-ptoject-bootstrap-candyshop.png';
 import ImgBurger from '../../assets/images/alex-loian-pet-ptoject-react-burger.png';
@@ -32,7 +30,7 @@ const PetProject = () => {
         <Grid container spacing={1} style={{marginTop:'40px',backgroundColor:'whitesmoke'}} alignItems="center" justify='center'>
                 {
                     DataPet.map((item)=>{
-                    return ( <Grid item xs={12} sm={12} md={4} lg={4} >
+                    return ( <Grid item xs={11} sm={11} md={4} lg={4} key={item.key}>
                         <Card key={item.key} picture={item.picture} alt={item.alt} title={item.title}/>
                         </Grid>);
                 })} 

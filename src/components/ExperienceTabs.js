@@ -5,15 +5,9 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
-import classes from './Expirience/Expirience.module.css';
-
 import Details from './Details/Details';
-
-
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-
-
 //Pictures
 import Caspio from '../assets/images/alex-loian-work-timeline-caspio.png';
 import AmericanEnglishCenter from '../assets/images/alex-loian-work-timeline-english-level.png';
@@ -121,39 +115,33 @@ const DataObj=[
 ];
 
 const workTimeline = (
-  <div className={classes.Container}>
       <VerticalTimeline>
           {
               DataObj.map((element)=>{
                  if(element.type==='work'){
                     return (
-                      
                       <VerticalTimelineElement
                           key={element.key+'11'}
                           className="vertical-timeline-element--work"
                           date={element.date}
                           iconStyle={{ background: '#3f51b5', color: '#fff' }}
                           icon={null}>
-                          <img className = {classes.Img} src ={element.img} alt ={element.title}/>
+                          <img src ={element.img} width="35%" alt ={element.title}/>
                           <h4 className="vertical-timeline-element-title">{element.title}</h4>
                           <h4 className="vertical-timeline-element-subtitle">{element.subtitle}</h4>
                           <p>{element.body}
                           </p>
                       </VerticalTimelineElement>
-                     
                     );
                  } else{
                    return null;
-                 }
-                  
+                 } 
               })
           }
       </VerticalTimeline>
-  </div>
 );
 const studyTimeline = (
-  <div className={classes.Container}>
-      <VerticalTimeline>
+      <VerticalTimeline style={{margin:'0px'}}>
           {
               DataObj.map((element)=>{
                     if(element.type==='study'){
@@ -165,7 +153,7 @@ const studyTimeline = (
                             date={element.date}
                             iconStyle={{ background: '#3f51b5', color: '#fff' }}
                             icon={null}>
-                            <img className = {classes.Img} src ={element.img} alt ={element.title}/>
+                            <img src ={element.img} width="35%" alt ={element.title}/>
                             <h4 className="vertical-timeline-element-title">{element.title}</h4>
                             <h4 className="vertical-timeline-element-subtitle">{element.subtitle}</h4>
                             <p>{element.body}
@@ -179,11 +167,9 @@ const studyTimeline = (
               })
           }
       </VerticalTimeline>
-  </div>
 );
 const allTimeline = (
-  <div className={classes.Container}>
-      <VerticalTimeline>
+      <VerticalTimeline style={{margin:'0px'}}>
           {
               DataObj.map((element)=>{
                   return (
@@ -194,7 +180,7 @@ const allTimeline = (
                           date={element.date}
                           iconStyle={{ background: '#3f51b5', color: '#fff' }}
                           icon={null}>
-                          <img className = {classes.Img} src ={element.img} alt ={element.title}/>
+                          <img src ={element.img} width="35%" alt ={element.title}/>
                           <h4 className="vertical-timeline-element-title">{element.title}</h4>
                           <h4 className="vertical-timeline-element-subtitle">{element.subtitle}</h4>
                           <p>{element.body}
@@ -205,7 +191,6 @@ const allTimeline = (
               })
           }
       </VerticalTimeline>
-  </div>
 );
 
 function TabContainer(props) {
@@ -256,9 +241,9 @@ function SwitchedExpirience(props) {
 
       </Tabs>
     </AppBar>
-    {value === 0 && allTimeline}
-    {value === 1 && workTimeline}
-    {value === 2 && studyTimeline}
+    {value === 0 && <div>{allTimeline}</div>}
+    {value === 1 && <div>{workTimeline}</div>}
+    {value === 2 && <div>{studyTimeline}</div>}
     {value === 3 && <Details/>}
 
   </div>

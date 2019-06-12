@@ -1,18 +1,13 @@
 import React from 'react';
+import Grid from '@material-ui/core/Grid';
+
 import QR from '../../assets/images/alex-loian-qr-code-telephone.png';
 import Button from '@material-ui/core/Button';
 import PDF from '../../assets/images/CV-Alex-Loian-Front-End-Developer-React-Resume.pdf';
 
-
-
-import Grid from '@material-ui/core/Grid';
-
-
 const Details = () => {
     return (
-
             <div style={{backgroundColor:'whitesmoke'}}>
-
                 <Grid container style={{marginTop:'30px'}} alignContent='center' justify='center'>
                     <Grid item xs={6} sm={6} md={3} lg={3}>
                         <h2>Alex Loian</h2>
@@ -24,7 +19,7 @@ const Details = () => {
                         <img width='120px' height='120px' style={{marginTop:'20px'}} src ={QR} alt ='Caspio Help Desk Specialist'/>
                     </Grid>
                 </Grid>
-                <Grid container spacing={3} style={{marginBottom:'30px', marginTop:'30px'}} alignContent='center' justify='space-around'>
+                <Grid container spacing={2} style={{marginBottom:'30px', marginTop:'30px'}} alignContent='center' justify='space-around'>
                     <Grid item xs={6} md={2} lg={2}>
                     <Button color='primary' variant='outlined' fullWidth download href={PDF}>CV</Button>
                     </Grid>
@@ -40,7 +35,6 @@ const Details = () => {
                     <Grid item xs={6} md={2} lg={2}>
                     <Button color='primary' variant='outlined' fullWidth href="https://github.com/AlexLDP">GitHub</Button>
                     </Grid>
-                 
                 </Grid>  
  
         </div>

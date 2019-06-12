@@ -10,8 +10,6 @@ const MainScreen = () => {
             <animated.div style={props}>
                 <h1>Alex Loian</h1>
                 </animated.div>
-            
-           
             <h1 className="App-logo">CV</h1>
             <animated.div style={leftP}>
             <h2>Front-End Developer</h2>

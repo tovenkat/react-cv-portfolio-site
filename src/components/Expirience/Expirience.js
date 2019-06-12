@@ -1,8 +1,6 @@
 import React from 'react';
-import classes from './Expirience.module.css';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-
 
 //Pictures
 import Caspio from '../../assets/images/alex-loian-work-timeline-caspio.png';
@@ -14,7 +12,6 @@ import University from '../../assets/images/alex-loian-work-timeline-university.
 import ERC from '../../assets/images/alex-loian-work-timeline-erc.png';
 import Microsoft from '../../assets/images/alex-loian-work-timeline-microsoft.png';
 ////
-
 const DataObj=[
     {
         img:Caspio,
