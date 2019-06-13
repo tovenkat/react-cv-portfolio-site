@@ -1,6 +1,5 @@
 import React from 'react';
 import SkillItem from './SkillItem/SkillItem';
-
 import Grid from '@material-ui/core/Grid';
 
 import ReactLogo from '../../assets/images/alex-loian-skills-react-logo.svg';
@@ -47,12 +46,20 @@ const DATASKILLSOBJ = [{
     key:6,
 }];
 
+const theme = {
+    paddingTop:'40px',
+    paddingBottom:'40px',
+    backgroundColor:'whitesmoke'
+};
+
+const skillItems = DATASKILLSOBJ.map((item)=>{
+    return (<Grid item xs={6} sm={4} md={2} lg={2} key={item.key}><SkillItem  picture={item.picture} alt={item.alt} title={item.title}/></Grid>);
+});
+
 const Skills = () => {
     return (
-                <Grid container spacing={1} style={{paddingTop:'40px',paddingBottom:'40px',backgroundColor:'whitesmoke'}} alignItems="stretch" justify='center'>
-                    {DATASKILLSOBJ.map((item)=>{
-                        return (<Grid item xs={6} sm={4} md={2} lg={2} key={item.key}><SkillItem  picture={item.picture} alt={item.alt} title={item.title}/></Grid>);
-                    })}
+                <Grid container spacing={1} style={theme} alignItems="stretch" justify='center'>
+                    {skillItems}
                 </Grid>
     );
 };
