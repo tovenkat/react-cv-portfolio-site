@@ -5,15 +5,13 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
-import Slide from '@material-ui/core/Slide';
+
 
 
 //Tabs Component
 import Pet from './PetProject/PetProject';
 import Skills from './Skills/Skills';
 import Portfolio from './Portfolio/Portfolio';
-
-
 //
 
 
@@ -61,7 +59,6 @@ function NavTabs(props) {
     {value === 0 && <Portfolio/>}
     {value === 1 && <Pet/>}
     {value === 2 && <Skills/>}
-
     </div>
   );
 }

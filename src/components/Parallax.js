@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
+import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons';
 
 
 // Little helpers ...
@@ -22,6 +22,7 @@ class Custom extends React.Component {
         <ParallaxLayer offset={0} speed={0} factor={3} style={{ backgroundImage: url('stars', true), backgroundSize: 'cover' }} />
 
         <ParallaxLayer offset={1.3} speed={-0.3} style={{ pointerEvents: 'none' }}>
+            
           <img src={url('satellite4')} style={{ width: '15%', marginLeft: '70%' }} />
         </ParallaxLayer>
 
