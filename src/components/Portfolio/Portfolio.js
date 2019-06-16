@@ -40,8 +40,7 @@ const DATAOBJ =[
 }];
 
 const theme = {
-    paddingTop:'40px',
-    paddingBottom:'40px',
+   
     backgroundColor:'whitesmoke'
 };
 
@@ -53,11 +52,12 @@ const portfolioItems = DATAOBJ.map((item)=>{
     );
 });
 const Portfolio = () => {
-    return (
-         <Grid container spacing={2} style={theme} alignItems="stretch" justify='center'>
-                {portfolioItems}
-        </Grid> 
-    );
+    return (<div>
+                <h1 style={{PaddingTop:'50px', marginBottom:'30px'}}>Portfolio</h1>
+                <Grid container spacing={2} alignItems="stretch" style={theme} justify='center'>
+                    {portfolioItems}
+                </Grid> 
+            </div>);
 };
 
 export default Portfolio;

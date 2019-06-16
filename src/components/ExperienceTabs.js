@@ -231,8 +231,9 @@ function SwitchedExpirience(props) {
 
   return (
     <div className={classes.root}>
+      <h1 style={{PaddingTop:'50px', marginBottom:'30px'}}>Experience</h1>
     <AppBar position="static">
-      <h2>Experience</h2>
+      
       <Tabs variant="fullWidth" value={value} onChange={handleChange}>
         <LinkTab label="All"/>
         <LinkTab label="Work"/>

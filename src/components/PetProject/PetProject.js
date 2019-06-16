@@ -24,9 +24,8 @@ const DataPet = [{ 'key':2,
     }];
     
 const theme = {
-    paddingTop:'40px',
-    paddingBottom:'40px',
-    backgroundColor:'whitesmoke'
+    backgroundColor:'whitesmoke',
+    PaddingTop:'20px'
 };
 
 const petItems = DataPet.map((item)=>{
@@ -37,10 +36,12 @@ const petItems = DataPet.map((item)=>{
 
 const PetProject = () => {
     return (
-        <Grid container spacing={1} style={theme} alignItems="center" justify='center'>
-                {petItems} 
-        </Grid>
-    );
+        <div >
+            <h1  style={{PaddingTop:'50px', marginBottom:'30px'}}>PET Projects</h1>
+            <Grid container spacing={1} style={theme} alignItems="center" justify='center'>
+                    {petItems} 
+            </Grid>
+        </div>);
 };
 
 export default PetProject;

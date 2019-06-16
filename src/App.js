@@ -9,6 +9,7 @@ import ExperienceTabs from './components/ExperienceTabs';
 import AboutMe from './components/AboutMe';
 import Portfolio from './components/Portfolio/Portfolio';
 import Pet from './components/PetProject/PetProject';
+import Footer from './components/Footer/Footer';
 
 
 
@@ -18,17 +19,13 @@ ReactGA.pageview(window.location.pathname + window.location.search);
 function App() {
   return (
     <div className="App">
-     <Route component={Drawer}/>
-     <Route path="/" exact component={ParalaxL}/>
-     <Route path="/experience" component={ExperienceTabs}/>
-     <Route path="/about" component={AboutMe}/>
-     <Route path="/portfolio" component={Portfolio}/>
-     <Route path="/pet" component={Pet}/>
-     
-
-
-
-      
+      <Route component={Drawer}/>
+      <Route path="/" exact component={ParalaxL}/>
+      <Route path="/experience" component={ExperienceTabs}/>
+      <Route path="/about" component={AboutMe}/>
+      <Route path="/portfolio" component={Portfolio}/>
+      <Route path="/pet" component={Pet}/>
+      <Route component={Footer}/>
     </div>
   );
 }
