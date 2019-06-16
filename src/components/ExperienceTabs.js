@@ -112,7 +112,56 @@ const DataObj=[
 
 ];
 
-const workTimeline = (
+
+
+
+function LinkTab(props) {
+  return (
+    <Tab
+      component="a"
+      onClick={event => {
+        event.preventDefault();
+      }}
+      {...props}
+    />
+  );
+}
+const useStyles = makeStyles(theme => ({
+  root: {
+    flexGrow: 4,
+    backgroundColor: theme.palette.background.paper,
+  },
+}));
+
+function ExpSwitch(props){
+  if (props.type==='All'){
+    return(
+      <VerticalTimeline style={{margin:'0px'}}>
+          {
+              DataObj.map((element)=>{
+                  return (
+                    
+                      <VerticalTimelineElement
+                          key={element.key+13}
+                          className="vertical-timeline-element--work"
+                          date={element.date}
+                          iconStyle={{ background: '#3f51b5', color: '#fff' }}
+                          icon={null}>
+                          <img src ={element.img} width="35%" alt ={element.title}/>
+                          <h4 className="vertical-timeline-element-title">{element.title}</h4>
+                          <h4 className="vertical-timeline-element-subtitle">{element.subtitle}</h4>
+                          <p>{element.body}
+                          </p>
+                      </VerticalTimelineElement>
+                      
+                  );
+              })
+          }
+      </VerticalTimeline>
+    )
+  }
+  if (props.type==='Work'){
+    return(
       <VerticalTimeline>
           {
               DataObj.map((element)=>{
@@ -137,8 +186,10 @@ const workTimeline = (
               })
           }
       </VerticalTimeline>
-);
-const studyTimeline = (
+    )
+  }
+  if (props.type==='Study'){
+    return(
       <VerticalTimeline style={{margin:'0px'}}>
           {
               DataObj.map((element)=>{
@@ -165,50 +216,10 @@ const studyTimeline = (
               })
           }
       </VerticalTimeline>
-);
-const allTimeline = (
-      <VerticalTimeline style={{margin:'0px'}}>
-          {
-              DataObj.map((element)=>{
-                  return (
-                    
-                      <VerticalTimelineElement
-                          key={element.key+13}
-                          className="vertical-timeline-element--work"
-                          date={element.date}
-                          iconStyle={{ background: '#3f51b5', color: '#fff' }}
-                          icon={null}>
-                          <img src ={element.img} width="35%" alt ={element.title}/>
-                          <h4 className="vertical-timeline-element-title">{element.title}</h4>
-                          <h4 className="vertical-timeline-element-subtitle">{element.subtitle}</h4>
-                          <p>{element.body}
-                          </p>
-                      </VerticalTimelineElement>
-                      
-                  );
-              })
-          }
-      </VerticalTimeline>
-);
 
-
-function LinkTab(props) {
-  return (
-    <Tab
-      component="a"
-      onClick={event => {
-        event.preventDefault();
-      }}
-      {...props}
-    />
-  );
+    )
+  }
 }
-const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 4,
-    backgroundColor: theme.palette.background.paper,
-  },
-}));
 
 function SwitchedExpirience(props) {
   const classes = useStyles();
@@ -230,9 +241,9 @@ function SwitchedExpirience(props) {
 
       </Tabs>
     </AppBar>
-    {value === 0 && <div>{allTimeline}</div>}
-    {value === 1 && <div>{workTimeline}</div>}
-    {value === 2 && <div>{studyTimeline}</div>}
+    {value === 0 && <ExpSwitch type='All'/>}
+    {value === 1 && <ExpSwitch type='Work'/>}
+    {value === 2 && <ExpSwitch type='Study'/>}
     {value === 3 && <Details/>}
 
   </div>
