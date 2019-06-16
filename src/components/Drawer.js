@@ -49,16 +49,17 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(side, false)}
     >
       <List>
-        {['Home','About Me', 'Contact Details', 'Expirience'].map((text, index) => (
+        {[<a href='/'>Home</a>,<a href='/about'>About Me</a>, <a href='/experience'>Experience</a>].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
+            <ListItemText primary={text}/>
           </ListItem>
         ))}
+        
       </List>
       <Divider />
       <List>
-        {['Portfolio', 'Pet Projects'].map((text, index) => (
+        {[<a href='/portfolio'>Portfolio</a>, <a href='/pet'>PET Projects</a>].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon><WorkIcon/></ListItemIcon>
             <ListItemText primary={text} />
@@ -67,8 +68,6 @@ export default function TemporaryDrawer() {
       </List>
 
       <List>
-          
-      
         <ListItem button key='Blog'>
             <ListItemIcon><BuildIcon/></ListItemIcon>
             <ListItemText primary= 'Blog' />

@@ -47,7 +47,7 @@ const theme = {
 
 const portfolioItems = DATAOBJ.map((item)=>{
     return (
-        <Grid item xs={11} sm={6} md={6} lg={4} key={item.key}>
+        <Grid item xs={11} sm={11} md={11} lg={11} key={item.key}>
             <Card picture={item.picture} alt={item.title} title={item.title} body = {item.body}/>
         </Grid> 
     );

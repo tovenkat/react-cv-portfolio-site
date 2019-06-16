@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import Details from './Details/Details';
+
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 //Pictures
@@ -237,14 +237,13 @@ function SwitchedExpirience(props) {
         <LinkTab label="All"/>
         <LinkTab label="Work"/>
         <LinkTab label="Study"/>
-        <LinkTab label="Details"/>
 
       </Tabs>
     </AppBar>
     {value === 0 && <ExpSwitch type='All'/>}
     {value === 1 && <ExpSwitch type='Work'/>}
     {value === 2 && <ExpSwitch type='Study'/>}
-    {value === 3 && <Details/>}
+
 
   </div>
   );

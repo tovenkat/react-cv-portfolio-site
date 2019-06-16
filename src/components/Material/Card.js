@@ -14,8 +14,7 @@ function ImgMediaCard(props) {
 
   return (
     <div>
-     <img src={props.picture} alt={props.alt}  width='100%'/>
-     <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+      <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <ExpansionPanelSummary
         aria-controls="panel1bh-content"
         id="panel1bh-header"
@@ -28,6 +27,8 @@ function ImgMediaCard(props) {
             </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
+     <img src={props.picture} alt={props.alt}  width='100%'/>
+     
     </div>
   );
 }
