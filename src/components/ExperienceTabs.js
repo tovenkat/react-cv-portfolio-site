@@ -147,7 +147,7 @@ function ExpSwitch(props){
                           date={element.date}
                           iconStyle={{ background: '#3f51b5', color: '#fff' }}
                           icon={null}>
-                          <img src ={element.img} width="35%" alt ={element.title}/>
+                          <img src ={element.img} width="80px" alt ={element.title}/>
                           <h4 className="vertical-timeline-element-title">{element.title}</h4>
                           <h4 className="vertical-timeline-element-subtitle">{element.subtitle}</h4>
                           <p>{element.body}
@@ -173,7 +173,7 @@ function ExpSwitch(props){
                           date={element.date}
                           iconStyle={{ background: '#3f51b5', color: '#fff' }}
                           icon={null}>
-                          <img src ={element.img} width="35%" alt ={element.title}/>
+                          <img src ={element.img} width="80px" alt ={element.title}/>
                           <h4 className="vertical-timeline-element-title">{element.title}</h4>
                           <h4 className="vertical-timeline-element-subtitle">{element.subtitle}</h4>
                           <p>{element.body}
@@ -202,7 +202,7 @@ function ExpSwitch(props){
                             date={element.date}
                             iconStyle={{ background: '#3f51b5', color: '#fff' }}
                             icon={null}>
-                            <img src ={element.img} width="35%" alt ={element.title}/>
+                            <img src ={element.img} width="80px" alt ={element.title}/>
                             <h4 className="vertical-timeline-element-title">{element.title}</h4>
                             <h4 className="vertical-timeline-element-subtitle">{element.subtitle}</h4>
                             <p>{element.body}

@@ -8,7 +8,8 @@ import PizzaShop from '../../assets/images/alex-loian-commercial-wordpress-pizza
 import InvestSite from '../../assets/images/alex-loian-commercial-wordpress-investment-site.png';
 import FinanceSite from '../../assets/images/alex-loian-commercial-wordpress-finance-site.png';
 
-const DATAOBJ =[{
+const DATAOBJ =[
+    {
     title:'Realestate Wordpress Develpment',
     key:2,
     picture: Realestatesite,
@@ -26,7 +27,7 @@ const DATAOBJ =[{
     body:'LoremIpsum'
 },
 {
-    title:'Investment Banking Wordpress Developmen',
+    title:'Investment/Banking Site Development',
     key:4,
     picture: InvestSite,
     body:'LoremIpsum'
