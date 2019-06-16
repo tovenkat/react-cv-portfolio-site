@@ -30,7 +30,7 @@ const theme = {
 };
 
 const petItems = DataPet.map((item)=>{
-    return ( <Grid item xs={11} sm={11} md={11} lg={11} key={item.key}>
+    return ( <Grid item xs={10} sm={10} md={10} lg={10} key={item.key}>
         <Card key={item.key} picture={item.picture} alt={item.alt} title={item.title}/>
         </Grid>);
 });

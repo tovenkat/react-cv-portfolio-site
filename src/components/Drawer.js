@@ -117,8 +117,10 @@ export default function TemporaryDrawer() {
   return (
     <div style={{
         position: 'fixed',
-        top: 0,
+        top: '15px',
+        left:'15px',
         zIndex:100,
+        backgroundColor:'lightgrey'
         }}>
       <Button onClick={toggleDrawer('left', true)}><MenuIcon/></Button>
       <Drawer open={state.left} onClose={toggleDrawer('left', false)}>

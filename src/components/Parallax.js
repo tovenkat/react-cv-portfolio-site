@@ -2,6 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons';
 import Drawer from './Drawer';
+import MacImage from '../assets/images/alex-loian-dummy-picture-1.jpg';
+import Button from '@material-ui/core/Button';
+import BuildIcon from '@material-ui/icons/Build';
+import ReactLogo from '../assets/images/alex-loian-skills-react-logo.svg';
 
 // Little helpers ...
 const url = (name, wrap = false) => `${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`
@@ -12,18 +16,31 @@ const Green = ({ children }) => <span style={{ color: '#57EE89' }}>{children}</s
 const Blue = ({ children }) => <span style={{ color: '#57C7FF' }}>{children}</span>
 const Gray = ({ children }) => <span style={{ color: '#909090' }}>{children}</span>
 
+
 class Custom extends React.Component {
     render() {
       return (
-        <Parallax ref={ref => (this.parallax = ref)} pages={3} style={{backgroundColor:'#E0E0E0'}}>
-            <Drawer/>
-          <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: '#805E73' }} />
+        <Parallax ref={ref => (this.parallax = ref)} pages={4} style={{backgroundColor:'white'}}>
+          <div style ={{position:'fixed',bottom:15, right:15, zIndex:100}}>
+            <Button onClick={() => this.parallax.scrollTo(0)}><BuildIcon/></Button>
+          </div>
+          
+          <ParallaxLayer offset={0} speed={1} factor={3}>
+              <img src={MacImage} style={{ width: '100%' }} />
+          </ParallaxLayer>
+          <ParallaxLayer offset={0} speed={1.4}
+            onClick={() => this.parallax.scrollTo(1)}
+            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection:'column', color:'#03A9F4' }}>
+                <h1>Alex Loian</h1>
+                <h3>Front-End Developer</h3>
+                <h4>React, Vanilla JavaScript, Web Components</h4>
+          </ParallaxLayer>
+          <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: "Yellow" }} />
           <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#87BCDE' }} />
-  
-          <ParallaxLayer offset={0} speed={0} factor={3} style={{ backgroundImage: url('stars', true), backgroundSize: 'cover' }} />
-  
-          <ParallaxLayer offset={1.3} speed={-0.3} style={{ pointerEvents: 'none' }}>
-            <img src={url('satellite4')} style={{ width: '15%', marginLeft: '70%' }} />
+          
+          
+          <ParallaxLayer offset={1.1} speed={0.6} style={{ pointerEvents: 'none' }}>
+            <img src={ReactLogo} style={{ width: '20%', marginLeft: '70%' }} />
           </ParallaxLayer>
   
           <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.1 }}>
@@ -66,16 +83,7 @@ class Custom extends React.Component {
             }}
           />
   
-          <ParallaxLayer
-            offset={0}
-            speed={0.1}
-            onClick={() => this.parallax.scrollTo(1)}
-            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection:'column', color:'#03A9F4' }}>
-                <h1>Alex Loian</h1>
-                <img src={url('server')} style={{ width: '10%' }} />
-                <h3>Front-End Developer</h3>
-                <h4>React, JavaScript, CSS, Bootstrap</h4>
-          </ParallaxLayer>
+          
   
           <ParallaxLayer
             offset={1}
@@ -92,6 +100,8 @@ class Custom extends React.Component {
             onClick={() => this.parallax.scrollTo(0)}>
             <img src={url('clients-main')} style={{ width: '40%' }} />
           </ParallaxLayer>
+        
+      
         </Parallax>
       )
     }
