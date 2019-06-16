@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import ImgCandyshop from '../../assets/images/alex-loian-pet-ptoject-bootstrap-candyshop.png';
 import ImgBurger from '../../assets/images/alex-loian-pet-ptoject-react-burger.png';
 import ImgSocketChat from '../../assets/images/alex-loian-pet-ptoject-socket-chat.png';
+import ToDo from '../../assets/images/alex-loian-pet-ptoject-to-do.png';
 
 const DataPet = [{ 'key':2,
     'picture':ImgCandyshop,
@@ -21,7 +22,14 @@ const DataPet = [{ 'key':2,
     'picture':ImgSocketChat,
     'alt':'Node JS with Socket IO online chats',
     'title':'Socket IO Chat'
-    }];
+    },
+    
+    { 'key':4,
+    'picture':ToDo,
+    'alt':'React TO-DO app',
+    'title':'React To-Do'
+    }
+];
     
 const theme = {
     backgroundColor:'whitesmoke',
