@@ -1,10 +1,8 @@
 import React from 'react';
 import './App.css';
 import ReactGA from 'react-ga';
-import Tabs from './components/Tabs';
-import MainScreen from './components/MainScreen/MainScreen';
-import ExperienceTabs from './components/ExperienceTabs';
-import Footer from './components/Footer/Footer';
+import Drawer from './components/Drawer';
+import ParalaxL from './components/Parallax';
 
 
 ReactGA.initialize('UA-134625728-1');
@@ -14,10 +12,9 @@ function App() {
   return (
     <div className="App">
      
-      <MainScreen/>
-      <ExperienceTabs/>
-      <Tabs/>
-      <Footer/>
+      <Drawer/>
+      <ParalaxL/>
+
       
     </div>
   );
