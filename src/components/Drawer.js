@@ -15,7 +15,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 import BuildIcon from '@material-ui/icons/Build';
 import WorkIcon from '@material-ui/icons/Work';
 
-
 const useStyles = makeStyles({
   list: {
     width: 300,
@@ -78,8 +77,8 @@ export default function TemporaryDrawer() {
     title:'Estimate Site'
   }];
   const WrapperLinks=(LinksList.map((link)=>(
-    <List>
-      <NavLink style={{textDecoration:'none', color:'black'}} to={link.to}>
+    <List key={link.to}>
+      <NavLink style={{textDecoration:'none', color:'black'}} to={link.to} >
             <ListItem button key="ss">
               <ListItemIcon>{link.icon}</ListItemIcon>
             {link.title}
@@ -100,7 +99,7 @@ export default function TemporaryDrawer() {
       <List>
         <ListItem button key='changeLanguage'>
           
-              <Switch checked='EN' value="EN" />
+              <Switch checked={true} value="EN" />
             
             <ListItemText primary="Language" />
           </ListItem>

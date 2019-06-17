@@ -45,8 +45,8 @@ const petItems = DataPet.map((item)=>{
 const PetProject = () => {
     return (
         <div >
-            <h1  style={{PaddingTop:'50px', marginBottom:'30px'}}>PET Projects</h1>
-            <Grid container spacing={1} style={theme} alignItems="center" justify='center'>
+            <h1  style={{marginBottom:'10px',}}>PET Projects</h1>
+            <Grid container spacing={3} style={theme} alignItems="center" justify='center'>
                     {petItems} 
             </Grid>
         </div>);

@@ -53,8 +53,10 @@ const portfolioItems = DATAOBJ.map((item)=>{
 });
 const Portfolio = () => {
     return (<div>
-                <h1 style={{PaddingTop:'50px', marginBottom:'30px'}}>Portfolio</h1>
-                <Grid container spacing={2} alignItems="stretch" style={theme} justify='center'>
+                <div>
+                <h1 style={{PaddingTop:'50px', marginBottom:'10px'}}>Portfolio</h1>
+                </div>
+                <Grid container spacing={3} alignItems="stretch" style={theme} justify='center'>
                     {portfolioItems}
                 </Grid> 
             </div>);
