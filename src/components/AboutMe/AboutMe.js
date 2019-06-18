@@ -1,5 +1,5 @@
 import React from 'react'
-import Skills from './Skills/Skills';
+import Skills from '../Skills/Skills';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 

@@ -1,9 +1,10 @@
 import React from 'react'
 import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons';
-import MacImage from '../assets/images/alex-loian-dummy-picture-1.jpg';
+
 import Button from '@material-ui/core/Button';
 import BuildIcon from '@material-ui/icons/Build';
-import ReactLogo from '../assets/images/alex-loian-skills-react-logo.svg';
+import ReactLogo from '../../assets/images/alex-loian-skills-react-logo.svg';
+import MacImage from '../../assets/images/alex-loian-dummy-picture-1.jpg';
 
 // Little helpers ...
 const url = (name, wrap = false) => `${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`
@@ -14,9 +15,9 @@ const url = (name, wrap = false) => `${wrap ? 'url(' : ''}https://awv3node-homep
 // const Blue = ({ children }) => <span style={{ color: '#57C7FF' }}>{children}</span>
 // const Gray = ({ children }) => <span style={{ color: '#909090' }}>{children}</span>
 
-
 class Custom extends React.Component {
     render() {
+      console.log(MacImage);
       return (
         <Parallax ref={ref => (this.parallax = ref)} pages={4} style={{backgroundColor:'white'}}>
           <div style ={{position:'fixed',bottom:15, right:15, zIndex:100}}>
@@ -33,7 +34,7 @@ class Custom extends React.Component {
                 <h3>Front-End Developer</h3>
                 <h4>React, Vanilla JavaScript, Web Components</h4>
           </ParallaxLayer>
-          <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: "Yellow" }} />
+          <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: 'red'}}/>>
           <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#87BCDE' }} />
           
           

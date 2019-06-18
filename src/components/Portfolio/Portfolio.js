@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from '../Material/Card';
+import Card from '../Card';
 import Grid from '@material-ui/core/Grid';
 
 
