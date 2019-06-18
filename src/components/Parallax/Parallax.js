@@ -17,9 +17,8 @@ const url = (name, wrap = false) => `${wrap ? 'url(' : ''}https://awv3node-homep
 
 class Custom extends React.Component {
     render() {
-      console.log(MacImage);
       return (
-        <Parallax ref={ref => (this.parallax = ref)} pages={4} style={{backgroundColor:'white'}}>
+        <Parallax ref={ref => (this.parallax = ref)} pages={4} style={{backgroundColor:'white',top:'0px'}}>
           <div style ={{position:'fixed',bottom:15, right:15, zIndex:100}}>
             <Button onClick={() => this.parallax.scrollTo(0)}><BuildIcon/></Button>
           </div>

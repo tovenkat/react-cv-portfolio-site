@@ -18,7 +18,7 @@ ReactGA.pageview(window.location.pathname + window.location.search);
 function App(props) {
   return (<BrowserRouter>
         <Route component={Drawer}/>
-        <Route path="/" exact component={ParalaxL}/>
+        <Route path="/" exact render={()=>(<ParalaxL/>)}/>
         <Route path="/about" render={()=>(<AboutMe items={props.about}/>)}/>
         <Route path="/experience" render={()=>(<Experience data={props.exp}/>)}/>
         <Route path="/portfolio" render={()=>(<Portfolio items={props.portfolio}/>)}/>
