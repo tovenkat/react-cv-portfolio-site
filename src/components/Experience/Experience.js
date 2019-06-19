@@ -39,8 +39,11 @@ function ExpSwitch(props){
                           <img src ={element.img} width="80px" alt ={element.title}/>
                           <h4 className="vertical-timeline-element-title">{element.title}</h4>
                           <h4 className="vertical-timeline-element-subtitle">{element.subtitle}</h4>
-                          <p>{element.body}
-                          </p>
+                          <p>{element.body}</p>
+                          <div>
+                             <ul>{element.lists ? element.lists.map((list,index)=>(<li key={index} style={{textAlign:'left'}}>{list} </li>)): null}</ul>
+                             {element.skills ? element.skills.map((skill,index)=>(<span key={index}>{skill} </span>)): null}
+                          </div>
                       </VerticalTimelineElement>);
               })
           }
