@@ -11,9 +11,9 @@ const theme = {
 
 const Skills = (props) => {
     const skillItems = props.items.map((item)=>{
-        return (<Grid item xs={6} sm={4} md={2} lg={2} key={item.key}><img src = {item.picture} width='120px' alt={item.alt}/></Grid>);
+        return (<Grid item xs={6} sm={4} md={1} lg={1} key={item.key}><img src = {item.picture} width='60px' alt={item.alt}/></Grid>);
     });
-    return (<Grid container spacing={1} style={theme} alignItems="stretch" justify='center'>
+    return (<Grid container spacing={0} style={theme} alignItems="stretch" justify='center'>
                 {skillItems}
             </Grid>
     );

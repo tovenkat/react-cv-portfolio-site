@@ -28,7 +28,7 @@ import Gas from './assets/images/alex-loian-work-timeline-gas-engineer.png';
 import University from './assets/images/alex-loian-work-timeline-university.png';
 import ERC from './assets/images/alex-loian-work-timeline-erc.png';
 import Microsoft from './assets/images/alex-loian-work-timeline-microsoft.png';
-
+import AlexAvatar from './assets/images/alex-loian-fron-end-developer-avatar.jpg';
 
 const Data = {
     exp:[
@@ -176,7 +176,17 @@ const Data = {
     }
     ],
     about: {
-        text:['Alex Loian', 'Front-End Developer'],
+        title:'About',
+        name:'Alex Loian',
+        avatar: AlexAvatar,
+        location:'Europe,Ukraine,Dnipro',
+        age:'28 years',
+        about:'Hi am Alex. I am passionable React Front-End Developer',
+        cv:{
+            title:'CV',
+            href:PDF,
+            download:'CV-Alex-Loian-Front-End-Developer-React'
+        },
         buttons:[{
             title:'CV',
             href:PDF,
