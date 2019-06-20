@@ -39,8 +39,8 @@ const Data = {
             title:'Help Desk Specialist',
             subtitle:'Caspio inc.',
             date:'oct./2018 - present',
-            skills:['JavaScript', 'TypeScript', 'HTML 5', 'CSS'],
-            lists:['some 1', 'Some2'],
+            skills:[],
+            lists:[],
             body:'Working on support Line with United States Market. Product support and general JavaScript and HTML Customizations.I performed a remote troubleshooting through diagnostic techniques and pertinent questions Determined the best solution based on the issue and details provided by customers Walked the customer through the problem-solving process Directed unresolved issues to the next level of support staff.'
         },
         {

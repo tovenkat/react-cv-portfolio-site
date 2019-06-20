@@ -68,7 +68,11 @@ class Custom extends React.Component {
           </ParallaxLayer>
   
           <ParallaxLayer offset={2.5} speed={-0.4} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none' }}>
+            <div><h3> Passionable Front-End Developer</h3>
             <img alt="Alex Loian" src={url('earth')} style={{ width: '60%' }} />
+            <h3> Searching for Strong Junior Possition</h3>
+            </div>
+            
           </ParallaxLayer>
   
           <ParallaxLayer
@@ -87,8 +91,9 @@ class Custom extends React.Component {
             offset={1}
             speed={0.1}
             onClick={() => this.parallax.scrollTo(2)}
-            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column',}}>
             <img alt="Alex Loian" src={url('bash')} style={{ width: '40%' }} />
+            <h3 style={{color:'whitesmoke'}}>React, Readux,Vanilla JS, CSS</h3>
           </ParallaxLayer>
   
           <ParallaxLayer
@@ -96,7 +101,9 @@ class Custom extends React.Component {
             speed={-0}
             style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
             onClick={() => this.parallax.scrollTo(0)}>
+    
             <img alt="Alex Loian" src={url('clients-main')} style={{ width: '40%' }} />
+
           </ParallaxLayer>
         
       

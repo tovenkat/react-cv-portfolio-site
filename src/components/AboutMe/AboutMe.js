@@ -35,13 +35,11 @@ const AboutMe = (props)=> {
 
                 
                 <Grid container spacing={2} style={{paddingBottom:'30px', paddingTop:'30px'}} alignContent='center' justify='space-around'>
-                    {buttons}
+             
                 </Grid>  
                 <Skills items={props.items.skills}/>
                 <Grid container style={{paddingTop:'30px'}} alignContent='center' justify='center'>
-                    <Grid item xs={6} sm={6} md={3} lg={3}>
-                        {contact}
-                    </Grid>
+               
                     <Grid item xs={6} sm={6} md={3} lg={3}>
                        {qrItem}
                     </Grid>
