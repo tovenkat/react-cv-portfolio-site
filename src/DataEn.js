@@ -154,24 +154,24 @@ const Data = {
         picture: FinanceSite,
         body:'LoremIpsum'
     }],
-    pet:[{ 'key':2,
-    'picture':ImgCandyshop,
-    'alt':'Practise Bootstrap',
-    'title':'Bootstrap CSS'
+    pet:[{ key:'2p',
+        picture:ImgCandyshop,
+        alt:'Practise Bootstrap',
+        title:'Bootstrap CSS'
     },
-    { 'key':1,
+    { 'key':'1p',
     'picture':ImgBurger,
         'alt':'React practise Burger SAP',
         'title':'Burger React'
     },
     
-    { 'key':3,
+    { 'key':'3p',
     'picture':ImgSocketChat,
     'alt':'Node JS with Socket IO online chats',
     'title':'Socket IO Chat'
     },
     
-    { 'key':4,
+    { 'key':'4p',
     'picture':ToDo,
     'alt':'React TO-DO app',
     'title':'React To-Do'

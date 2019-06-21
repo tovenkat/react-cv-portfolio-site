@@ -18,7 +18,7 @@ const url = (name, wrap = false) => `${wrap ? 'url(' : ''}https://awv3node-homep
 class Custom extends React.Component {
     render() {
       return (
-        <Parallax ref={ref => (this.parallax = ref)} pages={4} style={{backgroundColor:'white',top:'0px'}}>
+        <Parallax ref={ref => (this.parallax = ref)} pages={4} style={{backgroundColor:'yellow',top:'0px'}}>
           <div style ={{position:'fixed',bottom:15, right:15, zIndex:100}}>
             <Button onClick={() => this.parallax.scrollTo(0)}><BuildIcon/></Button>
           </div>
@@ -31,8 +31,14 @@ class Custom extends React.Component {
             style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection:'column', color:'#03A9F4' }}>
                 <h1>Alex Loian</h1>
                 <h3>Front-End Developer</h3>
-                <h4>React, Vanilla JavaScript, Web Components</h4>
           </ParallaxLayer>
+
+          <ParallaxLayer offset={0.9} speed={0.4} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center',flexDirection:'column', pointerEvents: 'none' }}>
+          <h4>React, Vanilla JavaScript, Web Components</h4>
+            <h3>Passionable Programmer</h3>
+          </ParallaxLayer>
+
+
           <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: 'red'}}/>>
           <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#87BCDE' }} />
           
@@ -67,8 +73,9 @@ class Custom extends React.Component {
             <img alt="Alex Loian" src={url('cloud')} style={{ display: 'block', width: '15%', marginLeft: '75%' }} />
           </ParallaxLayer>
   
-          <ParallaxLayer offset={2.5} speed={-0.4} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none' }}>
-            <img alt="Alex Loian" src={url('earth')} style={{ width: '60%' }} />
+          <ParallaxLayer offset={2.5} speed={-0.4} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center',flexDirection:'column', pointerEvents: 'none' }}>
+            <h3>Searching for the Strong Junior Possition</h3>
+            <img alt="Alex Loian" src={url('earth')} style={{ width: '30%' }} />
           </ParallaxLayer>
   
           <ParallaxLayer
@@ -87,8 +94,9 @@ class Custom extends React.Component {
             offset={1}
             speed={0.1}
             onClick={() => this.parallax.scrollTo(2)}
-            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection:'column' }}>
             <img alt="Alex Loian" src={url('bash')} style={{ width: '40%' }} />
+            <h3 style={{color:'white'}}>React, Redux, Vanilla Javascript</h3>
           </ParallaxLayer>
   
           <ParallaxLayer

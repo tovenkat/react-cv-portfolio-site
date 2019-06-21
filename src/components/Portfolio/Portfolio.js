@@ -4,7 +4,8 @@ import Grid from '@material-ui/core/Grid';
 
 
 const theme = {
-    backgroundColor:'whitesmoke'
+    backgroundColor:'#ffcc00',
+    width:'100%'
 };
 
 
