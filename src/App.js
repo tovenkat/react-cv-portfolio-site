@@ -10,7 +10,7 @@ import AboutMe from './components/AboutMe/AboutMe';
 import Experience from './components/Experience/Experience';
 import Portfolio from './components/Portfolio/Portfolio';
 import Pet from './components/PetProject/PetProject';
-import Footer from './components/Footer/Footer';
+
 
 ReactGA.initialize('UA-134625728-1');
 ReactGA.pageview(window.location.pathname + window.location.search);
@@ -23,7 +23,7 @@ function App(props) {
         <Route path="/experience" render={()=>(<Experience data={props.exp}/>)}/>
         <Route path="/portfolio" render={()=>(<Portfolio items={props.portfolio}/>)}/>
         <Route path="/pet" render={()=>(<Pet items={props.pet}/>)}/>
-        <Route component={Footer}/>
+        
     </BrowserRouter>);
 }
 

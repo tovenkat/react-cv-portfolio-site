@@ -6,8 +6,6 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import Switch from '@material-ui/core/Switch';
 import {NavLink} from 'react-router-dom';
 
 import InboxIcon from '@material-ui/icons/MoveToInbox';
@@ -64,18 +62,22 @@ export default function TemporaryDrawer() {
     divider:<Divider/>,
     icon:<WorkIcon/>,
     title:'PET Projects'
-  },
-  {
-    to:'/blog',
-    icon:<BuildIcon/>,
-    title:'Blog'
-  },
-  {
-    to:'/estimate',
-    icon:<BuildIcon/>,
-    divider:<Divider/>,
-    title:'Estimate Site'
   }];
+
+
+  // {
+  //   to:'/blog',
+  //   icon:<BuildIcon/>,
+  //   title:'Blog'
+  // },
+  // {
+  //   to:'/estimate',
+  //   icon:<BuildIcon/>,
+  //   divider:<Divider/>,
+  //   title:'Estimate Site'
+  // }
+
+
   const WrapperLinks=(LinksList.map((link)=>(
     <List key={link.to}>
       <NavLink style={{textDecoration:'none', color:'black'}} to={link.to} >
@@ -96,14 +98,6 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(side, false)}
     >
       {WrapperLinks}
-      <List>
-        <ListItem button key='changeLanguage'>
-          
-              <Switch checked={true} value="EN" />
-            
-            <ListItemText primary="Language" />
-          </ListItem>
-      </List>
     </div>
   );
 

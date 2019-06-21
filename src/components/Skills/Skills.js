@@ -3,9 +3,9 @@ import Grid from '@material-ui/core/Grid';
 
 
 const theme = {
-    paddingTop:'40px',
-    paddingBottom:'40px',
-    backgroundColor:'whitesmoke'
+   
+    width:'100%',
+   
 };
 
 
