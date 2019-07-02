@@ -161,7 +161,7 @@ const Data = {
     },
     { 'key':'1p',
     'picture':ImgBurger,
-        'alt':'React practise Burger SAP',
+        'alt':'React practise Burger SAP <a href="https://burger-react-alex-loian.web.app/">Demo</a>',
         'title':'Burger React'
     },
     
@@ -173,7 +173,7 @@ const Data = {
     
     { 'key':'4p',
     'picture':ToDo,
-    'alt':'React TO-DO app',
+    'alt':'React TO-DO app <a href="https://to-do-list-app-ad59b.web.app/">Demo</a>',
     'title':'React To-Do'
     }
     ],
