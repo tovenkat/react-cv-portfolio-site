@@ -24,6 +24,7 @@ function ImgMediaCard(props) {
         <ExpansionPanelDetails>
             <Typography>
                 {props.body}
+                {props.href}
             </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
