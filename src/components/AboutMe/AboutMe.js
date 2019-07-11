@@ -29,8 +29,6 @@ const AboutMe = (props)=> {
                 <div>
                     <Button color='primary' variant='outlined'  download={props.items.cv.download} href={props.items.cv.href}>{props.items.cv.title}</Button>
                 </div>
-                
-
 
                
                 <Skills items={props.items.skills}/>

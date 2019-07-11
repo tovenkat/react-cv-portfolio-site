@@ -97,6 +97,7 @@ class Custom extends React.Component {
             style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection:'column' }}>
             <img alt="Alex Loian" src={url('bash')} style={{ width: '40%' }} />
             <h3 style={{color:'white'}}>React, Redux, Vanilla Javascript</h3>
+
           </ParallaxLayer>
   
           <ParallaxLayer
@@ -104,7 +105,9 @@ class Custom extends React.Component {
             speed={-0}
             style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
             onClick={() => this.parallax.scrollTo(0)}>
+    
             <img alt="Alex Loian" src={url('clients-main')} style={{ width: '40%' }} />
+
           </ParallaxLayer>
         
       

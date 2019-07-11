@@ -11,7 +11,7 @@ const theme = {
 const PetProject = (props) => {
     const petItems = props.items.map((item)=>{
         return ( <Grid item xs={10} sm={10} md={10} lg={10} key={item.key}>
-            <Card picture={item.picture} alt={item.alt} title={item.title}/>
+            <Card picture={item.picture} alt={item.alt} title={item.title} href={item.href}/>
             </Grid>);
     });
     return (

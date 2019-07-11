@@ -10,6 +10,8 @@ import ImgCandyshop from './assets/images/alex-loian-pet-ptoject-bootstrap-candy
 import ImgBurger from './assets/images/alex-loian-pet-ptoject-react-burger.png';
 import ImgSocketChat from './assets/images/alex-loian-pet-ptoject-socket-chat.png';
 import ToDo from './assets/images/alex-loian-pet-ptoject-to-do.png';
+import ReduxPic from './assets/images/alex-loian-pet-ptoject-react-redux';
+
 
 import QR from './assets/images/alex-loian-qr-code-telephone.png';
 import PDF from './assets/images/CV-Alex-Loian-Front-End-Developer-React-Resume.pdf';
@@ -173,6 +175,11 @@ const Data = {
     'picture':ToDo,
     'alt':'React TO-DO app',
     'title':'React To-Do'
+    },
+    { 'key':5,
+    'picture':ReduxPic,
+    'alt':'React Redux Practise',
+    'title':'React Redux Practise'
     }
     ],
     about: {
