@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 const theme = {
     backgroundColor:'#ffcc00',
     top:'0px',
+    width:'100%'
 };
 
 const PetProject = (props) => {
@@ -16,7 +17,7 @@ const PetProject = (props) => {
     return (
         <div >
             <h1  style={{marginBottom:'10px',}}>PET Projects</h1>
-            <Grid container spacing={3} style={theme} alignItems="center" justify='center' style={{width:'100%'}}>
+            <Grid container spacing={3} style={theme} alignItems="center" justify='center' >
                     {petItems} 
             </Grid>
         </div>);

@@ -23,7 +23,7 @@ const useStyles = makeStyles({
 });
 
 
-export default function TemporaryDrawer() {
+export default function TemporaryDrawer(props) {
   const classes = useStyles();
   const [state, setState] = React.useState({
     left: false,
@@ -98,6 +98,9 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(side, false)}
     >
       {WrapperLinks}
+    
+      
+      <button onClick={props.changeLanguage}>Change Language</button>
     </div>
   );
 
