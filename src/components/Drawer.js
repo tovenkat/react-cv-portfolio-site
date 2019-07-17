@@ -39,7 +39,7 @@ export default function TemporaryDrawer(props) {
   const LinksList = [{
     to:'/',
     icon:<InboxIcon/>,
-    title:'Home'
+    title:'Home Page'
   },
   {
     to:'/about',
@@ -55,13 +55,13 @@ export default function TemporaryDrawer(props) {
   {
     to:'/portfolio',
     icon:<WorkIcon/>,
-    title:'Portfolio'
+    title:'WordPress Portfolio'
   },
   {
     to:'/pet',
     divider:<Divider/>,
     icon:<WorkIcon/>,
-    title:'PET Projects'
+    title:'Portfolio Projects'
   }];
 
 
@@ -97,10 +97,11 @@ export default function TemporaryDrawer(props) {
       onClick={toggleDrawer(side, false)}
       onKeyDown={toggleDrawer(side, false)}
     >
+      <p onClick={props.changeLanguage} style={{border:'1px solid black', width:'60%', margin:'auto',marginTop:'15px', padding:'15px'}}>Change Language</p>
       {WrapperLinks}
-    
-      
-      <button onClick={props.changeLanguage}>Change Language</button>
+
+              
+
     </div>
   );
 

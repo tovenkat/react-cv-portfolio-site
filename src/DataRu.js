@@ -205,7 +205,7 @@ const Data = {
       }
     ],
     about: {
-      title: "About",
+      title: "Обо мне",
       name: "Alex Loian",
       avatar: AlexAvatar,
       location: "Europe,Ukraine,Dnipro",

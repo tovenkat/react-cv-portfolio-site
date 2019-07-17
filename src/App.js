@@ -8,7 +8,7 @@ import DataEn from './DataEn';
 import DataRu from './DataRu';
 
 import Drawer from './components/Drawer';
-import ParalaxL from './components/Parallax/Parallax';
+import Paralax from './components/Parallax/Parallax';
 import AboutMe from './components/AboutMe/AboutMe';
 import Experience from './components/Experience/Experience';
 import Portfolio from './components/Portfolio/Portfolio';
@@ -32,7 +32,7 @@ class App extends Component {
     }
     return (<BrowserRouter>
       <Route render={()=>(<Drawer changeLanguage={this.changeLanguageHandler}/>)}/>
-      <Route path="/" exact render={()=>(<ParalaxL/>)}/>
+      <Route path="/" exact render={()=>(<Paralax about={language.about}/>)}/>
       <Route path="/about" render={()=>(<AboutMe items={language.about}/>)}/>
       <Route path="/experience" render={()=>(<Experience data={language.exp}/>)}/>
       <Route path="/portfolio" render={()=>(<Portfolio items={language.portfolio}/>)}/>
