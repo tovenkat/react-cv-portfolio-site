@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 import BuildIcon from '@material-ui/icons/Build';
 import ReactLogo from '../../assets/images/alex-loian-skills-react-logo.svg';
 import MacImage from '../../assets/images/alex-loian-dummy-picture-1.jpg';
-
+import classes from './Parallax.module.css';
 // Little helpers ...
 const url = (name, wrap = false) => `${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`
 // const Pink = ({ children }) => <span style={{ color: '#FF6AC1' }}>{children}</span>
@@ -14,6 +14,7 @@ const url = (name, wrap = false) => `${wrap ? 'url(' : ''}https://awv3node-homep
 // const Green = ({ children }) => <span style={{ color: '#57EE89' }}>{children}</span>
 // const Blue = ({ children }) => <span style={{ color: '#57C7FF' }}>{children}</span>
 // const Gray = ({ children }) => <span style={{ color: '#909090' }}>{children}</span>
+const imageWrapper= (image)=>(`url(${image})`);
 
 class Custom extends React.Component {
     render() {
@@ -23,8 +24,10 @@ class Custom extends React.Component {
             <Button onClick={() => this.parallax.scrollTo(0)}><BuildIcon/></Button>
           </div>
           
-          <ParallaxLayer offset={0} speed={1} factor={3}>
+          {/* <ParallaxLayer offset={0} speed={1} factor={3}>
               <img alt="Alex Loian" src={MacImage} style={{ width: '100%' }} />
+          </ParallaxLayer> */}
+          <ParallaxLayer className={classes.First} offset={0} speed={1} factor={3}style={{backgroundImage:imageWrapper(MacImage),backgroundSize:'contain',top:'0px'}}>
           </ParallaxLayer>
           <ParallaxLayer offset={0} speed={1.4}
             onClick={() => this.parallax.scrollTo(1)}
@@ -39,14 +42,17 @@ class Custom extends React.Component {
           </ParallaxLayer>
 
 
-          <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: 'red'}}/>>
-          <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#87BCDE' }} />
           
-          
+
+         
+          <ParallaxLayer offset={1.6} speed={-0.1} style={{ opacity: 0.4 }}>
+            <img alt="Alex Loian" src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '60%' }} />
+            <img alt="Alex Loian" src={url('cloud')} style={{ display: 'block', width: '25%', marginLeft: '30%' }} />
+            <img alt="Alex Loian" src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '80%' }} />
+          </ParallaxLayer>
           <ParallaxLayer offset={1.1} speed={0.6} style={{ pointerEvents: 'none' }}>
             <img alt="Alex Loian" src={ReactLogo} style={{ width: '20%', marginLeft: '70%' }} />
           </ParallaxLayer>
-  
           <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.1 }}>
             <img alt="Alex Loian" src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '55%' }} />
             <img alt="Alex Loian" src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '15%' }} />
@@ -62,22 +68,19 @@ class Custom extends React.Component {
             <img alt="Alex Loian" src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '75%' }} />
           </ParallaxLayer>
   
-          <ParallaxLayer offset={1.6} speed={-0.1} style={{ opacity: 0.4 }}>
-            <img alt="Alex Loian" src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '60%' }} />
-            <img alt="Alex Loian" src={url('cloud')} style={{ display: 'block', width: '25%', marginLeft: '30%' }} />
-            <img alt="Alex Loian" src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '80%' }} />
+          <ParallaxLayer
+            offset={1}
+            speed={0.1}
+            onClick={() => this.parallax.scrollTo(2)}
+            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection:'column' }}>
+            <img alt="Alex Loian" src={url('bash')} style={{ width: '40%' }} />
+            <h3 style={{color:'white'}}>React, Redux, Vanilla Javascript</h3>
           </ParallaxLayer>
-  
-          <ParallaxLayer offset={2.6} speed={0.4} style={{ opacity: 0.6 }}>
-            <img alt="Alex Loian" src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '5%' }} />
-            <img alt="Alex Loian" src={url('cloud')} style={{ display: 'block', width: '15%', marginLeft: '75%' }} />
-          </ParallaxLayer>
-  
-          <ParallaxLayer offset={2.5} speed={-0.4} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center',flexDirection:'column', pointerEvents: 'none' }}>
-            <h3>Searching for the Strong Junior Possition</h3>
-            <img alt="Alex Loian" src={url('earth')} style={{ width: '30%' }} />
-          </ParallaxLayer>
-  
+          
+
+
+
+         
           <ParallaxLayer
             offset={2}
             speed={-0.3}
@@ -87,19 +90,17 @@ class Custom extends React.Component {
               backgroundImage: url('clients', true)
             }}
           />
+          <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#87BCDE' }} />
   
-          
-  
-          <ParallaxLayer
-            offset={1}
-            speed={0.1}
-            onClick={() => this.parallax.scrollTo(2)}
-            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection:'column' }}>
-            <img alt="Alex Loian" src={url('bash')} style={{ width: '40%' }} />
-            <h3 style={{color:'white'}}>React, Redux, Vanilla Javascript</h3>
-
+          <ParallaxLayer offset={2.4} speed={0.4} style={{ opacity: 0.6 }}>
+            <img alt="Alex Loian" src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '5%' }} />
+            <img alt="Alex Loian" src={url('cloud')} style={{ display: 'block', width: '15%', marginLeft: '75%' }} />
           </ParallaxLayer>
   
+          <ParallaxLayer offset={2.3} speed={-0.4} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center',flexDirection:'column', pointerEvents: 'none' }}>
+            <h3>Searching for the Strong Junior Possition</h3>
+            <img alt="Alex Loian" src={url('earth')} style={{ width: '30%' }} />
+          </ParallaxLayer>
           <ParallaxLayer
             offset={2}
             speed={-0}
@@ -107,8 +108,13 @@ class Custom extends React.Component {
             onClick={() => this.parallax.scrollTo(0)}>
     
             <img alt="Alex Loian" src={url('clients-main')} style={{ width: '40%' }} />
-
           </ParallaxLayer>
+  
+          
+
+         
+  
+          
         
       
         </Parallax>
