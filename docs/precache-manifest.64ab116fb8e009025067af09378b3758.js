@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6c68852e1890722ff04b45366290ff13",
+    "revision": "6f36986a973da8a486836caa65d0648a",
     "url": "/react-cv-portfolio-site/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-cv-portfolio-site/static/css/2.38750c1c.chunk.css"
   },
   {
-    "revision": "e317ac2189821a464833",
+    "revision": "30f5dccc748aafbbb290",
     "url": "/react-cv-portfolio-site/static/css/main.e82967a8.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-cv-portfolio-site/static/js/2.3e13d7ec.chunk.js"
   },
   {
-    "revision": "e317ac2189821a464833",
-    "url": "/react-cv-portfolio-site/static/js/main.01c791cc.chunk.js"
+    "revision": "30f5dccc748aafbbb290",
+    "url": "/react-cv-portfolio-site/static/js/main.0fbaf781.chunk.js"
   },
   {
     "revision": "864815a1f180d06cac9b",
