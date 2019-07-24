@@ -1,14 +1,11 @@
 
 Portfolio React Site for the Alex Loian.
 
-### `Demo`
+Stack: React, Parallax, Material.
 
-[React Site](https://alexloian.com)
+[Demo](https://alexldp.github.io/react-cv-portfolio-site/)
 
 
-### `Steps To Run locally:`
+[CV](https://alexloian.com)
 
-### `git clone https://github.com/AlexLDP/react-cv-portfolio-site.git`
-### `cd ./react-cv-portfolio-site`
-### `npm i`
-### `npm start`
+

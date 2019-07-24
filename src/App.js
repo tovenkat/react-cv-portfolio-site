@@ -15,6 +15,8 @@ import Portfolio from './components/Portfolio/Portfolio';
 import Pet from './components/PetProject/PetProject';
 
 
+// homepage  "homepage": "https://alexldp.github.io/react-cv-portfolio-site/",
+
 ReactGA.initialize('UA-134625728-1');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
