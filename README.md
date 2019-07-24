@@ -4,6 +4,9 @@ Portfolio React Site for the Alex Loian.
 Stack: React, Parallax, Material.
 
 
-[CV](https://alexloian.com)
+[Demo of CV](https://alexloian.com)
+
+
+<img src="./1.png" width="350">
 
 
