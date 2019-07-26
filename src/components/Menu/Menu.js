@@ -10,13 +10,17 @@ import Button from "@material-ui/core/Button";
 import List from "@material-ui/core/List";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import MailIcon from "@material-ui/icons/Mail";
+import Avatar from '../../assets/images/alex-loian-fron-end-developer-avatar.jpg';
+
 
 import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
-import DialogContentText from "@material-ui/core/DialogContentText";
+
 import DialogTitle from "@material-ui/core/DialogTitle";
 import Slide from "@material-ui/core/Slide";
+
+import Grid from '@material-ui/core/Grid';
 
 import { Link } from "react-router-dom";
 
@@ -81,6 +85,7 @@ export default function Menu(props) {
       <List>
         {drawerLinks.map((text, index) => (
           <Link
+            key={index}
             style={{
               textDecoration: "none",
               color: "black",
@@ -108,9 +113,66 @@ export default function Menu(props) {
     </div>
   );
 
+
+  const buttonsBefore = (
+
+       <Grid container  justify="space-around" spacing={3}>
+      <Grid item xs={12} sm={4}>
+        <Button fullWidth={true}
+          
+          color="primary"
+          href="https://www.linkedin.com/in/alex-loian-82828284"
+        >
+          LinkedIn
+        </Button>
+      </Grid>
+      <Grid item xs={12} sm={4}>
+        <Button fullWidth={true}
+          
+          color="primary"
+          href="https://github.com/AlexLDP"
+        >
+          GitHub
+        </Button>
+      </Grid>
+      
+   
+    </Grid>
+ 
+  );
+  const buttonsAfter=( <Grid container  justify="space-around" spacing={3}>
+   
+  <Grid item xs={12} sm={4}>
+    <Button  fullWidth={true} color="primary" href="tel:0980506389">
+      Call
+    </Button>
+  </Grid>
+  <Grid item xs={12} sm={4}>
+        <Button fullWidth={true}
+          
+          color="primary"
+          download="Alex-Loian-CV-React-Developer"
+          href={cv}
+        >
+          CV
+        </Button>
+    </Grid>
+  <Grid item xs={12} sm={4}>
+    <Button fullWidth={true}
+      
+      color="primary"
+      href="mailto:wisehelper@gmail.com"
+    >
+      Email
+    </Button>
+  </Grid>
+  
+</Grid>
+);
+
   const dialog = (
     <Dialog
-      open={open}
+    open={open}
       TransitionComponent={Transition}
       keepMounted
       onClose={handleClose}
@@ -121,52 +183,24 @@ export default function Menu(props) {
         {"Looking for React Front-End position"}
       </DialogTitle>
       <DialogContent>
+        {buttonsBefore}
       
-        <DialogContentText id="alert-dialog-slide-description">
-          Let Google help apps determine location. This means sending anonymous
-          location data to Google, even when no apps are running.
-        </DialogContentText>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-around",
-            padding: "10px auto"
-          }}
-        >
-          <Button
-            variant="contained"
-            color="primary"
-            href="https://github.com/AlexLDP"
-          >
-            GitHub
-          </Button>
-          <Button
-            variant="contained"
-            color="primary"
-            href="https://www.linkedin.com/in/alex-loian-82828284"
-          >
-            Linked In
-          </Button>
-          <Button
-            variant="contained"
-            color="primary"
-            download="Alex-Loian-CV-React-Developer"
-            href={cv}
-          >
-            CV
-          </Button>
-          <Button variant="contained" color="primary" href="tel:0980506389">
-            Call
-          </Button>
-          <Button
-            variant="contained"
-            color="primary"
-            href="mailto:wisehelper@gmail.com"
-          >
-            Email
-          </Button>
-        </div>
+          
+       
+        <Grid container spacing={3}>
+          <Grid item xs={12} sm={4}>
+           <img style={{margin:'auto'}}width='100px' src={Avatar} alt="Alex Loian"/>
+          </Grid>
+          <Grid item xs={12} sm={8}>
+            <p>Location: Europe, Ukraine, Dnipro</p>
+            <p>Phone: 098-050-63-89</p>
+          </Grid>
+        </Grid>
+     
+        
+        {buttonsAfter}
+        <br/>
+       
       </DialogContent>
       <DialogActions>
         <Button onClick={handleClose} color="primary">

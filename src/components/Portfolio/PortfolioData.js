@@ -16,44 +16,44 @@ const Data = {
    en:{ portfolio: [
     {
       title: "Realestate Wordpress Develpment",
-      key: 2,
+      key: 11,
       picture: Realestatesite,
       body: "LoremIpsum"
     },
     {
       title: "Reporter Site",
-      key: 1,
+      key: 21,
       picture: ReporterMarketPlace,
       body: "LoremIpsum"
     },
     {
       title: "Pizza WordPress Site",
-      key: 3,
+      key: 31,
       picture: PizzaShop,
       body: "LoremIpsum"
     },
     {
       title: "Investment/Banking Site Development",
-      key: 4,
+      key: 41,
       picture: InvestSite,
       body: "LoremIpsum"
     },
     {
       title: "Financing Site Develpment",
-      key: 5,
+      key: 51,
       picture: FinanceSite,
       body: "LoremIpsum"
     }
   ],
   pet: [
     {
-      key: "2p",
+      key: "1pet",
       picture: ImgCandyshop,
       alt: "Practise Bootstrap",
       title: "Bootstrap CSS"
     },
     {
-      key: "1p",
+      key: "2pet",
       picture: ImgBurger,
       alt:
         "React practise Burger SAP",
@@ -63,14 +63,14 @@ const Data = {
     },
 
     {
-      key: "3p",
+      key: "3pet",
       picture: ImgSocketChat,
       alt: "Node JS with Socket IO online chats",
       title: "Socket IO Chat"
     },
 
     {
-      key: "4p",
+      key: "4pet",
       picture: ToDo,
       alt: "React TO-DO app ",
       title:
@@ -78,7 +78,7 @@ const Data = {
         href: <a href="https://to-do-list-app-ad59b.web.app/">Demo</a>
     },
     {
-      key: "4p",
+      key: "5pet",
       picture: ReduxPic,
       alt: "React TO-DO app ",
       title:

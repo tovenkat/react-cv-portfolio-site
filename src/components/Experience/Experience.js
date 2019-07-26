@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     textAlign:'center',
     top:'0px',
-    backgroundColor: '#ffcc00',
+    backgroundColor: 'whitesmoke',
   },
 }));
 
@@ -113,7 +113,7 @@ export default function Expirience(props) {
   }
 
   return (<div className={classes.root}>
-      <h1 style={{PaddingTop:'50px', marginBottom:'30px'}}>Experience</h1>
+  
       <AppBar position="static">
         <Tabs variant="fullWidth" value={value} onChange={handleChange}>
           <LinkTab label="All"/>

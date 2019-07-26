@@ -6,9 +6,6 @@ import ReactGA from 'react-ga';
 
 
 
-import Drawer from './components/Drawer';
-import Paralax from './components/Parallax/Parallax';
-import AboutMe from './components/AboutMe/AboutMe';
 import Experience from './components/Experience/Experience';
 import Portfolio from './components/Portfolio/Portfolio';
 
