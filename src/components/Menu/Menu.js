@@ -22,9 +22,10 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Slide from '@material-ui/core/Slide';
 
-import {NavLink} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 import cv from '../../assets/images/CV-Alex-Loian-Front-End-Developer-React-Resume.pdf'
+const drawerLinks = [{label:'Home',to:'/'}, {label:'Experience',to:'/experience'}, {label:'Portfolio',to:'/portfolio'}];
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -42,7 +43,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
   });
 
-export default function ButtonAppBar() {
+export default function Menu(props) {
   const classes = useStyles();
   
   const [state, setState] = React.useState({
@@ -75,22 +76,19 @@ export default function ButtonAppBar() {
       onKeyDown={toggleDrawer(side, false)}
     >
       <List>
-        {['Home', 'Experience', 'Portfolio'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
+        {drawerLinks.map((text, index) => (
+            <Link style={{textDecoration:'none', color:'black',display:'flex', flexDirection:'row', padding:'20px'}}to={text.to}>
+            <ListItemIcon><MailIcon /></ListItemIcon>
+            {text.label}</Link>
         ))}
+
       </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
+  
+      
+      <Button  variant="contained" color="primary"
+         onClick={props.changeLanguage} >Change Language</Button>
+    
+ 
     </div>
   );
 
@@ -102,6 +100,7 @@ const dialog = (
       onClose={handleClose}
       aria-labelledby="alert-dialog-slide-title"
       aria-describedby="alert-dialog-slide-description"
+    
     >
       <DialogTitle id="alert-dialog-slide-title">{"Looking for React Front-End position"}</DialogTitle>
       <DialogContent>
@@ -145,7 +144,7 @@ const dialog = (
           <Button color="inherit" onClick={handleClickOpen}>About</Button>
         </Toolbar>
       </AppBar>
-      <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
+      <Drawer  open={state.left} onClose={toggleDrawer('left', false)} >
         {sideList('left')}
       </Drawer>
       {dialog}

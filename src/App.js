@@ -28,6 +28,7 @@ class App extends Component {
   }
   changeLanguageHandler =()=>{
     this.setState({language: this.state.language==='en'?'ru':'en'})
+    
   }
   render(){
     let language=DataEn;
@@ -35,10 +36,8 @@ class App extends Component {
       language=DataRu;
     }
     return (<BrowserRouter>
-      {/* <Route render={()=>(<Drawer changeLanguage={this.changeLanguageHandler}/>)}/> */}
-      {/* <Route path="/" exact render={()=>(<Paralax about={language.about}/>)}/> */}
-      <Menu/>
-      <Route path="/" exact component={MainPage}/>
+      <Menu language={this.state.language} changeLanguage={this.changeLanguageHandler}/>
+      <Route path="/" exact render={()=>(<MainPage language={this.state.language} />)}/>
       <Route path="/about" render={()=>(<AboutMe items={language.about}/>)}/>
       <Route path="/experience" render={()=>(<Experience data={language.exp}/>)}/>
       <Route path="/portfolio" render={()=>(<Portfolio items={language.portfolio}/>)}/>
