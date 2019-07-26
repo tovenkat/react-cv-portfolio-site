@@ -6,8 +6,11 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
 import 'react-vertical-timeline-component/style.min.css';
 import { makeStyles } from '@material-ui/core/styles';
 
+import Data from './ExperienceData';
+
 const useStyles = makeStyles(theme => ({
   root: {
+    textAlign:'center',
     top:'0px',
     backgroundColor: '#ffcc00',
   },
@@ -118,9 +121,9 @@ export default function Expirience(props) {
           <LinkTab label="Study"/>
         </Tabs>
       </AppBar>
-    {value === 0 && <ExpSwitch type='All' data={props.data}/>}
-    {value === 1 && <ExpSwitch type='Work' data={props.data}/>}
-    {value === 2 && <ExpSwitch type='Study' data={props.data}/>}
+    {value === 0 && <ExpSwitch type='All' data={Data.en}/>}
+    {value === 1 && <ExpSwitch type='Work' data={Data.en}/>}
+    {value === 2 && <ExpSwitch type='Study' data={Data.en}/>}
     </div>);
 }
 

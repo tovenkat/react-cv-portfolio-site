@@ -4,15 +4,14 @@ import {BrowserRouter} from 'react-router-dom';
 
 import ReactGA from 'react-ga';
 
-import DataEn from './DataEn';
-import DataRu from './DataRu';
+
 
 import Drawer from './components/Drawer';
 import Paralax from './components/Parallax/Parallax';
 import AboutMe from './components/AboutMe/AboutMe';
 import Experience from './components/Experience/Experience';
 import Portfolio from './components/Portfolio/Portfolio';
-import Pet from './components/PetProject/PetProject';
+
 import MainPage from './components/MainPage/MainPage';
 import Menu from './components/Menu/Menu';
 
@@ -31,17 +30,17 @@ class App extends Component {
     
   }
   render(){
-    let language=DataEn;
+   
     if(this.state.language==='ru'){
-      language=DataRu;
+   
     }
     return (<BrowserRouter>
       <Menu language={this.state.language} changeLanguage={this.changeLanguageHandler}/>
       <Route path="/" exact render={()=>(<MainPage language={this.state.language} />)}/>
-      <Route path="/about" render={()=>(<AboutMe items={language.about}/>)}/>
-      <Route path="/experience" render={()=>(<Experience data={language.exp}/>)}/>
-      <Route path="/portfolio" render={()=>(<Portfolio items={language.portfolio}/>)}/>
-      <Route path="/pet" render={()=>(<Pet items={language.pet}/>)}/>
+      {/* <Route path="/about" render={()=>(<AboutMe items={language.about}/>)}/> */}
+      <Route path="/experience" render={()=>(<Experience/>)}/>
+      <Route path="/portfolio" render={()=>(<Portfolio />)}/>
+      
       
   </BrowserRouter>);
   }

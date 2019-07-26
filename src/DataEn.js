@@ -21,14 +21,6 @@ import html from "./assets/images/alex-loian-skill-html5.png";
 import cssLogo from "./assets/images/alex.loian.skill-css.png";
 import Caspio from "./assets/images/alex-loian-work-timeline-caspio.png";
 
-import AmericanEnglishCenter from "./assets/images/alex-loian-work-timeline-english-level.png";
-import IMT from "./assets/images/alex-loian-work-timeline-imt-school.png";
-import Upwork from "./assets/images/alex-loian-work-timeline-upwork.png";
-import Gas from "./assets/images/alex-loian-work-timeline-gas-engineer.png";
-import University from "./assets/images/alex-loian-work-timeline-university.png";
-import ERC from "./assets/images/alex-loian-work-timeline-erc.png";
-import Microsoft from "./assets/images/alex-loian-work-timeline-microsoft.png";
-import AlexAvatar from "./assets/images/alex-loian-fron-end-developer-avatar.jpg";
 
 const Data = {
   exp: [
@@ -128,79 +120,7 @@ const Data = {
       body: ""
     }
   ],
-  portfolio: [
-    {
-      title: "Realestate Wordpress Develpment",
-      key: 2,
-      picture: Realestatesite,
-      body: "LoremIpsum"
-    },
-    {
-      title: "Reporter Site",
-      key: 1,
-      picture: ReporterMarketPlace,
-      body: "LoremIpsum"
-    },
-    {
-      title: "Pizza WordPress Site",
-      key: 3,
-      picture: PizzaShop,
-      body: "LoremIpsum"
-    },
-    {
-      title: "Investment/Banking Site Development",
-      key: 4,
-      picture: InvestSite,
-      body: "LoremIpsum"
-    },
-    {
-      title: "Financing Site Develpment",
-      key: 5,
-      picture: FinanceSite,
-      body: "LoremIpsum"
-    }
-  ],
-  pet: [
-    {
-      key: "2p",
-      picture: ImgCandyshop,
-      alt: "Practise Bootstrap",
-      title: "Bootstrap CSS"
-    },
-    {
-      key: "1p",
-      picture: ImgBurger,
-      alt:
-        "React practise Burger SAP",
-        href:
-        <a href="https://burger-react-alex-loian.web.app/">Demo</a>,
-      title: "Burger React"
-    },
-
-    {
-      key: "3p",
-      picture: ImgSocketChat,
-      alt: "Node JS with Socket IO online chats",
-      title: "Socket IO Chat"
-    },
-
-    {
-      key: "4p",
-      picture: ToDo,
-      alt: "React TO-DO app ",
-      title:
-        'React To-Do ',
-        href: <a href="https://to-do-list-app-ad59b.web.app/">Demo</a>
-    },
-    {
-      key: "4p",
-      picture: ReduxPic,
-      alt: "React TO-DO app ",
-      title:
-        'React To-Do ',
-        href:<a href="https://alex-loian-redux-playground.firebaseapp.com">Demo</a>
-    }
-  ],
+  
   about: {
     title: "About",
     name: "Alex Loian",
