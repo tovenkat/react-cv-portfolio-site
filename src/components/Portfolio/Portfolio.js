@@ -5,9 +5,10 @@ import Grid from '@material-ui/core/Grid';
 
 const theme = {
     backgroundColor:'#ffcc00',
-    width:'100%'
+    
 };
-
+const mainStyle={width:'100%',
+boxSizing:'border-box', textAlign:'center'};
 
 const Portfolio = (props) => {
     const portfolioItems = props.items.map((item)=>{
@@ -17,9 +18,9 @@ const Portfolio = (props) => {
             </Grid> 
         );
     });
-    return (<div>
+    return (<div style={mainStyle}>
                 <div>
-                <h1 style={{PaddingTop:'50px', marginBottom:'10px'}}>Portfolio</h1>
+                <h1>Portfolio</h1>
                 </div>
                 <Grid container spacing={3} alignItems="stretch" style={theme} justify='center'>
                     {portfolioItems}

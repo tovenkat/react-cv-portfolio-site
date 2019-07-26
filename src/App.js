@@ -13,6 +13,8 @@ import AboutMe from './components/AboutMe/AboutMe';
 import Experience from './components/Experience/Experience';
 import Portfolio from './components/Portfolio/Portfolio';
 import Pet from './components/PetProject/PetProject';
+import MainPage from './components/MainPage/MainPage';
+import Menu from './components/Menu/Menu';
 
 
 // homepage  "homepage": "https://alexldp.github.io/react-cv-portfolio-site/",
@@ -33,8 +35,10 @@ class App extends Component {
       language=DataRu;
     }
     return (<BrowserRouter>
-      <Route render={()=>(<Drawer changeLanguage={this.changeLanguageHandler}/>)}/>
-      <Route path="/" exact render={()=>(<Paralax about={language.about}/>)}/>
+      {/* <Route render={()=>(<Drawer changeLanguage={this.changeLanguageHandler}/>)}/> */}
+      {/* <Route path="/" exact render={()=>(<Paralax about={language.about}/>)}/> */}
+      <Menu/>
+      <Route path="/" exact component={MainPage}/>
       <Route path="/about" render={()=>(<AboutMe items={language.about}/>)}/>
       <Route path="/experience" render={()=>(<Experience data={language.exp}/>)}/>
       <Route path="/portfolio" render={()=>(<Portfolio items={language.portfolio}/>)}/>

@@ -2,11 +2,9 @@ import React from 'react';
 import Card from '../Card';
 import Grid from '@material-ui/core/Grid';
     
-const theme = {
-    backgroundColor:'#ffcc00',
-    top:'0px',
-    width:'100%'
-};
+const mainStyle={width:'100%',
+
+boxSizing:'border-box', textAlign:'center',backgroundColor:'#ffcc00'};
 
 const PetProject = (props) => {
     const petItems = props.items.map((item)=>{
@@ -15,9 +13,9 @@ const PetProject = (props) => {
             </Grid>);
     });
     return (
-        <div >
-            <h1  style={{marginBottom:'10px',}}>PET Projects</h1>
-            <Grid container spacing={3} style={theme} alignItems="center" justify='center' >
+        <div style={mainStyle}>
+            <h1>PET Projects</h1>
+            <Grid container spacing={3} alignItems="center" justify='center' >
                     {petItems} 
             </Grid>
         </div>);
