@@ -4,9 +4,20 @@ import { Parallax, ParallaxLayer } from "react-spring/renderprops-addons";
 import Button from "@material-ui/core/Button";
 import BuildIcon from "@material-ui/icons/Build";
 import ReactLogo from "../../assets/images/alex-loian-skills-react-logo.svg";
-import MacImage from "../../assets/images/alex-loian-dummy-picture-1.jpg";
+
 import classes from "./Parallax.module.css";
 import Qr from "../../assets/images/alex-loian-qr-code-telephone.png"
+
+import MacImage from "../../assets/images/alex-loian-dummy-picture-1.jpg";
+import Stock1 from "../../assets/images/alex-loian-cv-stock-photos-1.jpg";
+import Stock2 from "../../assets/images/alex-loian-cv-stock-photos-2.jpg";
+import Stock3 from "../../assets/images/alex-loian-cv-stock-photos-3.jpg";
+import Stock4 from "../../assets/images/alex-loian-cv-stock-photos-4.jpg";
+import Stock5 from "../../assets/images/alex-loian-cv-stock-photos-5.jpg";
+import Stock6 from "../../assets/images/alex-loian-cv-stock-photos-6.jpg";
+import Stock7 from "../../assets/images/alex-loian-cv-stock-photos-7.jpg";
+
+
 // Little helpers ...
 const url = (name, wrap = false) =>
   `${
@@ -73,88 +84,49 @@ class Custom extends React.Component {
     );
     const page2 = (
       <div>
-        <ParallaxLayer offset={1.6} speed={-0.1} style={{ opacity: 0.4 }}>
-          <img
-            alt="Alex Loian"
-            src={url("cloud")}
-            style={{ display: "block", width: "20%", marginLeft: "60%" }}
-          />
-          <img
-            alt="Alex Loian"
-            src={url("cloud")}
-            style={{ display: "block", width: "25%", marginLeft: "30%" }}
-          />
-          <img
-            alt="Alex Loian"
-            src={url("cloud")}
-            style={{ display: "block", width: "10%", marginLeft: "80%" }}
-          />
-        </ParallaxLayer>
         <ParallaxLayer
-          offset={1.1}
+          className={classes.First}
+          offset={1}
+          speed={1}
+          factor={3}
+          style={{
+            backgroundImage: imageWrapper(Stock5),
+            backgroundSize: "contain",
+            backgroundPositionX: "center",
+            top: "0px"
+          }}
+        />
+  
+        <ParallaxLayer
+          offset={1.8}
           speed={0.6}
-          style={{ pointerEvents: "none" }}
+          style={{ pointerEvents: "none"}}
         >
           <img
             alt="Alex Loian"
             src={ReactLogo}
             style={{ width: "20%", marginLeft: "70%" }}
           />
+         
         </ParallaxLayer>
-        <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.1 }}>
-          <img
-            alt="Alex Loian"
-            src={url("cloud")}
-            style={{ display: "block", width: "20%", marginLeft: "55%" }}
-          />
-          <img
-            alt="Alex Loian"
-            src={url("cloud")}
-            style={{ display: "block", width: "10%", marginLeft: "15%" }}
-          />
-        </ParallaxLayer>
+       
 
-        <ParallaxLayer offset={1.75} speed={0.5} style={{ opacity: 0.1 }}>
-          <img
-            alt="Alex Loian"
-            src={url("cloud")}
-            style={{ display: "block", width: "20%", marginLeft: "70%" }}
-          />
-          <img
-            alt="Alex Loian"
-            src={url("cloud")}
-            style={{ display: "block", width: "20%", marginLeft: "40%" }}
-          />
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={1} speed={0.2} style={{ opacity: 0.2 }}>
-          <img
-            alt="Alex Loian"
-            src={url("cloud")}
-            style={{ display: "block", width: "10%", marginLeft: "10%" }}
-          />
-          <img
-            alt="Alex Loian"
-            src={url("cloud")}
-            style={{ display: "block", width: "20%", marginLeft: "75%" }}
-          />
-        </ParallaxLayer>
+        
 
         <ParallaxLayer
-          offset={1}
-          speed={0.6}
+          offset={1.3}
+          speed={0.3}
           onClick={() => this.parallax.scrollTo(2)}
           style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "flex-start",
-            flexDirection: "column"
+            width:'30%',
+            left:'60%',
+            color:'white',
+            
+            
           }}
         > <p>Searching for:  </p>
         <h2>Front-End Web Developer</h2>
         <h3>Strong Junior Position</h3>
-          
-          <img alt="Alex Loian" src={url("bash")} style={{ width: "30%" }} />
           <h2>React/Redux/JS</h2>
           <p>Location: Dnipro, Ukraine</p>
         </ParallaxLayer>
@@ -162,6 +134,7 @@ class Custom extends React.Component {
     );
     const page3 = (
       <div>
+        
         <ParallaxLayer
           offset={2}
           speed={-0.3}
@@ -234,6 +207,20 @@ class Custom extends React.Component {
         </ParallaxLayer>
       </div>
     );
+    const page4 = (
+      <ParallaxLayer
+          className={classes.First}
+          offset={2}
+          speed={1}
+          factor={3}
+          style={{
+            backgroundImage: imageWrapper(Stock6),
+            backgroundSize: "contain",
+            backgroundPositionX: "center",
+            top: "0px"
+          }}
+        />
+    )
     return (
       <Parallax
         ref={ref => (this.parallax = ref)}
@@ -249,6 +236,7 @@ class Custom extends React.Component {
         {page1}
         {page2}
         {page3}
+        {page4}
         
       </Parallax>
     );
