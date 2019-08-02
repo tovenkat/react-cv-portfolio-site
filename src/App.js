@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import {Route} from 'react-router-dom';
 import {BrowserRouter,Switch,Redirect} from 'react-router-dom';
 
+
 import ReactGA from 'react-ga';
 
 import Experience from './components/Experience/Experience';
@@ -17,7 +18,7 @@ const App =()=> {
  
   const changeLanguageHandler =()=>{
     setLang(lang==='en'?'ru':'en')
-    console.log(lang);
+   
   };
   
     return (

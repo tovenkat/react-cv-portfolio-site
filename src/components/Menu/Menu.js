@@ -6,7 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import Drawer from "@material-ui/core/Drawer";
-import Button from "@material-ui/core/Button";
+import logo from '../../assets/images/alex-loian-logo.png'
 import List from "@material-ui/core/List";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import MailIcon from "@material-ui/icons/Mail";
@@ -92,7 +92,8 @@ export default function Menu(props) {
           
           <Hidden smDown>
             {/* Part of DesktopView */}
-            <Typography variant="h6" className={classes.title}>{props.language==='en'?'Alex Loian Front-End React Developer':'Разработчик'}</Typography>
+            <img style={{margin:'0 20px'}}src={logo} height='60px'alt="Alex Loian Logo Front-End"/>
+            <Typography variant="h6" className={classes.title}>{props.language==='en'?'Front-End Developer':'Фронт-енд Разработчик'}</Typography>
             
             <NavigationItems changeLanguage={props.changeLanguage} menuOpenHandler={menuOpenHandler} row='row' about={aboutOpen}/>
 

@@ -1,36 +1,18 @@
 import React, { useState } from "react";
-import List from "@material-ui/core/List";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import MailIcon from "@material-ui/icons/Mail";
 import Button from "@material-ui/core/Button";
-import { makeStyles } from "@material-ui/core/styles";
-
 import Switch from "@material-ui/core/Switch";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
-
 import { Link } from "react-router-dom";
 
-import NavigationItem from "./NavigationItem/NavigationItem";
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1
-  },
-  menuButton: {
-    marginRight: theme.spacing(2)
-  },
-  title: {
-    flexGrow: 1
-  }
-}));
 
 const NavigationItems = props => {
   const [lang, setLang] = useState(true);
-  const classes = useStyles();
+
   const drawerLinks = [
-    { label: "Home", to: "/" },
-    { label: "Experience", to: "/experience" },
-    { label: "Portfolio", to: "/portfolio" }
+    { label: lang?"Home":'Главная', to: "/" },
+    { label: lang?"Experience":'Опыт Работы', to: "/experience" },
+    { label: lang?"Portfolio":'Примеры Работ', to: "/portfolio" }
   ];
 
   const items = (
@@ -41,9 +23,9 @@ const NavigationItems = props => {
       onKeyDown={props.menuOpenHandler(false)}
     >
       {drawerLinks.map((text, index) => (
-        <Button color="inherit">
+        <Button key={index} color="inherit">
           <Link
-            key={index}
+            
             style={{
               textDecoration: "none",
               color: "white",
@@ -56,7 +38,7 @@ const NavigationItems = props => {
         </Button>
       ))}
       <Button color="inherit" onClick={props.about}>
-        About
+        {lang?"About":'Связаться'}
       </Button>
       <FormControlLabel
         control={
@@ -66,10 +48,10 @@ const NavigationItems = props => {
               setLang(!lang);
               props.changeLanguage();
             }}
-            value={lang ? "EN" : "RU"}
+            value={lang ? "EN" : "РУС"}
           />
         }
-        label={lang ? "EN" : "RU"}
+        label={lang ? "EN" : "РУС"}
         style={{margin:'15px'}}
       />
     </div>
