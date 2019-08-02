@@ -3,6 +3,7 @@ import LazyHero from "react-lazy-hero";
 import MacImage from "../../assets/images/alex-loian-dummy-picture-1.jpg";
 import Stock7 from "../../assets/images/alex-loian-cv-stock-photos-7.jpg";
 
+
 export default function MainPage() {
   return (
     <div style={{ width: "100%", backgroundColor: "whitesmoke" }}>
@@ -27,6 +28,7 @@ export default function MainPage() {
           a
         </a>
       </div>
+
     </div>
   );
 }

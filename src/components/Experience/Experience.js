@@ -1,5 +1,5 @@
 import React from "react";
-
+import Paper from '@material-ui/core/Paper';
 import Tab from "@material-ui/core/Tab";
 import {
   VerticalTimeline,
@@ -38,6 +38,7 @@ function ExpSwitch(props) {
       <VerticalTimeline style={{ margin: "0px" }}>
         {props.data.map(element => {
           return (
+           
             <VerticalTimelineElement
               key={element.key + 13}
               className="vertical-timeline-element--work"
@@ -70,6 +71,7 @@ function ExpSwitch(props) {
                   : null}
               </div>
             </VerticalTimelineElement>
+            
           );
         })}
       </VerticalTimeline>
