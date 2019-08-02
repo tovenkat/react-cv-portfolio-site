@@ -99,7 +99,7 @@ const dialog = (
     
    </DialogContent>
    <DialogActions>
-     <Button onClick={props.handleClose} color="primary">
+     <Button onClick={props.aboutClose} color="primary">
        Close
      </Button>
    </DialogActions>

@@ -18,14 +18,12 @@ export default function MainPage() {
                 <h2>Site is under Construction</h2>
             </div>
             <div style={{height:'300px',backgroundColor:'cyan'}}>
-
+                1
             </div>
-            <div>
-            <LazyHero opacity={0} minHeight='400px' parallaxOffset={60} isCentered={true}  imageSrc={Stock7}>
-                <h1 style={{color:'black',textAlign:'center', paddingBottom:'200px'}}>Alex Loian</h1>
-                
-            </LazyHero>
-        </div>
+            <div style={{height:'300px',backgroundColor:'cyan'}}>
+                <a href='#some' id='some'>a</a>
+            </div>
+         
         </div>
        
     )

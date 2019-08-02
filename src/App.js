@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import {Route} from 'react-router-dom';
-import {BrowserRouter,Switch} from 'react-router-dom';
+import {BrowserRouter,Switch,Redirect} from 'react-router-dom';
 
 import ReactGA from 'react-ga';
 
@@ -17,6 +17,7 @@ const App =()=> {
  
   const changeLanguageHandler =()=>{
     setLang(lang==='en'?'ru':'en')
+    console.log(lang);
   };
   
     return (
@@ -26,6 +27,7 @@ const App =()=> {
         <Route path="/" exact render={()=>(<MainPage language={lang} />)}/>
         <Route path="/experience" render={()=>(<Experience language={lang}/>)}/>
         <Route path="/portfolio" render={()=>(<Portfolio language={lang}/>)}/>
+        <Redirect to='/'/>
       </Switch>
   </BrowserRouter>);
   
