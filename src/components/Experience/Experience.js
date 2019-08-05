@@ -1,11 +1,5 @@
 import React, { useContext } from "react";
-import Paper from "@material-ui/core/Paper";
-import Tab from "@material-ui/core/Tab";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement
-} from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
+
 import { makeStyles } from "@material-ui/core/styles";
 import Fab from "@material-ui/core/Fab";
 import Data from "./ExperienceData";
@@ -18,7 +12,7 @@ const useStyles = makeStyles(theme => ({
     textAlign: "center",
     top: "0px",
     backgroundColor: "whitesmoke",
-    margin: "30px"
+    padding: "30px"
   }
 }));
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Route } from "react-router-dom";
 import { BrowserRouter, Switch, Redirect } from "react-router-dom";
 import { ContextProvider } from "./Context";
@@ -14,26 +14,14 @@ ReactGA.initialize("UA-134625728-1");
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 const App = () => {
-  const [lang, setLang] = useState("en");
-
-  const changeLanguageHandler = () => {
-    setLang(lang === "en" ? "ru" : "en");
-  };
-
   return (
     <ContextProvider>
       <BrowserRouter>
         <Menu />
         <Switch>
-          <Route path="/" exact render={() => <MainPage language={lang} />} />
-          <Route
-            path="/experience"
-            render={() => <Experience language={lang} />}
-          />
-          <Route
-            path="/portfolio"
-            render={() => <Portfolio language={lang} />}
-          />
+          <Route path="/" exact component={MainPage} />
+          <Route path="/experience" component={Experience} />
+          <Route path="/portfolio" component={Portfolio} />
           <Redirect to="/" />
         </Switch>
       </BrowserRouter>

@@ -7,11 +7,8 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import Drawer from "@material-ui/core/Drawer";
 import logo from "../../assets/images/alex-loian-logo.png";
-import List from "@material-ui/core/List";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import MailIcon from "@material-ui/icons/Mail";
 
-import {Context} from "../../Context";
+import { Context } from "../../Context";
 
 import Hidden from "@material-ui/core/Hidden";
 import NavigationItems from "./NavigationItems/NavigationItems";
@@ -33,6 +30,10 @@ const useStyles = makeStyles(theme => ({
   },
   drawer: {
     backgroundColor: "#3f51b5"
+  },
+  mobile: {
+    display: "flex",
+    justifyContent: "space-between"
   }
 }));
 
@@ -43,16 +44,13 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 export default function Menu(props) {
   const classes = useStyles();
 
-  const [language, setLanguage] = useContext(Context);
-
-  const [menu, setMenu] = React.useState(false);
-  const [open, setOpen] = React.useState(false);
+  const [language, , about, setAbout, menu, setMenu] = useContext(Context);
 
   const aboutOpen = () => {
-    setOpen(true);
+    setAbout(true);
   };
   const aboutClose = () => {
-    setOpen(false);
+    setAbout(false);
   };
 
   const menuOpenHandler = open => event => {
@@ -69,7 +67,7 @@ export default function Menu(props) {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <Hidden mdUp>
+          <Hidden mdUp className={classes.mobile}>
             {/* Part Of MobileView */}
             <IconButton
               onClick={menuOpenHandler(true)}
@@ -80,6 +78,12 @@ export default function Menu(props) {
             >
               <MenuIcon />
             </IconButton>
+            <img
+              style={{ margin: "10px 0px" }}
+              src={logo}
+              height="60px"
+              alt="Alex Loian Logo Front-End"
+            />
           </Hidden>
 
           <Hidden smDown>
@@ -114,12 +118,13 @@ export default function Menu(props) {
       >
         <NavigationItems
           row="column"
+          color
           changeLanguage={props.changeLanguage}
           menuOpenHandler={menuOpenHandler}
         />
       </Drawer>
 
-      <About open={open} Transition={Transition} aboutClose={aboutClose} />
+      <About open={about} Transition={Transition} aboutClose={aboutClose} />
     </div>
   );
 }

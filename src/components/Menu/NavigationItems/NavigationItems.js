@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import Button from "@material-ui/core/Button";
 import Switch from "@material-ui/core/Switch";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
@@ -32,7 +32,7 @@ const NavigationItems = props => {
           <Link
             style={{
               textDecoration: "none",
-              color: "white",
+              color: props.color ? "black" : "white",
               padding: "20px"
             }}
             to={text.to}
@@ -41,7 +41,7 @@ const NavigationItems = props => {
           </Link>
         </Button>
       ))}
-      <Button color="inherit" onClick={props.about}>
+      <Button style={{ padding: "25px" }} color="inherit" onClick={props.about}>
         {language === "en" ? "About" : "Связаться"}
       </Button>
       <FormControlLabel
