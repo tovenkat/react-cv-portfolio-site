@@ -1,18 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Button from "@material-ui/core/Button";
 import Switch from "@material-ui/core/Switch";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import { Link } from "react-router-dom";
-
-
+import { Context } from "../../../Context";
 
 const NavigationItems = props => {
-  const [lang, setLang] = useState(true);
+  const [language, setLanguage] = useContext(Context);
 
   const drawerLinks = [
-    { label: lang?"Home":'Главная', to: "/" },
-    { label: lang?"Experience":'Опыт Работы', to: "/experience" },
-    { label: lang?"Portfolio":'Примеры Работ', to: "/portfolio" }
+    { label: language === "en" ? "Home" : "Главная", to: "/" },
+    {
+      label: language === "en" ? "Experience" : "Опыт Работы",
+      to: "/experience"
+    },
+    {
+      label: language === "en" ? "Portfolio" : "Примеры Работ",
+      to: "/portfolio"
+    }
   ];
 
   const items = (
@@ -25,7 +30,6 @@ const NavigationItems = props => {
       {drawerLinks.map((text, index) => (
         <Button key={index} color="inherit">
           <Link
-            
             style={{
               textDecoration: "none",
               color: "white",
@@ -38,21 +42,20 @@ const NavigationItems = props => {
         </Button>
       ))}
       <Button color="inherit" onClick={props.about}>
-        {lang?"About":'Связаться'}
+        {language === "en" ? "About" : "Связаться"}
       </Button>
       <FormControlLabel
         control={
           <Switch
-            checked={lang}
+            checked={language === "en"}
             onChange={() => {
-              setLang(!lang);
-              props.changeLanguage();
+              setLanguage(language === "en" ? "ru" : "en");
             }}
-            value={lang ? "EN" : "РУС"}
+            value={language === "en" ? "EN" : "РУС"}
           />
         }
-        label={lang ? "EN" : "РУС"}
-        style={{margin:'15px'}}
+        label={language === "en" ? "EN" : "РУС"}
+        style={{ margin: "15px" }}
       />
     </div>
   );
