@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import Grid from "@material-ui/core/Grid";
 import { items } from "./PortfolioData";
+import { Context } from "../../Context";
 
 import PortfolioItem from "./PortfolioItem/PortfolioItem";
 
@@ -15,6 +16,13 @@ const mainStyle = {
 };
 
 const Portfolio = props => {
+  const [lang] = useContext(Context);
+
+  let data = items.en;
+  if (lang === "ru") {
+    data = items.ru;
+  }
+
   const reactItems = (
     <Grid
       container
@@ -23,7 +31,7 @@ const Portfolio = props => {
       style={theme}
       justify="center"
     >
-      {items.en.map(item => {
+      {data.map(item => {
         return (
           <Grid item xs={10} sm={10} md={4} lg={4}>
             <PortfolioItem item={item} />
@@ -59,7 +67,7 @@ const Portfolio = props => {
           color: "black"
         }}
       >
-        React Projects
+        {lang === "en" ? "React Projects" : "Реакт Проэкты"}
       </h1>
       {reactItems}
       <h1
@@ -69,7 +77,7 @@ const Portfolio = props => {
           color: "black"
         }}
       >
-        Wordpress Projects
+        {lang === "en" ? "Wordpress Projects" : "Вордпресс Проэкты"}
       </h1>
     </div>
   );
