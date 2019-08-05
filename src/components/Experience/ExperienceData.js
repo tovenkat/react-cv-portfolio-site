@@ -202,10 +202,14 @@ const expru = [
   }
 ];
 const en = {
-  exp: exp
+  exp: exp,
+  currentLabel: ["My Experience", "Work Experience", "Study Experience"],
+  buttonLabel: ["Sort to Work", "Sort to Education", "Sort to General"]
 };
 const ru = {
-  exp: expru
+  exp: expru,
+  currentLabel: ["Общий Опыт", "Опыт работы", "Образование"],
+  buttonLabel: ["Опыт Работы", "Образование", "Общий опыт"]
 };
 
 const Data = {
