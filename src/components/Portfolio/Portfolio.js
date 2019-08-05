@@ -2,6 +2,7 @@ import React from "react";
 import Card from "../Card";
 import Grid from "@material-ui/core/Grid";
 import Data from "./PortfolioData";
+import PortfolioItem from "./PortfolioItem/PortfolioItem";
 
 const theme = {
   backgroundColor: "whitesmoke"
@@ -82,6 +83,33 @@ const Portfolio = props => {
       </h1>
       <Grid container spacing={3} alignItems="center" justify="center">
         {petItems}
+      </Grid>
+
+      <Grid
+        container
+        spacing={1}
+        alignItems="center"
+        style={theme}
+        justify="center"
+      >
+        <Grid item xs={10} sm={10} md={4} lg={3}>
+          <PortfolioItem />
+        </Grid>
+        <Grid item xs={10} sm={10} md={4} lg={3}>
+          <PortfolioItem />
+        </Grid>
+        <Grid item xs={10} sm={10} md={4} lg={3}>
+          <PortfolioItem />
+        </Grid>
+        <Grid item xs={10} sm={10} md={4} lg={3}>
+          <PortfolioItem />
+        </Grid>
+        <Grid item xs={10} sm={10} md={4} lg={4}>
+          <PortfolioItem />
+        </Grid>
+        <Grid item xs={10} sm={10} md={4} lg={4}>
+          <PortfolioItem />
+        </Grid>
       </Grid>
     </div>
   );
