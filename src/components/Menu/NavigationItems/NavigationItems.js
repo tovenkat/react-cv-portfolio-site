@@ -41,9 +41,11 @@ const NavigationItems = props => {
           </Link>
         </Button>
       ))}
+
       <Button style={{ padding: "25px" }} color="inherit" onClick={props.about}>
         {language === "en" ? "About" : "Связаться"}
       </Button>
+
       <FormControlLabel
         control={
           <Switch

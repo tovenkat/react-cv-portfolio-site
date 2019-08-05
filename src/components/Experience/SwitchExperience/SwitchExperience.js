@@ -6,7 +6,6 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 
 const SwitchExperience = props => {
-  console.log(props.type);
   let elements = props.data.exp;
   if (props.type === "work") {
     elements = props.data.exp.filter(item => item.type === "work");

@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import LazyHero from "react-lazy-hero";
+import { Context } from "../../Context";
 import MacImage from "../../assets/images/alex-loian-dummy-picture-1.jpg";
 import Stock2 from "../../assets/images/alex-loian-cv-stock-photos-2.jpg";
 import Stock3 from "../../assets/images/alex-loian-cv-stock-photos-3.jpg";
@@ -24,6 +25,7 @@ const insideStyles = {
 };
 
 export default function MainPage() {
+  const [language] = useContext(Context);
   return (
     <div style={{ width: "100%", backgroundColor: "whitesmoke" }}>
       <LazyHero
@@ -34,12 +36,20 @@ export default function MainPage() {
         imageSrc={MacImage}
       >
         <div style={{ color: "black", paddingBottom: "38vh" }}>
-          <h1>Alex Loian</h1>
-          <h3>React, Redux, Javascript</h3>
+          <h1>{language === "en" ? "Alex Loian" : "Алексей Лоян"}</h1>
+          <h3>
+            {language === "en"
+              ? "React, Redux, Javascript"
+              : "Реакт, Редакс, ДжаваСкрипт"}
+          </h3>
         </div>
       </LazyHero>
       <div style={{ textAlign: "center" }}>
-        <h2>Сайт в разработке</h2>
+        <h2>
+          {language === "en"
+            ? "Currently site is under construction"
+            : "Сайт в разработке"}
+        </h2>
       </div>
       <div style={{ height: "300px", backgroundColor: "cyan" }}>1</div>
 

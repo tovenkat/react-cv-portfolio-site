@@ -18,6 +18,10 @@ import Slide from "@material-ui/core/Slide";
 import { Link } from "react-router-dom";
 import About from "./About/About";
 
+import Button from "@material-ui/core/Button";
+import Menu from "@material-ui/core/Menu";
+import MenuItem from "@material-ui/core/MenuItem";
+
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1
@@ -34,6 +38,10 @@ const useStyles = makeStyles(theme => ({
   mobile: {
     display: "flex",
     justifyContent: "space-between"
+  },
+  links: {
+    textDecoration: "none",
+    color: "black"
   }
 }));
 
@@ -41,10 +49,23 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-export default function Menu(props) {
+export default function MenuMain(props) {
+  // aasssas
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  function handleClick(event) {
+    setAnchorEl(event.currentTarget);
+  }
+
+  function handleClose() {
+    setAnchorEl(null);
+  }
+  //ssddsdsds
   const classes = useStyles();
 
-  const [language, , about, setAbout, menu, setMenu] = useContext(Context);
+  const [language, setLanguage, about, setAbout, menu, setMenu] = useContext(
+    Context
+  );
 
   const aboutOpen = () => {
     setAbout(true);
@@ -63,59 +84,101 @@ export default function Menu(props) {
     setMenu(open);
   };
 
+  const mobileView = (
+    <Hidden mdUp className={classes.mobile}>
+      {/* Part Of MobileView */}
+      <IconButton
+        edge="start"
+        className={classes.menuButton}
+        color="inherit"
+        aria-label="Menu"
+        aria-controls="simple-menu"
+        aria-haspopup="true"
+        onClick={handleClick}
+      >
+        <MenuIcon />
+      </IconButton>
+      <Link to="/">
+        <img
+          style={{ margin: "10px 0px" }}
+          src={logo}
+          height="60px"
+          alt="Alex Loian Logo Front-End"
+        />
+      </Link>
+    </Hidden>
+  );
+  const desktopView = (
+    <Hidden smDown>
+      {/* Part of DesktopView */}
+      <Link to="/">
+        <img
+          style={{ margin: "0 20px" }}
+          src={logo}
+          height="60px"
+          alt="Alex Loian Logo Front-End"
+        />
+      </Link>
+      <Typography variant="h6" className={classes.title}>
+        {language === "en" ? "Front-End Developer" : "Фронт-енд Разработчик"}
+      </Typography>
+
+      <NavigationItems
+        changeLanguage={props.changeLanguage}
+        menuOpenHandler={menuOpenHandler}
+        row="row"
+        about={aboutOpen}
+      />
+    </Hidden>
+  );
+
   return (
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <Hidden mdUp className={classes.mobile}>
-            {/* Part Of MobileView */}
-            <IconButton
-              onClick={menuOpenHandler(true)}
-              edge="start"
-              className={classes.menuButton}
-              color="inherit"
-              aria-label="Menu"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Link to="/">
-              <img
-                style={{ margin: "10px 0px" }}
-                src={logo}
-                height="60px"
-                alt="Alex Loian Logo Front-End"
-              />
-            </Link>
-          </Hidden>
-
-          <Hidden smDown>
-            {/* Part of DesktopView */}
-            <Link to="/">
-              <img
-                style={{ margin: "0 20px" }}
-                src={logo}
-                height="60px"
-                alt="Alex Loian Logo Front-End"
-              />
-            </Link>
-            <Typography variant="h6" className={classes.title}>
-              {language === "en"
-                ? "Front-End Developer"
-                : "Фронт-енд Разработчик"}
-            </Typography>
-
-            <NavigationItems
-              changeLanguage={props.changeLanguage}
-              menuOpenHandler={menuOpenHandler}
-              row="row"
-              about={aboutOpen}
-            />
-          </Hidden>
+          {mobileView}
+          {desktopView}
         </Toolbar>
       </AppBar>
 
-      {/* Боковое Меню */}
-      <Drawer
+      <Menu
+        id="simple-menu"
+        anchorEl={anchorEl}
+        keepMounted
+        open={Boolean(anchorEl)}
+        onClose={handleClose}
+      >
+        <MenuItem onClick={handleClose} className={classes.links}>
+          <Link to="/" className={classes.links}>
+            Home
+          </Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link to="/portfolio" className={classes.links}>
+            Portfolio
+          </Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link to="/experience" className={classes.links}>
+            Experience
+          </Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <span onClick={aboutOpen} className={classes.links}>
+            About
+          </span>
+        </MenuItem>
+        <MenuItem
+          onClick={() => {
+            handleClose();
+            setLanguage(language === "en" ? "ru" : "en");
+          }}
+        >
+          ChangeLanguage
+        </MenuItem>
+      </Menu>
+
+      {/* <Drawer
         className={classes.drawer}
         open={menu}
         onClose={menuOpenHandler(false)}
@@ -126,7 +189,7 @@ export default function Menu(props) {
           changeLanguage={props.changeLanguage}
           menuOpenHandler={menuOpenHandler}
         />
-      </Drawer>
+      </Drawer> */}
 
       <About open={about} Transition={Transition} aboutClose={aboutClose} />
     </div>
