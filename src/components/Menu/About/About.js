@@ -1,10 +1,6 @@
 import React from "react";
 import Avatar from "../../../assets/images/alex-loian-fron-end-developer-avatar.jpg";
 import Dialog from "@material-ui/core/Dialog";
-import DialogActions from "@material-ui/core/DialogActions";
-import DialogContent from "@material-ui/core/DialogContent";
-import Grid from "@material-ui/core/Grid";
-import DialogTitle from "@material-ui/core/DialogTitle";
 import Button from "@material-ui/core/Button";
 import cv from "../../../assets/images/CV-Alex-Loian-Front-End-Developer-React-Resume.pdf";
 

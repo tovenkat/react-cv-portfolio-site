@@ -5,7 +5,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
-import Drawer from "@material-ui/core/Drawer";
+
 import logo from "../../assets/images/alex-loian-logo.png";
 
 import { Context } from "../../Context";
@@ -18,7 +18,6 @@ import Slide from "@material-ui/core/Slide";
 import { Link } from "react-router-dom";
 import About from "./About/About";
 
-import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 
