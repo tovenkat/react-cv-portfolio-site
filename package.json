@@ -12,6 +12,7 @@
     "react-ga": "^2.5.7",
     "react-grid-gallery": "^0.5.5",
     "react-lazy-hero": "^2.0.0",
+    "react-parallax": "^2.2.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "react-spring": "^8.0.27",

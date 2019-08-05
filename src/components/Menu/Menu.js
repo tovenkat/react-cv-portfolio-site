@@ -78,22 +78,26 @@ export default function Menu(props) {
             >
               <MenuIcon />
             </IconButton>
-            <img
-              style={{ margin: "10px 0px" }}
-              src={logo}
-              height="60px"
-              alt="Alex Loian Logo Front-End"
-            />
+            <Link to="/">
+              <img
+                style={{ margin: "10px 0px" }}
+                src={logo}
+                height="60px"
+                alt="Alex Loian Logo Front-End"
+              />
+            </Link>
           </Hidden>
 
           <Hidden smDown>
             {/* Part of DesktopView */}
-            <img
-              style={{ margin: "0 20px" }}
-              src={logo}
-              height="60px"
-              alt="Alex Loian Logo Front-End"
-            />
+            <Link to="/">
+              <img
+                style={{ margin: "0 20px" }}
+                src={logo}
+                height="60px"
+                alt="Alex Loian Logo Front-End"
+              />
+            </Link>
             <Typography variant="h6" className={classes.title}>
               {language === "en"
                 ? "Front-End Developer"
