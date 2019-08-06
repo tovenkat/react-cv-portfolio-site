@@ -11,6 +11,14 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
+import {
+  FaPhone,
+  FaLinkedin,
+  FaGithub,
+  FaTimes,
+  FaPaperclip
+} from "react-icons/fa";
+import IconButton from "@material-ui/core/IconButton";
 
 const useStyles = makeStyles({
   card: {
@@ -19,7 +27,7 @@ const useStyles = makeStyles({
   },
   actionGroup: {
     display: "flex",
-    justifyContent: "space-around"
+    justifyContent: "space-between"
   }
 });
 const About = props => {
@@ -53,27 +61,34 @@ const About = props => {
         >
           CV
         </Button>
-        <Button size="small" color="primary" href="https://github.com/AlexLDP">
-          GitHub
-        </Button>
-        <Button
+        <IconButton
+          size="small"
+          color="primary"
+          href="https://github.com/AlexLDP"
+        >
+          <FaGithub />
+        </IconButton>
+        <IconButton
           size="small"
           color="primary"
           href="https://www.linkedin.com/in/alex-loian-82828284"
         >
-          LinkedIN
-        </Button>
-      </CardActions>
-      <CardActions className={classes.actionGroup}>
-        <Button size="small" color="primary" href="tel:0980506389">
-          Call
-        </Button>
-        <Button size="small" color="primary" href="mailto:wisehelper@gmail.com">
-          Email
-        </Button>
-        <Button size="small" color="primary" onClick={props.aboutClose}>
-          Close
-        </Button>
+          <FaLinkedin />
+        </IconButton>
+
+        <IconButton size="small" color="primary" href="tel:0980506389">
+          <FaPhone />
+        </IconButton>
+        <IconButton
+          size="small"
+          color="primary"
+          href="mailto:wisehelper@gmail.com"
+        >
+          <FaPaperclip />
+        </IconButton>
+        <IconButton size="small" color="primary" onClick={props.aboutClose}>
+          <FaTimes />
+        </IconButton>
       </CardActions>
     </Card>
   );
