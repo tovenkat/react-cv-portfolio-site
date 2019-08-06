@@ -10,48 +10,76 @@ import { FaStarHalfAlt, FaStar, FaRegStar } from "react-icons/fa";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: "50%",
+    width: "95%",
     marginTop: theme.spacing(3),
     overflowX: "auto",
     margin: "auto"
   },
   table: {
-    minWidth: 650
+    minWidth: 300
   }
 }));
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
-
-const rows = [
-  createData("React", 159),
-  createData("Redux", 237),
-  createData("JavaScript", 262),
-  createData("Node Js", 305),
-  createData("CSS", 356)
-];
-
-export default function Skill() {
+const stars = val => {
+  switch (val) {
+    case 1:
+      return (
+        <>
+          <FaStar />
+          <FaStar />
+          <FaRegStar />
+          <FaRegStar />
+        </>
+      );
+    case 2:
+      return (
+        <>
+          <FaStar />
+          <FaStar />
+          <FaStarHalfAlt />
+          <FaRegStar />
+        </>
+      );
+    case 3:
+      return (
+        <>
+          <FaStar />
+          <FaStar />
+          <FaStar />
+          <FaStar />
+        </>
+      );
+    default:
+      return (
+        <>
+          <FaStar />
+          <FaRegStar />
+          <FaRegStar />
+          <FaRegStar />
+        </>
+      );
+  }
+};
+export default function Skill(props) {
   const classes = useStyles();
 
   return (
     <Paper className={classes.root}>
-      <FaStarHalfAlt /> <FaStar /> <FaRegStar />
+      <h3>{props.title}</h3>
       <Table className={classes.table}>
         <TableHead>
           <TableRow>
-            <TableCell>Name of the Skill</TableCell>
-            <TableCell align="right">Knowledges</TableCell>
+            <TableCell>Skill:</TableCell>
+            <TableCell align="right">Knowledge</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map(row => (
-            <TableRow key={row.name}>
+          {props.data.map((item, index) => (
+            <TableRow key={index}>
               <TableCell component="th" scope="row">
-                {row.name}
+                {item.name}
               </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
+              <TableCell align="right">{stars(item.value)}</TableCell>
             </TableRow>
           ))}
         </TableBody>

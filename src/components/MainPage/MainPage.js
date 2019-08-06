@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import LazyHero from "react-lazy-hero";
 import { Context } from "../../Context";
 import Skills from "./Skills/Skills";
+import Grid from "@material-ui/core/Grid";
 import MacImage from "../../assets/images/alex-loian-dummy-picture-1.jpg";
 import Stock2 from "../../assets/images/alex-loian-cv-stock-photos-2.jpg";
 import Stock3 from "../../assets/images/alex-loian-cv-stock-photos-3.jpg";
@@ -27,6 +28,13 @@ const insideStyles = {
 
 export default function MainPage() {
   const [language] = useContext(Context);
+
+  const recomendArea = (
+    <>
+      <h1>Recomendations</h1>
+      <div style={{ height: "600px", backgroundColor: "whitesmoke" }}>1</div>
+    </>
+  );
   return (
     <div style={{ width: "100%", backgroundColor: "whitesmoke" }}>
       <LazyHero
@@ -56,27 +64,22 @@ export default function MainPage() {
       <div>
         <div style={styles}>
           <div name="Parallax" />
-          <h1>Skills</h1>
+
           <Skills />
-          <div style={{ height: "600px", backgroundColor: "whitesmoke" }} />
+
           <Parallax bgImage={Stock5} strength={500}>
             <div style={{ height: 500 }}>
               <div style={insideStyles}>HTML inside the parallax</div>
             </div>
           </Parallax>
-          <h1>Skills</h1>
-          <Skills />
-          <div style={{ height: "600px", backgroundColor: "whitesmoke" }} />
+          {recomendArea}
           <div name="Parallax" />
           <Parallax bgImage={Stock6} strength={500}>
             <div style={{ height: 500 }}>
               <div style={insideStyles}>HTML inside the parallax</div>
             </div>
           </Parallax>
-          <h1>Recomendations</h1>
-          <div style={{ height: "600px", backgroundColor: "whitesmoke" }}>
-            1
-          </div>
+          {recomendArea}
           <div name="Parallax" />
           <Parallax bgImage={Stock4} strength={500}>
             <div style={{ height: 500 }}>
