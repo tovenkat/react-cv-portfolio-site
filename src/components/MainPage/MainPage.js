@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import LazyHero from "react-lazy-hero";
 import { Context } from "../../Context";
+import Skills from "./Skills/Skills";
 import MacImage from "../../assets/images/alex-loian-dummy-picture-1.jpg";
 import Stock2 from "../../assets/images/alex-loian-cv-stock-photos-2.jpg";
 import Stock3 from "../../assets/images/alex-loian-cv-stock-photos-3.jpg";
@@ -45,30 +46,37 @@ export default function MainPage() {
         </div>
       </LazyHero>
       <div style={{ textAlign: "center" }}>
-        <h2>
+        <h1>
           {language === "en"
-            ? "Currently site is under construction"
+            ? "Site is Under Construction"
             : "Сайт в разработке"}
-        </h2>
+        </h1>
       </div>
-      <div style={{ height: "300px", backgroundColor: "cyan" }}>1</div>
 
       <div>
         <div style={styles}>
           <div name="Parallax" />
+          <h1>Skills</h1>
+          <Skills />
+          <div style={{ height: "600px", backgroundColor: "whitesmoke" }} />
           <Parallax bgImage={Stock5} strength={500}>
             <div style={{ height: 500 }}>
               <div style={insideStyles}>HTML inside the parallax</div>
             </div>
           </Parallax>
-          <h1>| | |</h1>
+          <h1>Skills</h1>
+          <Skills />
+          <div style={{ height: "600px", backgroundColor: "whitesmoke" }} />
           <div name="Parallax" />
           <Parallax bgImage={Stock6} strength={500}>
             <div style={{ height: 500 }}>
               <div style={insideStyles}>HTML inside the parallax</div>
             </div>
           </Parallax>
-          <h1>| | |</h1>
+          <h1>Recomendations</h1>
+          <div style={{ height: "600px", backgroundColor: "whitesmoke" }}>
+            1
+          </div>
           <div name="Parallax" />
           <Parallax bgImage={Stock4} strength={500}>
             <div style={{ height: 500 }}>

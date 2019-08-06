@@ -11,7 +11,7 @@ const NavigationItems = props => {
   const drawerLinks = [
     { label: language === "en" ? "Home" : "Главная", to: "/" },
     {
-      label: language === "en" ? "Experience" : "Опыт Работы",
+      label: language === "en" ? "Сareer" : "Опыт Работы",
       to: "/experience"
     },
     {
@@ -43,7 +43,7 @@ const NavigationItems = props => {
       ))}
 
       <Button style={{ padding: "25px" }} color="inherit" onClick={props.about}>
-        {language === "en" ? "About" : "Связаться"}
+        {language === "en" ? "Contact" : "Связаться"}
       </Button>
 
       <FormControlLabel

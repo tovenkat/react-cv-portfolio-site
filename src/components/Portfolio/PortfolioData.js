@@ -9,8 +9,11 @@ import ImgCandyshop from "../../assets/images/alex-loian-pet-project-bootstrap-c
 import ImgBurger from "../../assets/images/alex-loian-pet-project-react-burger.png";
 import ImgSocketChat from "../../assets/images/alex-loian-pet-project-socket-chat.png";
 import ToDo from "../../assets/images/alex-loian-pet-project-to-do.png";
-import ReduxPic from "../../assets/images/alex-loian-pet-project-react-redux.png";
+
 import Rest from "../../assets/images/alex-loian-react-caspio-rest.png";
+import Redux from "../../assets/images/alex-loian-pet-project-react-redux.png";
+import MultiStep from "../../assets/images/alex-loian-multi-step-form.png";
+import CvSite from "../../assets/images/alex-loian-cv-site.png";
 
 const Data = {
   en: {
@@ -77,7 +80,7 @@ const Data = {
       },
       {
         key: "5pet",
-        picture: ReduxPic,
+
         alt: "React TO-DO app ",
         title: "React To-Do ",
         href: (
@@ -108,6 +111,15 @@ const reactEn = [
     skills: ["React", "Material", "Firebase"]
   },
   {
+    title: "React CV PortFolio Site",
+    subTitle: "August 6,2019",
+    img: CvSite,
+    demoLink: "https://alexloian.com/",
+    gitHubLink: "https://github.com/AlexLDP/react-cv-portfolio-site",
+    description: `CV Portfolio Site`,
+    skills: ["React", "Material", "React Hooks"]
+  },
+  {
     title: "React REST Token",
     subTitle: "June 5,2019",
     img: Rest,
@@ -115,6 +127,34 @@ const reactEn = [
     gitHubLink: "https://github.com/AlexLDP/react-to-do",
     description: `Capsio Support Helper. REST Token Generator for Caspio REST`,
     skills: ["React", "Material", "AJAX", "REST", "Caspio"]
+  },
+
+  {
+    title: "React Redux Training",
+    subTitle: "June 5,2019",
+    img: Redux,
+    demoLink: "https://alex-loian-redux-playground.web.app/",
+    gitHubLink: "https://github.com/AlexLDP/Redux-Training-Playground",
+    description: `Capsio Support Helper. REST Token Generator for Caspio REST`,
+    skills: ["React", "Material", "AJAX", "REST", "Caspio"]
+  },
+  {
+    title: "React Multi-Step Submission Form",
+    subTitle: "July 25,2019",
+    img: MultiStep,
+    demoLink: "https://alexldp.github.io/Multistep-Form-React/",
+    gitHubLink: "https://github.com/AlexLDP/Multistep-Form-React",
+    description: `Simple Multi-Step Submission Form`,
+    skills: ["React", "React Hooks", "Material"]
+  },
+  {
+    title: "React Social Media Network",
+    subTitle: "August 21,2019",
+    img: MultiStep,
+    demoLink: "https://alexldp.github.io/Multistep-Form-React/",
+    gitHubLink: "https://github.com/AlexLDP/social-media-app",
+    description: `Social Media Network. This app uses firebase back-end part`,
+    skills: ["React", "NodeJS", "React Hooks", "Material", "Firebase"]
   }
 ];
 const reactRu = [

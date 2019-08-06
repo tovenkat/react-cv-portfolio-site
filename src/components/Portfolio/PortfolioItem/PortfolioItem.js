@@ -84,7 +84,6 @@ export default function PortfolioItem(props) {
               return (
                 <Chip
                   key={key}
-                  avatar={FaPlay}
                   color="secondary"
                   label={element}
                   className={classes.chip}

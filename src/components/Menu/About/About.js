@@ -56,6 +56,7 @@ const About = props => {
         <Button
           size="small"
           color="primary"
+          title="CV Download"
           download="Alex-Loian-CV-React-Developer"
           href={cv}
         >
@@ -64,6 +65,8 @@ const About = props => {
         <IconButton
           size="small"
           color="primary"
+          label="GitHuB"
+          title="GitHuB"
           href="https://github.com/AlexLDP"
         >
           <FaGithub />
@@ -71,22 +74,34 @@ const About = props => {
         <IconButton
           size="small"
           color="primary"
+          title="LinkedIn"
           href="https://www.linkedin.com/in/alex-loian-82828284"
         >
           <FaLinkedin />
         </IconButton>
 
-        <IconButton size="small" color="primary" href="tel:0980506389">
+        <IconButton
+          title="Call Me"
+          size="small"
+          color="primary"
+          href="tel:0980506389"
+        >
           <FaPhone />
         </IconButton>
         <IconButton
           size="small"
           color="primary"
+          title="Email Me"
           href="mailto:wisehelper@gmail.com"
         >
           <FaPaperclip />
         </IconButton>
-        <IconButton size="small" color="primary" onClick={props.aboutClose}>
+        <IconButton
+          title="Close"
+          size="small"
+          color="primary"
+          onClick={props.aboutClose}
+        >
           <FaTimes />
         </IconButton>
       </CardActions>
