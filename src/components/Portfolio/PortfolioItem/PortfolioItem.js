@@ -17,7 +17,10 @@ import { FaGithub, FaPlay } from "react-icons/fa";
 
 const useStyles = makeStyles(theme => ({
   card: {
-    maxWidth: 450
+    maxWidth: 500,
+    width: "98%",
+    margin: "auto",
+    boxSizing: "border-box"
   },
   chip: {
     margin: theme.spacing(1)
@@ -76,9 +79,10 @@ export default function PortfolioItem(props) {
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography paragraph>
-            {props.item.skills.map(element => {
+            {props.item.skills.map((element, key) => {
               return (
                 <Chip
+                  key={key}
                   avatar={FaPlay}
                   color="secondary"
                   label={element}

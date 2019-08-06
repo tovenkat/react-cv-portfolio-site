@@ -6,11 +6,13 @@ import { Context } from "../../Context";
 import PortfolioItem from "./PortfolioItem/PortfolioItem";
 
 const theme = {
-  backgroundColor: "white"
+  backgroundColor: "white",
+  margin: "auto"
 };
 const mainStyle = {
   width: "100%",
   marginTop: "0px",
+  margin: "auto",
   boxSizing: "border-box",
   textAlign: "center"
 };
@@ -26,14 +28,14 @@ const Portfolio = props => {
   const reactItems = (
     <Grid
       container
-      spacing={1}
+      direction="row"
+      justify="space-around"
       alignItems="center"
       style={theme}
-      justify="center"
     >
-      {data.map(item => {
+      {data.map((item, key) => {
         return (
-          <Grid item xs={10} sm={10} md={4} lg={4}>
+          <Grid key={key} item xs={10} sm={10} md={4} lg={4}>
             <PortfolioItem item={item} />
           </Grid>
         );
@@ -48,9 +50,9 @@ const Portfolio = props => {
       style={theme}
       justify="center"
     >
-      {items.en.map(item => {
+      {items.en.map((item, key) => {
         return (
-          <Grid item xs={10} sm={10} md={4} lg={4}>
+          <Grid key={key} item xs={10} sm={10} md={4} lg={4}>
             <PortfolioItem item={item} />
           </Grid>
         );
