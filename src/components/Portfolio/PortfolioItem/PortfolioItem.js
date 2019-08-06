@@ -17,10 +17,11 @@ import { FaGithub, FaPlay } from "react-icons/fa";
 
 const useStyles = makeStyles(theme => ({
   card: {
-    maxWidth: 500,
+    maxWidth: 550,
     width: "98%",
     margin: "auto",
-    boxSizing: "border-box"
+    boxSizing: "border-box",
+    marginBottom: "15px"
   },
   chip: {
     margin: theme.spacing(1)

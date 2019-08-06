@@ -35,7 +35,7 @@ const Portfolio = props => {
     >
       {data.map((item, key) => {
         return (
-          <Grid key={key} item xs={10} sm={10} md={4} lg={4}>
+          <Grid key={key} item xs={10} sm={11} md={5} lg={4}>
             <PortfolioItem item={item} />
           </Grid>
         );
