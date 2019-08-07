@@ -2,10 +2,10 @@ import React from "react";
 import Data from "./ReccommendationsData";
 import { makeStyles } from "@material-ui/core/styles";
 import Avatar from "@material-ui/core/Avatar";
-import Grid from "@material-ui/core/Grid";
+import Carousel from "nuka-carousel";
 
 import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
+
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
@@ -19,9 +19,12 @@ const useStyles = makeStyles({
     height: 180
   },
   card: {
-    maxWidth: 400,
-
-    margin: "15px auto"
+    maxWidth: 500,
+    margin: "auto",
+    marginBottom: "40px"
+  },
+  wrapper: {
+    margin: "10px"
   }
 });
 
@@ -29,14 +32,15 @@ const Recommendations = () => {
   const classes = useStyles();
   const list = Data.map(item => {
     return (
-      <Grid item xs={12} sm={12} md={6} lg={3}>
+      // <Grid container direction="row" justify="center" alignItems="center">
+      //   <Grid item xs={12} sm={12} md={6} lg={3}>
+      <div className={classes.wrapper}>
         <Card className={classes.card}>
           <Avatar
             alt={item.name}
             src={item.img}
             className={classes.bigAvatar}
           />
-
           <CardContent>
             <Typography variant="h5" gutterBottom>
               {item.name}
@@ -54,7 +58,7 @@ const Recommendations = () => {
 
           <CardActions>
             <IconButton
-              size="large"
+              size="medium"
               color="primary"
               title="LinkedIn"
               href={item.linkedIn}
@@ -63,14 +67,20 @@ const Recommendations = () => {
             </IconButton>
           </CardActions>
         </Card>
-      </Grid>
+      </div>
     );
   });
 
   return (
-    <Grid container direction="row" justify="center" alignItems="center">
+    <Carousel
+      autoplay
+      withoutControls
+      autoplayInterval={2200}
+      cellAlign="center"
+      wrapAround
+    >
       {list}
-    </Grid>
+    </Carousel>
   );
 };
 
