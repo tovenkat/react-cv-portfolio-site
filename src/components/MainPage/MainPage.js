@@ -2,16 +2,13 @@ import React, { useContext } from "react";
 import LazyHero from "react-lazy-hero";
 import { Context } from "../../Context";
 import Skills from "./Skills/Skills";
-import Grid from "@material-ui/core/Grid";
+
 import Typography from "@material-ui/core/Typography";
 import Recomendations from "./Recommendations/Recommendations";
 import MacImage from "../../assets/images/alex-loian-dummy-picture-1.jpg";
-import Stock2 from "../../assets/images/alex-loian-cv-stock-photos-2.jpg";
-import Stock3 from "../../assets/images/alex-loian-cv-stock-photos-3.jpg";
+
 import Stock4 from "../../assets/images/alex-loian-cv-stock-photos-4.jpg";
 import Stock5 from "../../assets/images/alex-loian-cv-stock-photos-5.jpg";
-import Stock6 from "../../assets/images/alex-loian-cv-stock-photos-6.jpg";
-import Stock7 from "../../assets/images/alex-loian-cv-stock-photos-7.jpg";
 
 import { Parallax } from "react-parallax";
 
