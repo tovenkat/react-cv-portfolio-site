@@ -5,10 +5,10 @@ import Skills from "./Skills/Skills";
 
 import Typography from "@material-ui/core/Typography";
 import Recomendations from "./Recommendations/Recommendations";
-import MacImage from "../../assets/images/alex-loian-dummy-picture-1.jpg";
+import MacImage from "../../assets/images/parallax/alex-loian-parallax-1.jpg";
 
-import Stock4 from "../../assets/images/alex-loian-cv-stock-photos-4.jpg";
-import Stock5 from "../../assets/images/alex-loian-cv-stock-photos-5.jpg";
+import Stock4 from "../../assets/images/parallax/alex-loian-parallax-2.jpg";
+import Stock5 from "../../assets/images/parallax/alex-loian-parallax-3.jpg";
 
 import { Parallax } from "react-parallax";
 
@@ -16,21 +16,13 @@ const styles = {
   fontFamily: "sans-serif",
   textAlign: "center"
 };
-const insideStyles = {
-  background: "white",
-  padding: 20,
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%,-50%)"
-};
 
 export default function MainPage() {
   const [language] = useContext(Context);
 
   const recomendArea = (
     <>
-      <Typography variant="h4" gutterBottom>
+      <Typography style={{ margin: "30px" }} variant="h4" gutterBottom>
         Recomendations
       </Typography>
       <Recomendations />
@@ -56,7 +48,7 @@ export default function MainPage() {
           </Typography>
         </div>
       </LazyHero>
-      <div style={{ textAlign: "center", padding: "15px" }}>
+      <div style={{ textAlign: "center", padding: "30px" }}>
         <Typography variant="h4" gutterBottom>
           {language === "en" ? "About" : "Обо мне"}
         </Typography>
@@ -107,7 +99,7 @@ export default function MainPage() {
           <Parallax bgImage={Stock5} strength={500}>
             <div style={{ height: 500 }} />
           </Parallax>
-          <div style={{ height: "400px" }}>Horizontal timeline</div>
+
           {recomendArea}
           <div name="Parallax" />
           <Parallax bgImage={Stock4} strength={500}>
@@ -115,10 +107,6 @@ export default function MainPage() {
               <Skills />
             </div>
           </Parallax>
-          <Typography variant="h4" gutterBottom>
-            Portfolio Content
-            <div style={{ height: "400px" }}>Portfolio items</div>
-          </Typography>
         </div>
       </div>
     </div>

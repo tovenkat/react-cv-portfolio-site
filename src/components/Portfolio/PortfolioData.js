@@ -1,21 +1,11 @@
-import React from "react";
-import ReporterMarketPlace from "../../assets/images/alex-loian-commercial-wordpress-reporter-marketplace.png";
-import Realestatesite from "../../assets/images/alex-loian-commercial-wordpress-realestatesite.png";
-import PizzaShop from "../../assets/images/alex-loian-commercial-wordpress-pizza-shop.png";
-import InvestSite from "../../assets/images/alex-loian-commercial-wordpress-investment-site.png";
-import FinanceSite from "../../assets/images/alex-loian-commercial-wordpress-finance-site.png";
+import ToDo from "../../assets/images/react/alex-loian-pet-project-to-do.png";
+import ImgBurger from "../../assets/images/react/alex-loian-pet-project-react-burger.png";
+import Rest from "../../assets/images/react/alex-loian-react-caspio-rest.png";
+import Redux from "../../assets/images/react/alex-loian-pet-project-react-redux.png";
+import MultiStep from "../../assets/images/react/alex-loian-multi-step-form.png";
+import CvSite from "../../assets/images/react/alex-loian-cv-site.jpg";
 
-import ImgCandyshop from "../../assets/images/alex-loian-pet-project-bootstrap-candyshop.png";
-import ImgBurger from "../../assets/images/alex-loian-pet-project-react-burger.png";
-import ImgSocketChat from "../../assets/images/alex-loian-pet-project-socket-chat.png";
-import ToDo from "../../assets/images/alex-loian-pet-project-to-do.png";
-
-import Rest from "../../assets/images/alex-loian-react-caspio-rest.png";
-import Redux from "../../assets/images/alex-loian-pet-project-react-redux.png";
-import MultiStep from "../../assets/images/alex-loian-multi-step-form.png";
-import CvSite from "../../assets/images/alex-loian-cv-site.png";
-
-const Data = {
+/*const Data = {
   en: {
     portfolio: [
       {
@@ -89,7 +79,7 @@ const Data = {
       }
     ]
   }
-};
+};*/
 
 const reactEn = [
   {

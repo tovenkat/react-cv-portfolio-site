@@ -1,8 +1,8 @@
 import React from "react";
-import Avatar from "../../../assets/images/alex-loian-fron-end-developer-avatar.jpg";
+import Avatar from "../../../assets/images/main/alex-loian-fron-end-developer-avatar.jpg";
 import Dialog from "@material-ui/core/Dialog";
 import Button from "@material-ui/core/Button";
-import cv from "../../../assets/images/CV-Alex-Loian-Front-End-Developer-React-Resume.pdf";
+import cv from "../../../assets/images/main/CV-Alex-Loian-Front-End-Developer-React-Resume.pdf";
 
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";

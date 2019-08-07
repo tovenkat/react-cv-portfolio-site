@@ -78,6 +78,7 @@ const Recommendations = () => {
       autoplayInterval={2200}
       cellAlign="center"
       wrapAround
+      speed={1400}
     >
       {list}
     </Carousel>

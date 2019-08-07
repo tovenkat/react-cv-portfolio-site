@@ -5,19 +5,13 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
-
-import logo from "../../assets/images/alex-loian-logo.png";
-
+import logo from "../../assets/images/main/alex-loian-logo.png";
 import { Context } from "../../Context";
-
 import Hidden from "@material-ui/core/Hidden";
 import NavigationItems from "./NavigationItems/NavigationItems";
-
 import Slide from "@material-ui/core/Slide";
-
 import { Link } from "react-router-dom";
 import About from "./About/About";
-
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 
@@ -62,7 +56,7 @@ export default function MenuMain(props) {
   //ssddsdsds
   const classes = useStyles();
 
-  const [language, setLanguage, about, setAbout, menu, setMenu] = useContext(
+  const [language, setLanguage, about, setAbout, , setMenu] = useContext(
     Context
   );
 

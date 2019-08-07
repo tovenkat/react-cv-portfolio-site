@@ -42,23 +42,6 @@ const Portfolio = props => {
       })}
     </Grid>
   );
-  const wordpressItems = (
-    <Grid
-      container
-      spacing={1}
-      alignItems="center"
-      style={theme}
-      justify="center"
-    >
-      {items.en.map((item, key) => {
-        return (
-          <Grid key={key} item xs={10} sm={10} md={4} lg={4}>
-            <PortfolioItem item={item} />
-          </Grid>
-        );
-      })}
-    </Grid>
-  );
 
   return (
     <div style={mainStyle}>

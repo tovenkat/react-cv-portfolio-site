@@ -1,11 +1,11 @@
-import AmericanEnglishCenter from "../../assets/images/alex-loian-work-timeline-english-level.png";
-import IMT from "../../assets/images/alex-loian-work-timeline-imt-school.png";
-import Upwork from "../../assets/images/alex-loian-work-timeline-upwork.png";
-import Gas from "../../assets/images/alex-loian-work-timeline-gas-engineer.png";
-import University from "../../assets/images/alex-loian-work-timeline-university.png";
-import ERC from "../../assets/images/alex-loian-work-timeline-erc.png";
-import Microsoft from "../../assets/images/alex-loian-work-timeline-microsoft.png";
-import Caspio from "../../assets/images/alex-loian-work-timeline-caspio.png";
+import AmericanEnglishCenter from "../../assets/images/logos/alex-loian-work-timeline-english-level.png";
+import IMT from "../../assets/images/logos/alex-loian-work-timeline-imt-school.png";
+import Upwork from "../../assets/images/logos/alex-loian-work-timeline-upwork.png";
+import Gas from "../../assets/images/logos/alex-loian-work-timeline-gas-engineer.png";
+import University from "../../assets/images/logos/alex-loian-work-timeline-university.png";
+import ERC from "../../assets/images/logos/alex-loian-work-timeline-erc.png";
+import Microsoft from "../../assets/images/logos/alex-loian-work-timeline-microsoft.png";
+import Caspio from "../../assets/images/logos/alex-loian-work-timeline-caspio.png";
 
 const exp = [
   {
