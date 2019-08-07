@@ -30,11 +30,11 @@ const useStyles = makeStyles({
 
 const Recommendations = () => {
   const classes = useStyles();
-  const list = Data.map(item => {
+  const list = Data.map((item, index) => {
     return (
       // <Grid container direction="row" justify="center" alignItems="center">
       //   <Grid item xs={12} sm={12} md={6} lg={3}>
-      <div className={classes.wrapper}>
+      <div className={classes.wrapper} key={index}>
         <Card className={classes.card}>
           <Avatar
             alt={item.name}
