@@ -2,10 +2,11 @@ import React, { useContext } from "react";
 import LazyHero from "react-lazy-hero";
 import { Context } from "../../Context";
 import Skills from "./Skills/Skills";
-
+import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Recomendations from "./Recommendations/Recommendations";
 import MacImage from "../../assets/images/parallax/alex-loian-parallax-1.jpg";
+import cv from "../../assets/images/main/CV-Alex-Loian-Front-End-Developer-React-Resume.pdf";
 
 import Stock4 from "../../assets/images/parallax/alex-loian-parallax-2.jpg";
 import Stock5 from "../../assets/images/parallax/alex-loian-parallax-3.jpg";
@@ -28,6 +29,52 @@ export default function MainPage() {
       <Recomendations />
     </>
   );
+  const aboutMe = (
+    <>
+      <Typography variant="h4" gutterBottom>
+        {language === "en" ? "About" : "Обо мне"}
+      </Typography>
+      <div style={{ maxWidth: "600px", margin: "auto" }}>
+        <Typography variant="body1" color="textSecondary" component="p">
+          I'm a multi-talented human. Most of my time I design and build digital
+          products. I'm also a multi-disciplinary maker with over 2 years of
+          experiences in React and JavaScript.
+        </Typography>
+        <Typography variant="body1" color="textSecondary" component="p">
+          I don’t like to define myself by the work I’ve done. I define myself
+          by the work I want to do. Skills can be taught, personality is
+          inherent. I prefer to keep learning, continue challenging myself, and
+          do interesting things that matter.
+        </Typography>
+        <Typography variant="body1" color="textSecondary" component="p">
+          Fueled by high energy levels and boundless enthusiasm, I’m easily
+          inspired and more then willing to follow my fascinations wherever they
+          take me. I’m passionate, expressive, multi-talented spirit with a
+          natural ability to entertain and inspire. I’m never satisfied to just
+          come up with ideas. Instead I have an almost impulsive need to act on
+          them.
+        </Typography>
+        <Typography variant="body1" color="textSecondary" component="p">
+          I’m a people-person with deep emotions and empathy, a natural
+          storyteller. I’m able to inspire and am at my best when I’m sharing my
+          creative expressions with others. I currently work remotely and have a
+          full-time commitment at InVision. Outside of my commitments I work
+          with a select freelance client base. Feel free to get in touch by any
+          means of communication.
+        </Typography>
+        <Button
+          title="CV Download"
+          download="Alex-Loian-CV-React-Developer"
+          href={cv}
+          variant="contained"
+          color="primary"
+          style={{ margin: "30px" }}
+        >
+          Download CV
+        </Button>
+      </div>
+    </>
+  );
   return (
     <div style={{ width: "100%", backgroundColor: "whitesmoke" }}>
       <LazyHero
@@ -48,49 +95,7 @@ export default function MainPage() {
           </Typography>
         </div>
       </LazyHero>
-      <div style={{ textAlign: "center", padding: "30px" }}>
-        <Typography variant="h4" gutterBottom>
-          {language === "en" ? "About" : "Обо мне"}
-        </Typography>
-        <div style={{ maxWidth: "600px", margin: "auto" }}>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat odio
-            nemo, ab est eum explicabo eaque, placeat ratione esse error in? Vel
-            rerum assumenda recusandae accusamus et ad minima quisquam,
-            accusantium eum debitis iste saepe suscipit ex eligendi culpa sequi
-            possimus obcaecati itaque! Quisquam quos cum debitis unde sunt
-            veniam distinctio quibusdam quae dolor quas possimus voluptatem
-            necessitatibus quis suscipit nisi, totam esse est iste odit
-            repellendus itaque placeat. Ipsam, accusantium repellat ad nulla
-            illum consectetur sed nemo enim explicabo non dolore aliquam
-            corporis hic, ex vitae suscipit quam. Facilis quidem, fuga eaque,
-            soluta ipsa temporibus ducimus, maxime in necessitatibus sequi error
-            totam distinctio voluptatem magnam provident earum perspiciatis.
-            Sequi laborum odio maxime expedita voluptate nemo vero facilis
-            minima facere amet quis aliquid voluptates, ullam obcaecati quasi
-            magni in veniam quibusdam, alias ab rem tenetur tempore error fugit?
-            Iure perferendis quidem similique deserunt unde reiciendis omnis
-            veniam quae enim deleniti ut hic labore eius culpa delectus, iste
-            temporibus animi? Aspernatur amet est ducimus minus nihil at ipsum,
-            fugiat nostrum provident saepe non corporis optio dolorem officia
-            minima necessitatibus! Assumenda error expedita non quam odio minima
-            quos, maxime quo sit, labore esse repellat quisquam eius sint
-            provident voluptates officiis nostrum voluptatem sequi. Ratione
-            corporis obcaecati voluptatum quis optio alias nostrum, dolorum
-            neque? Cum, accusantium ipsam dolores debitis recusandae commodi!
-            Possimus necessitatibus, commodi, temporibus provident praesentium
-            odio accusantium cumque saepe similique reprehenderit fugiat
-            consequatur porro ullam ipsa officiis minus nesciunt laborum
-            perferendis doloribus voluptate nam ea! Ab, vero aspernatur pariatur
-            nulla, odio provident aut quisquam fugiat quis non consectetur et,
-            laboriosam numquam cum architecto in quam eos illum quaerat nobis
-            debitis! Aperiam dignissimos eos itaque aut consequatur suscipit
-            quidem? Magnam possimus vero, aspernatur assumenda voluptas ullam.
-            Nostrum dicta quia dignissimos dolorum, enim iusto blanditiis amet
-            unde, autem culpa ut aspernatur mollitia adipisci.
-          </Typography>
-        </div>
-      </div>
+      <div style={{ textAlign: "center", padding: "30px" }}>{aboutMe}</div>
 
       <div>
         <div style={styles}>
