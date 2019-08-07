@@ -6,6 +6,7 @@ import TableCell from "@material-ui/core/TableCell";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
 import { FaStarHalfAlt, FaStar, FaRegStar } from "react-icons/fa";
 
 const useStyles = makeStyles(theme => ({
@@ -65,7 +66,9 @@ export default function Skill(props) {
 
   return (
     <Paper className={classes.root}>
-      <h3>{props.title}</h3>
+      <Typography variant="h4" gutterBottom>
+        {props.title}
+      </Typography>
       <Table className={classes.table}>
         <TableHead>
           <TableRow>
