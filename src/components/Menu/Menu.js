@@ -141,26 +141,20 @@ export default function MenuMain(props) {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose} className={classes.links}>
-          <Link to="/" className={classes.links}>
+        <Link to="/" className={classes.links}>
+          <MenuItem onClick={handleClose} className={classes.links}>
             Home
-          </Link>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <Link to="/portfolio" className={classes.links}>
-            Portfolio
-          </Link>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <Link to="/experience" className={classes.links}>
-            Experience
-          </Link>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <span onClick={aboutOpen} className={classes.links}>
-            About
-          </span>
-        </MenuItem>
+          </MenuItem>
+        </Link>
+        <Link to="/portfolio" className={classes.links}>
+          <MenuItem onClick={handleClose}>Portfolio</MenuItem>
+        </Link>
+        <Link to="/experience" className={classes.links}>
+          <MenuItem onClick={handleClose}>Experience</MenuItem>
+        </Link>
+        <span onClick={aboutOpen} className={classes.links}>
+          <MenuItem onClick={handleClose}>About</MenuItem>{" "}
+        </span>
         <MenuItem
           onClick={() => {
             handleClose();
