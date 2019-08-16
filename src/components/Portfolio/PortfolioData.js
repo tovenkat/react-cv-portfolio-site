@@ -1,6 +1,8 @@
 import ToDo from "../../assets/images/react/alex-loian-pet-project-to-do.png";
 import ImgBurger from "../../assets/images/react/alex-loian-pet-project-react-burger.png";
 import Rest from "../../assets/images/react/alex-loian-react-caspio-rest.png";
+import Blog from "../../assets/images/react/alex-loian-blog-react.png";
+import Timer from "../../assets/images/react/alex-loian-count-down-timer.png";
 import Redux from "../../assets/images/react/alex-loian-pet-project-react-redux.png";
 import MultiStep from "../../assets/images/react/alex-loian-multi-step-form.png";
 import CvSite from "../../assets/images/react/alex-loian-cv-site.jpg";
@@ -138,6 +140,24 @@ const reactEn = [
     skills: ["React", "React Hooks", "Material"]
   },
   {
+    title: "React Blog REST API",
+    subTitle: "August 19,2019",
+    img: Blog,
+    demoLink: "https://alex-loian-blog-posts.web.app/",
+    gitHubLink: "https://github.com/AlexLDP/list-of-items",
+    description: `Social Media Network. This app uses firebase back-end part`,
+    skills: ["React", "Axios", "Redux", "Thunk"]
+  },
+  {
+    title: "React Count Down Timer",
+    subTitle: "August 20,2019",
+    img: Timer,
+    demoLink: "http://alexldp.github.io/count-down-timer",
+    gitHubLink: "https://github.com/AlexLDP/count-down-timer",
+    description: `Social Media Network. This app uses firebase back-end part`,
+    skills: ["React", "Redux", "Thunk", "Material"]
+  },
+  {
     title: "React Social Media Network",
     subTitle: "August 21,2019",
     img: MultiStep,
@@ -165,6 +185,24 @@ const reactRu = [
     gitHubLink: "https://github.com/AlexLDP/react-to-do",
     description: `Ту-ду лист и точка.`,
     skills: ["React", "Material", "Firebase"]
+  },
+  {
+    title: "React Blog REST API",
+    subTitle: "August 19,2019",
+    img: Blog,
+    demoLink: "https://alex-loian-blog-posts.web.app/",
+    gitHubLink: "https://github.com/AlexLDP/list-of-items",
+    description: `Social Media Network. This app uses firebase back-end part`,
+    skills: ["React", "Axios", "Redux", "Thunk"]
+  },
+  {
+    title: "React Count Down Timer",
+    subTitle: "August 20,2019",
+    img: Timer,
+    demoLink: "http://alexldp.github.io/count-down-timer",
+    gitHubLink: "https://github.com/AlexLDP/count-down-timer",
+    description: `Social Media Network. This app uses firebase back-end part`,
+    skills: ["React", "Redux", "Thunk", "Material"]
   },
   {
     title: "Генератор Токенов на Реакте",
