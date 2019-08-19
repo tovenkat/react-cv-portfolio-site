@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -56,15 +56,15 @@ export default function MenuMain(props) {
   //ssddsdsds
   const classes = useStyles();
 
-  const [language, setLanguage, about, setAbout, , setMenu] = useContext(
-    Context
-  );
+  const [language, setLanguage] = useContext(Context);
+
+  const [modal, setModal] = useState(false);
 
   const aboutOpen = () => {
-    setAbout(true);
+    setModal(true);
   };
   const aboutClose = () => {
-    setAbout(false);
+    setModal(false);
   };
 
   const menuOpenHandler = open => event => {
@@ -74,7 +74,7 @@ export default function MenuMain(props) {
     ) {
       return;
     }
-    setMenu(open);
+    //setMenu(open);
   };
 
   const mobileView = (
@@ -165,20 +165,7 @@ export default function MenuMain(props) {
         </MenuItem>
       </Menu>
 
-      {/* <Drawer
-        className={classes.drawer}
-        open={menu}
-        onClose={menuOpenHandler(false)}
-      >
-        <NavigationItems
-          row="column"
-          color
-          changeLanguage={props.changeLanguage}
-          menuOpenHandler={menuOpenHandler}
-        />
-      </Drawer> */}
-
-      <About open={about} Transition={Transition} aboutClose={aboutClose} />
+      <About open={modal} Transition={Transition} aboutClose={aboutClose} />
     </div>
   );
 }

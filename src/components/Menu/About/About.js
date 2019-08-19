@@ -1,8 +1,7 @@
 import React from "react";
-import Avatar from "../../../assets/images/main/alex-loian-fron-end-developer-avatar.jpg";
+
 import Dialog from "@material-ui/core/Dialog";
 import Button from "@material-ui/core/Button";
-import cv from "../../../assets/images/main/CV-Alex-Loian-Front-End-Developer-React-Resume.pdf";
 
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -20,9 +19,13 @@ import {
 } from "react-icons/fa";
 import IconButton from "@material-ui/core/IconButton";
 
+import cv from "../../../assets/images/main/CV-Alex-Loian-Front-End-Developer-React-Resume.pdf";
+import Avatar from "../../../assets/images/main/alex-loian-fron-end-developer-avatar.jpg";
+
 const useStyles = makeStyles({
   card: {
-    maxWidth: 450,
+    minHeight: "450px",
+    maxWidth: 400,
     margin: "auto"
   },
   actionGroup: {
@@ -39,7 +42,7 @@ const About = props => {
         <CardMedia
           component="img"
           alt="Alex Loian Front-End React Developer"
-          height="450"
+          height="400"
           image={Avatar}
           title="Alex Loian Front-End React Developer"
         />
@@ -79,7 +82,6 @@ const About = props => {
         >
           <FaLinkedin />
         </IconButton>
-
         <IconButton
           title="Call Me"
           size="small"
@@ -100,7 +102,7 @@ const About = props => {
           title="Close"
           size="small"
           color="primary"
-          onClick={props.aboutClose}
+          onClick={() => props.aboutClose(false)}
         >
           <FaTimes />
         </IconButton>
