@@ -11,6 +11,13 @@ import Portfolio from "./Portfolio";
 import { Parallax } from "react-parallax";
 
 const useStyles = makeStyles({
+  labelMain: {
+    textAlign: "center",
+    paddingTop: "10vh",
+    paddingBottom: "10vh",
+    color: "whitesmoke",
+    textShadow: "7px 8px 5px black"
+  },
   label: {
     textAlign: "center",
     padding: "30px"
@@ -20,11 +27,16 @@ const useStyles = makeStyles({
   },
   heading: {
     margin: "auto"
+  },
+  button: {
+    display: "flex",
+    justifyContent: "center",
+    padding: "30px"
   }
 });
 const NewPortfolio = () => {
   const classes = useStyles();
-  const [details, setDetails] = useState(true);
+  const [details, setDetails] = useState(false);
 
   let content = (
     <Carousel
@@ -38,11 +50,16 @@ const NewPortfolio = () => {
     >
       {items.en.map(item => {
         return (
-          <div style={{ width: "95%", margin: "auto", maxWidth: "900px" }}>
+          <div
+            key={item.id}
+            style={{ width: "95%", margin: "auto", maxWidth: "800px" }}
+          >
+            <a href={item.demoLink}>
+              <img width="100%" src={item.img} alt={item.title} />
+            </a>
             <Typography className={classes.label} variant="h4">
               {item.title}
             </Typography>
-            <img width="100%" src={item.img} alt={item.title} />
           </div>
         );
       })}
@@ -54,14 +71,19 @@ const NewPortfolio = () => {
   return (
     <>
       <Parallax bgImage={portfolioImage} strength={500}>
-        <div style={{ height: 400 }}> </div>
+        <Typography className={classes.labelMain} variant="h2">
+          React Portfolio
+        </Typography>
       </Parallax>
-      <Typography className={classes.label} variant="h3">
-        React Portfolio
-      </Typography>
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <Fab variant="extended" color="primary" aria-label="add">
-          View All
+
+      <div className={classes.button}>
+        <Fab
+          variant="extended"
+          onClick={() => setDetails(!details)}
+          color="primary"
+          aria-label="add"
+        >
+          {details ? "Show Less" : "Show Details"}
         </Fab>
       </div>
       {content}

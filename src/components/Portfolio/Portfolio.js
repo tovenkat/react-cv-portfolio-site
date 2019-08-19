@@ -43,20 +43,7 @@ const Portfolio = props => {
     </Grid>
   );
 
-  return (
-    <div style={mainStyle}>
-      <h1
-        style={{
-          backgroundColor: "white",
-          padding: "30px",
-          color: "black"
-        }}
-      >
-        {lang === "en" ? "React Projects" : "Реакт Проэкты"}
-      </h1>
-      {reactItems}
-    </div>
-  );
+  return <div style={mainStyle}>{reactItems}</div>;
 };
 
 export default Portfolio;
