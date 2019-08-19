@@ -55,25 +55,6 @@ const Portfolio = props => {
         {lang === "en" ? "React Projects" : "Реакт Проэкты"}
       </h1>
       {reactItems}
-      <h1
-        style={{
-          backgroundColor: "white",
-          padding: "30px",
-          color: "black"
-        }}
-      >
-        JavaScript
-      </h1>
-
-      <h1
-        style={{
-          backgroundColor: "white",
-          padding: "30px",
-          color: "black"
-        }}
-      >
-        {lang === "en" ? "Wordpress Projects" : "Вордпресс Проэкты"}
-      </h1>
     </div>
   );
 };
