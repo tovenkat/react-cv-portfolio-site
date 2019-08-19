@@ -6,6 +6,8 @@ import Carousel from "nuka-carousel";
 import { items } from "./PortfolioData";
 import Fab from "@material-ui/core/Fab";
 
+import PortfolioCarousel from "./PortfolioCarousel/PortfolioCarousel";
+
 import PortfolioList from "./PortfolioList";
 
 import { Parallax } from "react-parallax";
@@ -38,33 +40,7 @@ const NewPortfolio = () => {
   const classes = useStyles();
   const [details, setDetails] = useState(false);
 
-  let content = (
-    <Carousel
-      autoplay
-      pauseOnHover={false}
-      withoutControls
-      autoplayInterval={4600}
-      cellAlign="center"
-      wrapAround
-      speed={900}
-    >
-      {items.en.map(item => {
-        return (
-          <div
-            key={item.id}
-            style={{ width: "95%", margin: "auto", maxWidth: "800px" }}
-          >
-            <a href={item.demoLink}>
-              <img width="100%" src={item.img} alt={item.title} />
-            </a>
-            <Typography className={classes.label} variant="h4">
-              {item.title}
-            </Typography>
-          </div>
-        );
-      })}
-    </Carousel>
-  );
+  let content = <PortfolioCarousel />;
   if (details) {
     content = <PortfolioList />;
   }

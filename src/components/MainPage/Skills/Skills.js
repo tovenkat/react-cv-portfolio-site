@@ -12,11 +12,13 @@ import Typography from "@material-ui/core/Typography";
 import { FaStarHalfAlt, FaStar, FaRegStar } from "react-icons/fa";
 
 const skills = [
-  { name: "React", value: 3 },
-  { name: "JavaScript", value: 3 },
-  { name: "NodeJS", value: 3 },
-  { name: "Redux", value: 3 },
-  { name: "Material", value: 3 }
+  { name: "React", value: 2 },
+  { name: "Redux", value: 2 },
+  { name: "React Material", value: 2 },
+  { name: "Thunk", value: 2 },
+  { name: "Web Components", value: 2 },
+  { name: "Vanilla JavaScript", value: 2 },
+  { name: "NodeJS", value: 2 }
 ];
 const stars = val => {
   switch (val) {

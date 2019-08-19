@@ -7,6 +7,9 @@ import Typography from "@material-ui/core/Typography";
 import Recomendations from "./Recommendations/Recommendations";
 import MacImage from "../../assets/images/parallax/alex-loian-parallax-1.jpg";
 import cv from "../../assets/images/main/CV-Alex-Loian-Front-End-Developer-React-Resume.pdf";
+import Avatar from "@material-ui/core/Avatar";
+import mainAvatar from "../../assets/images/main/alex-loian-avatar.JPG";
+import PortfolioCarousel from "../Portfolio/PortfolioCarousel/PortfolioCarousel";
 
 import Stock4 from "../../assets/images/parallax/alex-loian-parallax-2.jpg";
 import Stock5 from "../../assets/images/parallax/alex-loian-parallax-3.jpg";
@@ -34,6 +37,15 @@ export default function MainPage() {
       <Typography variant="h4" gutterBottom>
         {language === "en" ? "About" : "Обо мне"}
       </Typography>
+      <Avatar
+        alt="Alex Loian Main Avatar"
+        src={mainAvatar}
+        style={{
+          margin: "30px auto",
+          width: 250,
+          height: 250
+        }}
+      />
       <div style={{ maxWidth: "600px", margin: "auto" }}>
         <Typography variant="body1" color="textSecondary" component="p">
           I'm a multi-talented human. Most of my time I design and build digital
@@ -104,14 +116,20 @@ export default function MainPage() {
           <Parallax bgImage={Stock5} strength={500}>
             <div style={{ height: 500 }} />
           </Parallax>
+          <div style={{ textAlign: "center" }}>
+            <Typography variant="h4" gutterBottom style={{ padding: "30px" }}>
+              {language === "en" ? "Portfolio" : "Портфолио"}
+            </Typography>
+            <PortfolioCarousel />
+          </div>
 
-          {recomendArea}
           <div name="Parallax" />
           <Parallax bgImage={Stock4} strength={500}>
             <div style={{ height: 600 }}>
               <Skills />
             </div>
           </Parallax>
+          {recomendArea}
         </div>
       </div>
     </div>
