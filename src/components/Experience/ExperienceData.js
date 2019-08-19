@@ -12,6 +12,18 @@ const exp = [
     img: Caspio,
     key: 1,
     type: "work",
+    title: "Front-End React Developer",
+    subtitle: "Caspio inc.",
+    date: "sep./2019 - present",
+    skills: [],
+    lists: [],
+    body:
+      "Front-End Development/Web Components/Vanilla JavaSctipt/NodeJS/React/Redux"
+  },
+  {
+    img: Caspio,
+    key: 2,
+    type: "work",
     title: "Help Desk Specialist",
     subtitle: "Caspio inc.",
     date: "oct./2018 - sep./2019",
@@ -22,7 +34,7 @@ const exp = [
   },
   {
     img: Upwork,
-    key: 2,
+    key: 3,
     type: "work",
     title: "Freelancer",
     subtitle: "Upwork",
@@ -31,7 +43,7 @@ const exp = [
   },
   {
     img: IMT,
-    key: 3,
+    key: 4,
     type: "study",
     title: "IMT School",
     subtitle: "Front-End Developer",
@@ -40,7 +52,7 @@ const exp = [
   },
   {
     img: Gas,
-    key: 4,
+    key: 5,
     type: "work",
     title: "Wordpress Developer",
     subtitle: "GasBuild",
@@ -50,7 +62,7 @@ const exp = [
   },
   {
     img: Gas,
-    key: 5,
+    key: 6,
     type: "work",
     title: "Natural Gas Safety Engineer",
     subtitle: "GasBuild",
@@ -60,7 +72,7 @@ const exp = [
   },
   {
     img: AmericanEnglishCenter,
-    key: 6,
+    key: 7,
     type: "study",
     title: "American English Center Dnipro",
     subtitle: "Advanced Level.",
@@ -69,7 +81,7 @@ const exp = [
   },
   {
     img: Microsoft,
-    key: 7,
+    key: 8,
     type: "work",
     title: "Sales Consultant",
     subtitle: "Mircosoft Ukraine",
@@ -78,7 +90,7 @@ const exp = [
   },
   {
     img: ERC,
-    key: 8,
+    key: 9,
     type: "work",
     title: "Sales Consultant",
     subtitle: "Apple Ukraine (ERC)",
@@ -87,7 +99,7 @@ const exp = [
   },
   {
     img: University,
-    key: 9,
+    key: 10,
     type: "study",
     title: "American English Center Dnipro",
     subtitle: "National Metallurgical Academy of Ukraine",
@@ -96,7 +108,7 @@ const exp = [
   },
   {
     img: University,
-    key: 10,
+    key: 11,
     type: "study",
     title: "WED Manager",
     subtitle: "National Metallurgical Academy of Ukraine",
@@ -105,6 +117,18 @@ const exp = [
   }
 ];
 const expru = [
+  {
+    img: Caspio,
+    key: 1,
+    type: "work",
+    title: "Реакт Разработчик",
+    subtitle: "Caspio inc.",
+    date: "сентябрь./2019 - настоящее время",
+    skills: [],
+    lists: [],
+    body:
+      "Front-End Development/Web Components/Vanilla JavaSctipt/NodeJS/React/Redux"
+  },
   {
     img: Caspio,
     key: 1,
