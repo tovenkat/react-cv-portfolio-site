@@ -12,13 +12,14 @@ import Typography from "@material-ui/core/Typography";
 import { FaStarHalfAlt, FaStar, FaRegStar } from "react-icons/fa";
 
 const skills = [
-  { name: "React", value: 2 },
-  { name: "Redux", value: 2 },
-  { name: "React Material", value: 2 },
-  { name: "Thunk", value: 2 },
-  { name: "Web Components", value: 2 },
-  { name: "Vanilla JavaScript", value: 2 },
-  { name: "NodeJS", value: 2 }
+  { name: "React", value: 5 },
+  { name: "Redux", value: 4 },
+  { name: "React Material", value: 3 },
+  { name: "Thunk", value: 3 },
+  { name: "Web Components", value: 3 },
+  { name: "Vanilla JavaScript", value: 3 },
+  { name: "NodeJS", value: 3 },
+  { name: "GitHub", value: 3 }
 ];
 const stars = val => {
   switch (val) {
@@ -27,6 +28,7 @@ const stars = val => {
         <>
           <FaStar />
           <FaStar />
+          <FaStarHalfAlt />
           <FaRegStar />
           <FaRegStar />
         </>
@@ -36,13 +38,35 @@ const stars = val => {
         <>
           <FaStar />
           <FaStar />
-          <FaStarHalfAlt />
+          <FaStar />
+          <FaRegStar />
           <FaRegStar />
         </>
       );
     case 3:
       return (
         <>
+          <FaStar />
+          <FaStar />
+          <FaStar />
+          <FaStarHalfAlt />
+          <FaRegStar />
+        </>
+      );
+    case 4:
+      return (
+        <>
+          <FaStar />
+          <FaStar />
+          <FaStar />
+          <FaStar />
+          <FaStarHalfAlt />
+        </>
+      );
+    case 5:
+      return (
+        <>
+          <FaStar />
           <FaStar />
           <FaStar />
           <FaStar />
@@ -62,7 +86,8 @@ const stars = val => {
 };
 const useStyles = makeStyles(theme => ({
   container: {
-    paddingTop: "30px"
+    paddingTop: "30px",
+    padding: "30px"
   },
   button: {
     marginBottom: "30px"
@@ -73,6 +98,8 @@ const useStyles = makeStyles(theme => ({
   root: {
     width: "95%",
     marginTop: theme.spacing(3),
+    padding: 20,
+    maxwidth: 500,
     overflowX: "auto",
     margin: "auto"
   },
@@ -91,9 +118,8 @@ const Skills = () => {
         justify="center"
         alignItems="center"
         spacing={2}
-        className={classes.container}
       >
-        <Grid item xs={12} sm={6} lg={3}>
+        <Grid item xs={12} sm={6} lg={3} className={classes.container}>
           <Paper className={classes.root}>
             <Typography variant="h4" gutterBottom>
               Skills

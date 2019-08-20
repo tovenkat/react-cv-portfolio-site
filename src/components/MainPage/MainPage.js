@@ -104,7 +104,7 @@ export default function MainPage() {
   const recomendArea = (
     <>
       <Typography style={{ margin: "30px" }} variant="h4" gutterBottom>
-        {language === "en" ? "Recommendation" : "Рекомендации"}
+        {language === "en" ? "Recommendations" : "Рекомендации"}
       </Typography>
       <Recomendations />
     </>
@@ -125,7 +125,7 @@ export default function MainPage() {
             <Typography variant="h4" gutterBottom style={{ padding: "30px" }}>
               {language === "en" ? "Portfolio" : "Портфолио"}
             </Typography>
-            <PortfolioCarousel />
+            <PortfolioCarousel withoutTitle />
           </div>
 
           <div name="Parallax" />

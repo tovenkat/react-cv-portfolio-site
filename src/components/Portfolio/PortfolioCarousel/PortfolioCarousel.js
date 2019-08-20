@@ -3,6 +3,7 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Carousel from "nuka-carousel";
 import { items } from "../PortfolioData";
+import CardActionArea from "@material-ui/core/CardActionArea";
 
 const useStyles = makeStyles({
   labelMain: {
@@ -29,7 +30,7 @@ const useStyles = makeStyles({
   }
 });
 
-const PortfolioCarousel = () => {
+const PortfolioCarousel = props => {
   const classes = useStyles();
   return (
     <Carousel
@@ -47,12 +48,14 @@ const PortfolioCarousel = () => {
             key={item.id}
             style={{ width: "95%", margin: "auto", maxWidth: "800px" }}
           >
-            <a href={item.demoLink}>
+            <CardActionArea href={item.demoLink}>
               <img width="100%" src={item.img} alt={item.title} />
-            </a>
-            <Typography className={classes.label} variant="h4">
-              {item.title}
-            </Typography>
+            </CardActionArea>
+            {props.withoutTitle ? null : (
+              <Typography className={classes.label} variant="h4">
+                {item.title}
+              </Typography>
+            )}
           </div>
         );
       })}
