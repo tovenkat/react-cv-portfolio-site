@@ -1,20 +1,20 @@
 import React, { useContext } from "react";
 import LazyHero from "react-lazy-hero";
-import { Context } from "../../Context";
-import Skills from "./Skills/Skills";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import { Parallax } from "react-parallax";
+
+import { Context } from "../../Context";
+import PortfolioCarousel from "../Portfolio/PortfolioCarousel/PortfolioCarousel";
 import Recomendations from "./Recommendations/Recommendations";
+import Skills from "./Skills/Skills";
+
 import MacImage from "../../assets/images/parallax/alex-loian-parallax-1.jpg";
 import cv from "../../assets/images/main/CV-Alex-Loian-Front-End-Developer-React-Resume.pdf";
 import Avatar from "@material-ui/core/Avatar";
 import mainAvatar from "../../assets/images/main/alex-loian-avatar.JPG";
-import PortfolioCarousel from "../Portfolio/PortfolioCarousel/PortfolioCarousel";
-
 import Stock4 from "../../assets/images/parallax/alex-loian-parallax-2.jpg";
 import Stock5 from "../../assets/images/parallax/alex-loian-parallax-3.jpg";
-
-import { Parallax } from "react-parallax";
 
 const styles = {
   fontFamily: "sans-serif",
@@ -24,14 +24,27 @@ const styles = {
 export default function MainPage() {
   const [language] = useContext(Context);
 
-  const recomendArea = (
-    <>
-      <Typography style={{ margin: "30px" }} variant="h4" gutterBottom>
-        Recomendations
-      </Typography>
-      <Recomendations />
-    </>
+  const mainPicture = (
+    <LazyHero
+      opacity={0}
+      minHeight="100vh"
+      parallaxOffset={60}
+      isCentered={true}
+      imageSrc={MacImage}
+    >
+      <div style={{ color: "black", paddingBottom: "38vh" }}>
+        <Typography variant="h4" gutterBottom>
+          {language === "en" ? "Alex Loian" : "Алексей Лоян"}{" "}
+        </Typography>
+        <Typography variant="h6" gutterBottom>
+          {language === "en"
+            ? "React, Redux, Javascript"
+            : "Реакт, Редакс, ДжаваСкрипт"}
+        </Typography>
+      </div>
+    </LazyHero>
   );
+
   const aboutMe = (
     <>
       <Typography variant="h4" gutterBottom>
@@ -82,31 +95,23 @@ export default function MainPage() {
           color="primary"
           style={{ margin: "30px" }}
         >
-          Download CV
+          {language === "en" ? "Download CV" : "Скачать Резюме"}
         </Button>
       </div>
     </>
   );
+
+  const recomendArea = (
+    <>
+      <Typography style={{ margin: "30px" }} variant="h4" gutterBottom>
+        {language === "en" ? "Recommendation" : "Рекомендации"}
+      </Typography>
+      <Recomendations />
+    </>
+  );
   return (
     <div style={{ width: "100%", backgroundColor: "whitesmoke" }}>
-      <LazyHero
-        opacity={0}
-        minHeight="100vh"
-        parallaxOffset={60}
-        isCentered={true}
-        imageSrc={MacImage}
-      >
-        <div style={{ color: "black", paddingBottom: "38vh" }}>
-          <Typography variant="h4" gutterBottom>
-            {language === "en" ? "Alex Loian" : "Алексей Лоян"}{" "}
-          </Typography>
-          <Typography variant="h6" gutterBottom>
-            {language === "en"
-              ? "React, Redux, Javascript"
-              : "Реакт, Редакс, ДжаваСкрипт"}
-          </Typography>
-        </div>
-      </LazyHero>
+      {mainPicture}
       <div style={{ textAlign: "center", padding: "30px" }}>{aboutMe}</div>
 
       <div>
