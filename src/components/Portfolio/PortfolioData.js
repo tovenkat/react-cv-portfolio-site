@@ -8,6 +8,33 @@ import MultiStep from "../../assets/images/react/alex-loian-multi-step-form.png"
 import CvSite from "../../assets/images/react/alex-loian-cv-site.jpg";
 import Budget from "../../assets/images/react/alex-loian-budget-calculator.png";
 
+import Drawer from "../../assets/images/webcomponents/alex-loian-side-drawer-component.png";
+import StencilApi from "../../assets/images/webcomponents/alex-loian-stencil-api-component.png";
+
+const weben = [
+  {
+    title: "Side Drawer Web component",
+    subTitle: "August 25,2019",
+    img: Drawer,
+    demoLink: "https://side-drawer-stenc.firebaseapp.com/",
+    gitHubLink: "https://github.com/AlexLDP/side-drawer-stencil",
+    description: `Side Drawer Web component`,
+    skills: ["Stencil", "JSX", "CSS", "Firebase", "Javascript"]
+  },
+  {
+    title: "Search Stock API",
+    subTitle: "August 25,2019",
+    img: StencilApi,
+    demoLink: "https://advanced-stencil-component.firebaseapp.com/",
+    gitHubLink: "https://github.com/AlexLDP/advanced-stencil-component",
+    description: `Search Stock API web component`,
+    skills: ["Stencil", "JSX", "CSS", "Firebase", "Javascript", "fetch API"]
+  }
+];
+export const web = {
+  en: weben
+};
+
 /*const Data = {
   en: {
     portfolio: [

@@ -63,6 +63,11 @@ const NewPortfolio = () => {
         </Fab>
       </div>
       {content}
+      <Parallax bgImage={portfolioImage} strength={500}>
+        <Typography className={classes.labelMain} variant="h2">
+          Web Components
+        </Typography>
+      </Parallax>
     </>
   );
 };
