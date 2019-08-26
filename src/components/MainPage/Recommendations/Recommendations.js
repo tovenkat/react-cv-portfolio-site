@@ -58,7 +58,7 @@ const Recommendations = () => {
           <CardActions>
             <IconButton
               size="medium"
-              color="primary"
+              style={{ color: "#ffc107" }}
               title="LinkedIn"
               href={item.linkedIn}
             >

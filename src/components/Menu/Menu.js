@@ -127,7 +127,7 @@ export default function MenuMain(props) {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" style={{ background: "rgb(63, 61, 86)" }}>
         <Toolbar>
           {mobileView}
           {desktopView}

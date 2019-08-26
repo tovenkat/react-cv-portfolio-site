@@ -20,7 +20,7 @@ import {
 import IconButton from "@material-ui/core/IconButton";
 
 import cv from "../../../assets/images/main/CV-Alex-Loian-Front-End-Developer-React-Resume.pdf";
-import Avatar from "../../../assets/images/main/alex-loian-fron-end-developer-avatar.jpg";
+import Avatar from "../../../assets/images/main/alex-loian-avatar.JPG";
 
 const useStyles = makeStyles({
   card: {

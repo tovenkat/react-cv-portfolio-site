@@ -13,7 +13,8 @@ import MacImage from "../../assets/images/parallax/alex-loian-parallax-1.jpg";
 import cv from "../../assets/images/main/CV-Alex-Loian-Front-End-Developer-React-Resume.pdf";
 import Avatar from "@material-ui/core/Avatar";
 import mainAvatar from "../../assets/images/main/alex-loian-avatar.JPG";
-import Stock4 from "../../assets/images/parallax/alex-loian-parallax-2.jpg";
+import Stock4 from "../../assets/images/parallax/3.svg";
+import Stock55 from "../../assets/images/parallax/1.svg";
 import Stock5 from "../../assets/images/parallax/alex-loian-parallax-3.jpg";
 
 const styles = {
@@ -92,8 +93,11 @@ export default function MainPage() {
           download="Alex-Loian-CV-React-Developer"
           href={cv}
           variant="contained"
-          color="primary"
-          style={{ margin: "30px" }}
+          style={{
+            margin: "30px",
+            background: "rgb(63, 61, 86)",
+            color: "white"
+          }}
         >
           {language === "en" ? "Download CV" : "Скачать Резюме"}
         </Button>
@@ -103,7 +107,11 @@ export default function MainPage() {
 
   const recomendArea = (
     <>
-      <Typography style={{ margin: "30px" }} variant="h4" gutterBottom>
+      <Typography
+        style={{ margin: "30px", color: "#ffc107" }}
+        variant="h4"
+        gutterBottom
+      >
         {language === "en" ? "Recommendations" : "Рекомендации"}
       </Typography>
       <Recomendations />
@@ -112,7 +120,14 @@ export default function MainPage() {
   return (
     <div style={{ width: "100%", backgroundColor: "whitesmoke" }}>
       {mainPicture}
-      <div style={{ textAlign: "center", padding: "30px" }}>{aboutMe}</div>
+      <div
+        style={{
+          textAlign: "center",
+          padding: "30px"
+        }}
+      >
+        {aboutMe}
+      </div>
 
       <div>
         <div style={styles}>
@@ -121,20 +136,23 @@ export default function MainPage() {
           <Parallax bgImage={Stock5} strength={500}>
             <div style={{ height: 500 }} />
           </Parallax>
-          <div style={{ textAlign: "center" }}>
-            <Typography variant="h4" gutterBottom style={{ padding: "30px" }}>
-              {language === "en" ? "Portfolio" : "Портфолио"}
-            </Typography>
-            <PortfolioCarousel withoutTitle />
-          </div>
 
           <div name="Parallax" />
+          <Skills />
+
           <Parallax bgImage={Stock4} strength={500}>
-            <div style={{ height: 600 }}>
-              <Skills />
-            </div>
+            <div style={{ height: "90vh" }}>{recomendArea}</div>
           </Parallax>
-          {recomendArea}
+          <div
+            style={{
+              height: "8vh",
+              background: "rgb(63, 61, 86)",
+              color: "#ffc107",
+              boxShadow: "-4px -5px 4px 1px lightgrey"
+            }}
+          >
+            Copyright. 2019
+          </div>
         </div>
       </div>
     </div>
