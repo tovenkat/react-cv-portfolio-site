@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import Typography from "@material-ui/core/Typography";
+import { Context } from "../../../Context";
 import { makeStyles } from "@material-ui/core/styles";
 import Carousel from "nuka-carousel";
-import { items } from "../PortfolioData";
 import CardActionArea from "@material-ui/core/CardActionArea";
 
 const useStyles = makeStyles({
@@ -32,6 +32,13 @@ const useStyles = makeStyles({
 
 const PortfolioCarousel = props => {
   const classes = useStyles();
+  const [lang] = useContext(Context);
+
+  let data = props.items.en;
+  // if (lang === "ru") {
+  //   data = items.ru;
+  // }
+  console.log(data);
   return (
     <Carousel
       autoplay
@@ -42,7 +49,7 @@ const PortfolioCarousel = props => {
       wrapAround
       speed={900}
     >
-      {items.en.map(item => {
+      {data.map(item => {
         return (
           <div
             key={item.id}

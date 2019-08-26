@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Grid from "@material-ui/core/Grid";
-import { items } from "./PortfolioData";
+
 import { Context } from "../../Context";
 
 import PortfolioItem from "./PortfolioItem/PortfolioItem";
@@ -20,9 +20,9 @@ const mainStyle = {
 const PortfolioList = props => {
   const [lang] = useContext(Context);
 
-  let data = items.en;
+  let data = props.items.en;
   if (lang === "ru") {
-    data = items.ru;
+    data = props.items.ru;
   }
 
   const reactItems = (

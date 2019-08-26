@@ -40,9 +40,9 @@ const NewPortfolio = () => {
   const classes = useStyles();
   const [details, setDetails] = useState(false);
 
-  let content = <PortfolioCarousel />;
+  let reactContent = <PortfolioCarousel items={items} />;
   if (details) {
-    content = <PortfolioList />;
+    reactContent = <PortfolioList items={items} />;
   }
   return (
     <>
@@ -62,7 +62,7 @@ const NewPortfolio = () => {
           {details ? "Show Less" : "Show Details"}
         </Fab>
       </div>
-      {content}
+      {reactContent}
       <Parallax bgImage={portfolioImage} strength={500}>
         <Typography className={classes.labelMain} variant="h2">
           Web Components
