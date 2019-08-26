@@ -3,9 +3,8 @@ import LazyHero from "react-lazy-hero";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { Parallax } from "react-parallax";
-
 import { Context } from "../../Context";
-import PortfolioCarousel from "../Portfolio/PortfolioCarousel/PortfolioCarousel";
+
 import Recomendations from "./Recommendations/Recommendations";
 import Skills from "./Skills/Skills";
 
@@ -121,12 +120,7 @@ export default function MainPage() {
           <Parallax bgImage={Stock5} strength={500}>
             <div style={{ height: 500 }} />
           </Parallax>
-          <div style={{ textAlign: "center" }}>
-            <Typography variant="h4" gutterBottom style={{ padding: "30px" }}>
-              {language === "en" ? "Portfolio" : "Портфолио"}
-            </Typography>
-            <PortfolioCarousel withoutTitle />
-          </div>
+          {recomendArea}
 
           <div name="Parallax" />
           <Parallax bgImage={Stock4} strength={500}>
@@ -134,7 +128,6 @@ export default function MainPage() {
               <Skills />
             </div>
           </Parallax>
-          {recomendArea}
         </div>
       </div>
     </div>

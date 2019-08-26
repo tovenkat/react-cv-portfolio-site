@@ -35,10 +35,10 @@ const PortfolioCarousel = props => {
   const [lang] = useContext(Context);
 
   let data = props.items.en;
-  // if (lang === "ru") {
-  //   data = items.ru;
-  // }
-  console.log(data);
+  if (lang === "ru") {
+    data = props.items.ru;
+  }
+
   return (
     <Carousel
       autoplay
@@ -52,7 +52,7 @@ const PortfolioCarousel = props => {
       {data.map(item => {
         return (
           <div
-            key={item.id}
+            key={new Date().getTime}
             style={{ width: "95%", margin: "auto", maxWidth: "800px" }}
           >
             <CardActionArea href={item.demoLink}>

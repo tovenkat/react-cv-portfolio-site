@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import portfolioImage from "../../assets/images/parallax/alex-loian-portfolio.jpg";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-import Carousel from "nuka-carousel";
-import { items } from "./PortfolioData";
+
+import { items, web } from "./PortfolioData";
 import Fab from "@material-ui/core/Fab";
 
 import PortfolioCarousel from "./PortfolioCarousel/PortfolioCarousel";
@@ -38,11 +38,17 @@ const useStyles = makeStyles({
 });
 const NewPortfolio = () => {
   const classes = useStyles();
-  const [details, setDetails] = useState(false);
+  const [detailsReact, setDetailsReact] = useState(false);
+  const [detailsWeb, setDetailsWeb] = useState(false);
 
   let reactContent = <PortfolioCarousel items={items} />;
-  if (details) {
+  if (detailsReact) {
     reactContent = <PortfolioList items={items} />;
+  }
+
+  let webComponentsContent = <PortfolioCarousel items={web} />;
+  if (detailsWeb) {
+    webComponentsContent = <PortfolioList items={web} />;
   }
   return (
     <>
@@ -55,11 +61,11 @@ const NewPortfolio = () => {
       <div className={classes.button}>
         <Fab
           variant="extended"
-          onClick={() => setDetails(!details)}
+          onClick={() => setDetailsReact(!detailsReact)}
           color="primary"
           aria-label="add"
         >
-          {details ? "Show Less" : "Show Details"}
+          {detailsReact ? "Show Less" : "Show Details"}
         </Fab>
       </div>
       {reactContent}
@@ -68,6 +74,18 @@ const NewPortfolio = () => {
           Web Components
         </Typography>
       </Parallax>
+
+      <div className={classes.button}>
+        <Fab
+          variant="extended"
+          onClick={() => setDetailsWeb(!detailsWeb)}
+          color="primary"
+          aria-label="add"
+        >
+          {detailsWeb ? "Show Less" : "Show Details"}
+        </Fab>
+      </div>
+      {webComponentsContent}
     </>
   );
 };

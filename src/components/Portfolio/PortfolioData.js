@@ -31,85 +31,30 @@ const weben = [
     skills: ["Stencil", "JSX", "CSS", "Firebase", "Javascript", "fetch API"]
   }
 ];
-export const web = {
-  en: weben
-};
-
-/*const Data = {
-  en: {
-    portfolio: [
-      {
-        title: "Realestate Wordpress Develpment",
-        key: 11,
-        picture: Realestatesite,
-        body: "LoremIpsum"
-      },
-      {
-        title: "Reporter Site",
-        key: 21,
-        picture: ReporterMarketPlace,
-        body: "LoremIpsum"
-      },
-      {
-        title: "Pizza WordPress Site",
-        key: 31,
-        picture: PizzaShop,
-        body: "LoremIpsum"
-      },
-      {
-        title: "Investment/Banking Site Development",
-        key: 41,
-        picture: InvestSite,
-        body: "LoremIpsum"
-      },
-      {
-        title: "Financing Site Develpment",
-        key: 51,
-        picture: FinanceSite,
-        body: "LoremIpsum"
-      }
-    ],
-    pet: [
-      {
-        key: "1pet",
-        picture: ImgCandyshop,
-        alt: "Practise Bootstrap",
-        title: "Bootstrap CSS"
-      },
-      {
-        key: "2pet",
-        picture: ImgBurger,
-        alt: "React practise Burger SAP",
-        href: <a href="https://burger-react-alex-loian.web.app/">Demo</a>,
-        title: "Burger React"
-      },
-
-      {
-        key: "3pet",
-        picture: ImgSocketChat,
-        alt: "Node JS with Socket IO online chats",
-        title: "Socket IO Chat"
-      },
-
-      {
-        key: "4pet",
-        picture: ToDo,
-        alt: "React TO-DO app ",
-        title: "React To-Do ",
-        href: <a href="https://to-do-list-app-ad59b.web.app/">Demo</a>
-      },
-      {
-        key: "5pet",
-
-        alt: "React TO-DO app ",
-        title: "React To-Do ",
-        href: (
-          <a href="https://alex-loian-redux-playground.firebaseapp.com">Demo</a>
-        )
-      }
-    ]
+const webru = [
+  {
+    title: "Side Drawer Web component",
+    subTitle: "August 25,2019",
+    img: Drawer,
+    demoLink: "https://side-drawer-stenc.firebaseapp.com/",
+    gitHubLink: "https://github.com/AlexLDP/side-drawer-stencil",
+    description: `Side Drawer Web component`,
+    skills: ["Stencil", "JSX", "CSS", "Firebase", "Javascript"]
+  },
+  {
+    title: "Search Stock API",
+    subTitle: "August 25,2019",
+    img: StencilApi,
+    demoLink: "https://advanced-stencil-component.firebaseapp.com/",
+    gitHubLink: "https://github.com/AlexLDP/advanced-stencil-component",
+    description: `Search Stock API web component`,
+    skills: ["Stencil", "JSX", "CSS", "Firebase", "Javascript", "fetch API"]
   }
-};*/
+];
+export const web = {
+  en: weben,
+  ru: webru
+};
 
 const reactEn = [
   {
@@ -265,3 +210,79 @@ export const items = {
   en: reactEn,
   ru: reactRu
 };
+
+/*const Data = {
+  en: {
+    portfolio: [
+      {
+        title: "Realestate Wordpress Develpment",
+        key: 11,
+        picture: Realestatesite,
+        body: "LoremIpsum"
+      },
+      {
+        title: "Reporter Site",
+        key: 21,
+        picture: ReporterMarketPlace,
+        body: "LoremIpsum"
+      },
+      {
+        title: "Pizza WordPress Site",
+        key: 31,
+        picture: PizzaShop,
+        body: "LoremIpsum"
+      },
+      {
+        title: "Investment/Banking Site Development",
+        key: 41,
+        picture: InvestSite,
+        body: "LoremIpsum"
+      },
+      {
+        title: "Financing Site Develpment",
+        key: 51,
+        picture: FinanceSite,
+        body: "LoremIpsum"
+      }
+    ],
+    pet: [
+      {
+        key: "1pet",
+        picture: ImgCandyshop,
+        alt: "Practise Bootstrap",
+        title: "Bootstrap CSS"
+      },
+      {
+        key: "2pet",
+        picture: ImgBurger,
+        alt: "React practise Burger SAP",
+        href: <a href="https://burger-react-alex-loian.web.app/">Demo</a>,
+        title: "Burger React"
+      },
+
+      {
+        key: "3pet",
+        picture: ImgSocketChat,
+        alt: "Node JS with Socket IO online chats",
+        title: "Socket IO Chat"
+      },
+
+      {
+        key: "4pet",
+        picture: ToDo,
+        alt: "React TO-DO app ",
+        title: "React To-Do ",
+        href: <a href="https://to-do-list-app-ad59b.web.app/">Demo</a>
+      },
+      {
+        key: "5pet",
+
+        alt: "React TO-DO app ",
+        title: "React To-Do ",
+        href: (
+          <a href="https://alex-loian-redux-playground.firebaseapp.com">Demo</a>
+        )
+      }
+    ]
+  }
+};*/
