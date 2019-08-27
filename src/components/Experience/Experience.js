@@ -47,7 +47,7 @@ export default function Experience(props) {
     <div className={classes.root}>
       <h1>{dataObject.currentLabel[sortButton]}</h1>
       <Fab
-        style={{ margin: "15px" }}
+        style={{ margin: "15px", backgroundColor: "#3f3d56" }}
         variant="extended"
         color="primary"
         aria-label="add"

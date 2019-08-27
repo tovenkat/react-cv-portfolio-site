@@ -9,8 +9,8 @@ const useStyles = makeStyles({
     justifyContent: "center",
     alignContent: "center",
     textAlign: "center",
-    color: "white",
-    backgroundColor: "#3f51b5",
+    color: "#ffc107",
+    backgroundColor: "#3f3d56",
     boxShadow: "1px -2px 2px 0px #d0bebe"
   },
   buttons: {
@@ -26,7 +26,7 @@ const Footer = () => {
   return (
     <footer className={classes.wrapper}>
       <div className={classes.buttons}>
-        <ButtonsGroup color="white" />
+        <ButtonsGroup color="#ffc107" />
       </div>
       <p>© Copyright 2019. Alex Loian</p>
     </footer>

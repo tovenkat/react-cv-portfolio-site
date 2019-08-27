@@ -19,7 +19,7 @@ const theme = makeStyles({
     textShadow: "7px 8px 5px black"
   },
   button: {
-    color: "white",
+    backgroundColor: "#3f3d56",
     display: "block",
     margin: "30px auto"
   }

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Typography from "@material-ui/core/Typography";
+
 import { Context } from "../../Context";
 import { makeStyles } from "@material-ui/core/styles";
 import Carousel from "nuka-carousel";

@@ -12,8 +12,8 @@ import MacImage from "../../assets/parallax/alex-loian-parallax-1.jpg";
 import cv from "../../assets/mainInfo/CV-Alex-Loian-Front-End-Developer-React-Resume.pdf";
 import Avatar from "@material-ui/core/Avatar";
 import mainAvatar from "../../assets/mainInfo/alex-loian-avatar.JPG";
-import Stock4 from "../../assets/parallax/alex-loian-parallax-2.jpg";
 import Stock5 from "../../assets/parallax/alex-loian-parallax-3.jpg";
+import Developer from "../../assets/parallax/alex-loian-developer.svg";
 
 const styles = {
   fontFamily: "sans-serif",
@@ -31,11 +31,15 @@ export default function MainPage() {
       isCentered={true}
       imageSrc={MacImage}
     >
-      <div style={{ color: "black", paddingBottom: "38vh" }}>
+      <div style={{ color: "#3f3d56", paddingBottom: "38vh" }}>
         <Typography variant="h4" gutterBottom>
           {language === "en" ? "Alex Loian" : "Алексей Лоян"}{" "}
         </Typography>
-        <Typography variant="h6" gutterBottom>
+        <Typography
+          style={{ color: "#ffc107", textShadow: "3px 3px 2px #f0efef" }}
+          variant="h6"
+          gutterBottom
+        >
           {language === "en"
             ? "React, Redux, Javascript"
             : "Реакт, Редакс, ДжаваСкрипт"}
@@ -92,7 +96,7 @@ export default function MainPage() {
           href={cv}
           variant="contained"
           color="primary"
-          style={{ margin: "30px" }}
+          style={{ margin: "30px", backgroundColor: "#3f3d56" }}
         >
           {language === "en" ? "Download CV" : "Скачать Резюме"}
         </Button>
@@ -123,8 +127,8 @@ export default function MainPage() {
           {recomendArea}
 
           <div name="Parallax" />
-          <Parallax bgImage={Stock4} strength={500}>
-            <div style={{ height: 600 }}>
+          <Parallax bgImage={Developer} strength={500}>
+            <div style={{ height: "70vh" }}>
               <Skills />
             </div>
           </Parallax>

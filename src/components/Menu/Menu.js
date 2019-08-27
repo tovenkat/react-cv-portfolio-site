@@ -16,7 +16,7 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 
 const config = {
-  backgroundColor: "#3f51b5",
+  backgroundColor: "#3f3d56",
   colorText: "whitesmoke"
 };
 

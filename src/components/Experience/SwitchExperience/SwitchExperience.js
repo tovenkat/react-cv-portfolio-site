@@ -22,7 +22,7 @@ const SwitchExperience = props => {
             key={element.key + 13}
             className="vertical-timeline-element--work"
             date={element.date}
-            iconStyle={{ background: "#3f51b5", color: "#fff" }}
+            iconStyle={{ background: "#3f3d56", color: "#ffc107" }}
             icon={element.type === "work" ? <FaBullhorn /> : <FaAppleAlt />}
           >
             <img src={element.img} width="80px" alt={element.title} />
