@@ -11,7 +11,7 @@ const NavigationItems = props => {
   const linksStyle = {
     textDecoration: "none",
     color: props.color,
-    paddingLeft: "1.25rem"
+    padding: "0 1rem"
   };
   const drawerLinks = [
     { label: language === "en" ? "Home" : "Главная", to: "/" },

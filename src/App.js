@@ -9,6 +9,7 @@ import Experience from "./components/Experience/Experience";
 import MainPage from "./components/MainPage/MainPage";
 import Menu from "./components/Menu/Menu";
 import Portfolio from "./components/Portfolio/Portfolio";
+import Footer from "./components/Footer/Footer";
 
 ReactGA.initialize("UA-134625728-1");
 ReactGA.pageview(window.location.pathname + window.location.search);
@@ -25,6 +26,7 @@ const App = () => {
           <Redirect to="/" />
         </Switch>
       </BrowserRouter>
+      <Footer />
     </ContextProvider>
   );
 };
