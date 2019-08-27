@@ -8,6 +8,11 @@ import { Context } from "../../../Context";
 const NavigationItems = props => {
   const [language, setLanguage] = useContext(Context);
 
+  const linksStyle = {
+    textDecoration: "none",
+    color: props.color,
+    paddingLeft: "1.25rem"
+  };
   const drawerLinks = [
     { label: language === "en" ? "Home" : "Главная", to: "/" },
     {
@@ -20,7 +25,7 @@ const NavigationItems = props => {
     }
   ];
 
-  const items = (
+  const links = (
     <div
       style={{ display: "flex", flexDirection: props.row }}
       role="presentation"
@@ -29,23 +34,14 @@ const NavigationItems = props => {
     >
       {drawerLinks.map((text, index) => (
         <Button key={index} color="inherit">
-          <Link
-            style={{
-              textDecoration: "none",
-              color: props.color ? "black" : "white",
-              padding: "20px"
-            }}
-            to={text.to}
-          >
+          <Link style={linksStyle} to={text.to}>
             {text.label}
           </Link>
         </Button>
       ))}
-
-      <Button style={{ padding: "25px" }} color="inherit" onClick={props.about}>
+      <Button style={linksStyle} color="inherit" onClick={props.about}>
         {language === "en" ? "Contact" : "Связаться"}
       </Button>
-
       <FormControlLabel
         control={
           <Switch
@@ -53,15 +49,15 @@ const NavigationItems = props => {
             onChange={() => {
               setLanguage(language === "en" ? "ru" : "en");
             }}
-            value={language === "en" ? "EN" : "РУС"}
+            value={language}
           />
         }
         label={language === "en" ? "EN" : "РУС"}
-        style={{ margin: "15px" }}
+        style={linksStyle}
       />
     </div>
   );
-  return <>{items}</>;
+  return links;
 };
 
 export default NavigationItems;

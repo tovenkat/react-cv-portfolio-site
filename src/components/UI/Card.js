@@ -4,7 +4,7 @@ import ExpansionPanel from "@material-ui/core/ExpansionPanel";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 
-function ImgMediaCard(props) {
+const Cards = props => {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleChange = panel => (event, isExpanded) => {
@@ -35,6 +35,6 @@ function ImgMediaCard(props) {
       <img src={props.picture} alt={props.alt} loading="lazy" width="100%" />
     </div>
   );
-}
+};
 
-export default ImgMediaCard;
+export default Cards;

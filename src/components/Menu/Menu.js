@@ -15,6 +15,11 @@ import About from "../About/About";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 
+const config = {
+  backgroundColor: "#3f51b5",
+  colorText: "whitesmoke"
+};
+
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1
@@ -23,7 +28,8 @@ const useStyles = makeStyles(theme => ({
     marginRight: theme.spacing(2)
   },
   title: {
-    flexGrow: 1
+    flexGrow: 1,
+    color: config.colorText
   },
   drawer: {
     backgroundColor: "#3f51b5"
@@ -111,7 +117,11 @@ export default function MenuMain(props) {
           alt="Alex Loian Logo Front-End"
         />
       </Link>
-      <Typography variant="h6" className={classes.title}>
+      <Typography
+        variant="h6"
+        style={{ color: config.colorText }}
+        className={classes.title}
+      >
         {language === "en" ? "Front-End Developer" : "Фронт-енд Разработчик"}
       </Typography>
 
@@ -120,13 +130,17 @@ export default function MenuMain(props) {
         menuOpenHandler={menuOpenHandler}
         row="row"
         about={aboutOpen}
+        color={config.colorText}
       />
     </Hidden>
   );
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar
+        position="static"
+        style={{ backgroundColor: config.backgroundColor || null }}
+      >
         <Toolbar>
           {mobileView}
           {desktopView}
@@ -134,7 +148,7 @@ export default function MenuMain(props) {
       </AppBar>
 
       <Menu
-        id="simple-menu"
+        id="mobile-menu"
         anchorEl={anchorEl}
         keepMounted
         open={Boolean(anchorEl)}

@@ -6,6 +6,9 @@ import Carousel from "nuka-carousel";
 import CardActionArea from "@material-ui/core/CardActionArea";
 
 const useStyles = makeStyles({
+  wrapper: {
+    height: "60vh"
+  },
   labelMain: {
     textAlign: "center",
     paddingTop: "10vh",
@@ -40,33 +43,30 @@ const HorizontalCarousel = props => {
   }
 
   return (
-    <Carousel
-      autoplay
-      pauseOnHover={false}
-      withoutControls
-      autoplayInterval={4600}
-      cellAlign="center"
-      wrapAround
-      speed={900}
-    >
-      {data.map(item => {
-        return (
-          <div
-            key={new Date().getTime}
-            style={{ width: "95%", margin: "auto", maxWidth: "800px" }}
-          >
-            <CardActionArea href={item.demoLink ? item.demoLink : null}>
-              <img width="100%" src={item.img} alt={item.title} />
-            </CardActionArea>
-            {props.withoutTitle ? null : (
-              <Typography className={classes.label} variant="h4">
-                {item.title}
-              </Typography>
-            )}
-          </div>
-        );
-      })}
-    </Carousel>
+    <div className={classes.wrapper}>
+      <Carousel
+        autoplay
+        pauseOnHover={false}
+        withoutControls
+        autoplayInterval={4600}
+        cellAlign="center"
+        wrapAround
+        speed={900}
+      >
+        {data.map(item => {
+          return (
+            <div
+              key={new Date().getTime}
+              style={{ width: "95%", margin: "auto", maxWidth: "800px" }}
+            >
+              <CardActionArea href={item.demoLink ? item.demoLink : null}>
+                <img width="100%" src={item.img} alt={item.title} />
+              </CardActionArea>
+            </div>
+          );
+        })}
+      </Carousel>
+    </div>
   );
 };
 

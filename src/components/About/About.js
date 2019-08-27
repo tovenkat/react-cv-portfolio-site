@@ -1,38 +1,44 @@
 import React from "react";
 
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
+import { makeStyles } from "@material-ui/core/styles";
 import Dialog from "@material-ui/core/Dialog";
 import Card from "@material-ui/core/Card";
-import Button from "@material-ui/core/Button";
-
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
+import CardMedia from "@material-ui/core/CardMedia";
+import CardContent from "@material-ui/core/CardContent";
+import CardActions from "@material-ui/core/CardActions";
+import CardActionArea from "@material-ui/core/CardActionArea";
 import IconButton from "@material-ui/core/IconButton";
+import Typography from "@material-ui/core/Typography";
+import { FaTimes } from "react-icons/fa";
 
-import cv from "../../assets/mainInfo/CV-Alex-Loian-Front-End-Developer-React-Resume.pdf";
+import ButtonsGroup from "../UI/ButtonsGroup";
+
 import Avatar from "../../assets/mainInfo/alex-loian-avatar.JPG";
-import {
-  FaPhone,
-  FaLinkedin,
-  FaGithub,
-  FaTimes,
-  FaPaperclip
-} from "react-icons/fa";
+
+const config = {
+  name: "Alex Loian",
+  body: "Front-End React Developer. React/JS/NodeJS",
+  img: Avatar,
+  imgHeight: 400,
+  colorIcons: "#3f51b5",
+  background: "whitesmoke",
+  textColor: "black"
+};
 
 const useStyles = makeStyles({
   card: {
     minHeight: "450px",
     maxWidth: 400,
-    margin: "auto"
+    margin: "auto",
+    backgroundColor: config.background,
+    color: config.textColor
   },
   actionGroup: {
     display: "flex",
     justifyContent: "space-between"
   }
 });
+
 const About = props => {
   const classes = useStyles();
 
@@ -41,65 +47,26 @@ const About = props => {
       <CardActionArea>
         <CardMedia
           component="img"
-          alt="Alex Loian Front-End React Developer"
-          height="400"
-          image={Avatar}
-          title="Alex Loian Front-End React Developer"
+          alt={config.name + config.body}
+          height={config.imgHeight}
+          image={config.img}
+          title={config.name}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Alex Loian
+            {config.name}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Front-End React Deveper. React/JS/NodeJS
+          <Typography variant="body2" component="p">
+            {config.body}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions className={classes.actionGroup}>
-        <Button
-          size="small"
-          color="primary"
-          title="CV Download"
-          download="Alex-Loian-CV-React-Developer"
-          href={cv}
-        >
-          CV
-        </Button>
-        <IconButton
-          size="small"
-          color="primary"
-          label="GitHuB"
-          title="GitHuB"
-          href="https://github.com/AlexLDP"
-        >
-          <FaGithub />
-        </IconButton>
-        <IconButton
-          size="small"
-          color="primary"
-          title="LinkedIn"
-          href="https://www.linkedin.com/in/alex-loian-82828284"
-        >
-          <FaLinkedin />
-        </IconButton>
-        <IconButton
-          title="Call Me"
-          size="small"
-          color="primary"
-          href="tel:0980506389"
-        >
-          <FaPhone />
-        </IconButton>
-        <IconButton
-          size="small"
-          color="primary"
-          title="Email Me"
-          href="mailto:wisehelper@gmail.com"
-        >
-          <FaPaperclip />
-        </IconButton>
+        <ButtonsGroup color={config.colorIcons} />
+
         <IconButton
           title="Close"
+          style={{ color: config.colorIcons }}
           size="small"
           color="primary"
           onClick={() => props.aboutClose(false)}

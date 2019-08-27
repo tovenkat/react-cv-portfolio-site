@@ -33,12 +33,12 @@ const weben = [
 ];
 const webru = [
   {
-    title: "Side Drawer Web component",
-    subTitle: "August 25,2019",
+    title: "Слайд Меню",
+    subTitle: "Август 25,2019",
     img: Drawer,
     demoLink: "https://side-drawer-stenc.firebaseapp.com/",
     gitHubLink: "https://github.com/AlexLDP/side-drawer-stencil",
-    description: `Side Drawer Web component`,
+    description: `Веб компонент для создания Слайд Меню`,
     skills: ["Stencil", "JSX", "CSS", "Firebase", "Javascript"]
   },
   {
