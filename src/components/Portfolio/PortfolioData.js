@@ -206,7 +206,7 @@ const reactRu = [
     skills: ["React", "Material", "AJAX", "REST", "Caspio"]
   }
 ];
-export const items = {
+export const react = {
   en: reactEn,
   ru: reactRu
 };

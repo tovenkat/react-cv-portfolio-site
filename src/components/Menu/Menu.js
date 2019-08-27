@@ -5,13 +5,13 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
-import logo from "../../assets/images/main/alex-loian-logo.png";
+import logo from "../../assets/mainInfo/alex-loian-logo.png";
 import { Context } from "../../Context";
 import Hidden from "@material-ui/core/Hidden";
 import NavigationItems from "./NavigationItems/NavigationItems";
 import Slide from "@material-ui/core/Slide";
 import { Link } from "react-router-dom";
-import About from "./About/About";
+import About from "../About/About";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 
@@ -43,7 +43,6 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 export default function MenuMain(props) {
-  // aasssas
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   function handleClick(event) {
@@ -53,7 +52,7 @@ export default function MenuMain(props) {
   function handleClose() {
     setAnchorEl(null);
   }
-  //ssddsdsds
+
   const classes = useStyles();
 
   const [language, setLanguage] = useContext(Context);

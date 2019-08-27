@@ -8,12 +8,12 @@ import { Context } from "../../Context";
 import Recomendations from "./Recommendations/Recommendations";
 import Skills from "./Skills/Skills";
 
-import MacImage from "../../assets/images/parallax/alex-loian-parallax-1.jpg";
-import cv from "../../assets/images/main/CV-Alex-Loian-Front-End-Developer-React-Resume.pdf";
+import MacImage from "../../assets/parallax/alex-loian-parallax-1.jpg";
+import cv from "../../assets/mainInfo/CV-Alex-Loian-Front-End-Developer-React-Resume.pdf";
 import Avatar from "@material-ui/core/Avatar";
-import mainAvatar from "../../assets/images/main/alex-loian-avatar.JPG";
-import Stock4 from "../../assets/images/parallax/alex-loian-parallax-2.jpg";
-import Stock5 from "../../assets/images/parallax/alex-loian-parallax-3.jpg";
+import mainAvatar from "../../assets/mainInfo/alex-loian-avatar.JPG";
+import Stock4 from "../../assets/parallax/alex-loian-parallax-2.jpg";
+import Stock5 from "../../assets/parallax/alex-loian-parallax-3.jpg";
 
 const styles = {
   fontFamily: "sans-serif",

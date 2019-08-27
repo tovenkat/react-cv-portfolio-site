@@ -1,18 +1,16 @@
 import React, { useState } from "react";
-import portfolioImage from "../../assets/images/parallax/alex-loian-portfolio.jpg";
+import portfolioImage from "../../assets/parallax/alex-loian-portfolio.jpg";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 
-import { items, web } from "./PortfolioData";
+import { react, web } from "./PortfolioData";
 import Fab from "@material-ui/core/Fab";
-
-import PortfolioCarousel from "./PortfolioCarousel/PortfolioCarousel";
-
+import HorizontalCarousel from "../UI/HorizontalCarousel";
 import PortfolioList from "./PortfolioList";
 
 import { Parallax } from "react-parallax";
 
-const useStyles = makeStyles({
+const theme = makeStyles({
   labelMain: {
     textAlign: "center",
     paddingTop: "10vh",
@@ -20,74 +18,81 @@ const useStyles = makeStyles({
     color: "whitesmoke",
     textShadow: "7px 8px 5px black"
   },
-  label: {
-    textAlign: "center",
-    padding: "30px"
-  },
-  root: {
-    width: "100%"
-  },
-  heading: {
-    margin: "auto"
-  },
   button: {
-    display: "flex",
-    justifyContent: "center",
-    padding: "30px"
+    color: "white",
+    display: "block",
+    margin: "30px auto"
   }
 });
-const NewPortfolio = () => {
-  const classes = useStyles();
+
+const reactPortfolio = state => {
+  return state ? (
+    <PortfolioList items={react} />
+  ) : (
+    <HorizontalCarousel items={react} />
+  );
+};
+
+const webPortfolio = state => {
+  return state ? (
+    <PortfolioList items={web} />
+  ) : (
+    <HorizontalCarousel items={web} />
+  );
+};
+
+const Portfolio = () => {
+  const classes = theme();
+
   const [detailsReact, setDetailsReact] = useState(false);
   const [detailsWeb, setDetailsWeb] = useState(false);
 
-  let reactContent = <PortfolioCarousel items={items} />;
-  if (detailsReact) {
-    reactContent = <PortfolioList items={items} />;
-  }
+  const config = {
+    img: portfolioImage,
+    widthParallax: 500,
+    react: "React Portfolio",
+    web: "Web Components",
+    labels: ["Show Less", "Show Details"]
+  };
 
-  let webComponentsContent = <PortfolioCarousel items={web} />;
-  if (detailsWeb) {
-    webComponentsContent = <PortfolioList items={web} />;
-  }
   return (
     <>
-      <Parallax bgImage={portfolioImage} strength={500}>
+      <Parallax bgImage={config.img} strength={config.widthParallax}>
         <Typography className={classes.labelMain} variant="h2">
-          React Portfolio
+          {config.react}
         </Typography>
       </Parallax>
 
-      <div className={classes.button}>
-        <Fab
-          variant="extended"
-          onClick={() => setDetailsReact(!detailsReact)}
-          color="primary"
-          aria-label="add"
-        >
-          {detailsReact ? "Show Less" : "Show Details"}
-        </Fab>
-      </div>
-      {reactContent}
-      <Parallax bgImage={portfolioImage} strength={500}>
+      <Fab
+        variant="extended"
+        onClick={() => setDetailsReact(!detailsReact)}
+        color="primary"
+        className={classes.button}
+        aria-label="react details"
+      >
+        {detailsReact ? config.labels[0] : config.labels[1]}
+      </Fab>
+      {reactPortfolio(detailsReact)}
+
+      <Parallax bgImage={config.img} strength={config.widthParallax}>
         <Typography className={classes.labelMain} variant="h2">
-          Web Components
+          {config.web}
         </Typography>
       </Parallax>
 
-      <div className={classes.button}>
-        <Fab
-          variant="extended"
-          onClick={() => setDetailsWeb(!detailsWeb)}
-          color="primary"
-          aria-label="add"
-        >
-          {detailsWeb ? "Show Less" : "Show Details"}
-        </Fab>
-      </div>
-      {webComponentsContent}
+      <Fab
+        variant="extended"
+        onClick={() => setDetailsWeb(!detailsWeb)}
+        color="primary"
+        className={classes.button}
+        aria-label="add"
+      >
+        {detailsWeb ? config.labels[0] : config.labels[1]}
+      </Fab>
+
+      {webPortfolio(detailsWeb)}
     </>
   );
 };
 
-export default NewPortfolio;
+export default Portfolio;
