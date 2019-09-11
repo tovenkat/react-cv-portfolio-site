@@ -7,7 +7,7 @@
     "@material-ui/core": "^4.0.2",
     "@material-ui/icons": "^4.1.0",
     "lodash-es": "^4.17.15",
-    "nuka-carousel": "^4.5.9",
+    "nuka-carousel": "^4.5.11",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-ga": "^2.5.7",
@@ -43,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "imagemin-webpack": "^5.1.0"
   }
 }

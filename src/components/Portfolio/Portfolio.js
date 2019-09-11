@@ -44,8 +44,8 @@ const webPortfolio = state => {
 const Portfolio = () => {
   const classes = theme();
 
-  const [detailsReact, setDetailsReact] = useState(false);
-  const [detailsWeb, setDetailsWeb] = useState(false);
+  const [detailsReact, setDetailsReact] = useState(true);
+  const [detailsWeb, setDetailsWeb] = useState(true);
 
   const config = {
     img: portfolioImage,

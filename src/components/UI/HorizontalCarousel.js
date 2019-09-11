@@ -7,7 +7,7 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 
 const useStyles = makeStyles({
   wrapper: {
-    height: "60vh"
+    height: "600px"
   },
   labelMain: {
     textAlign: "center",

@@ -128,7 +128,7 @@ export default function MainPage() {
 
           <div name="Parallax" />
           <Parallax bgImage={Developer} strength={500}>
-            <div style={{ height: "70vh" }}>
+            <div style={{ height: "700px" }}>
               <Skills />
             </div>
           </Parallax>
