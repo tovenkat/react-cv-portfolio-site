@@ -50,9 +50,16 @@ export default function MainPage() {
 
   const aboutMe = (
     <>
-      <Typography variant="h4" gutterBottom>
-        {language === "en" ? "About" : "Обо мне"}
-      </Typography>
+      {darkMode ? (
+        <Typography Typography variant="h3" gutterBottom>
+          Alex Loian
+        </Typography>
+      ) : (
+        <Typography variant="h4" gutterBottom>
+          {language === "en" ? "About" : "Обо мне"}
+        </Typography>
+      )}
+
       <Avatar
         alt="Alex Loian Main Avatar"
         src={mainAvatar}
