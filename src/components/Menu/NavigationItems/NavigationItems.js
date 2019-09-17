@@ -1,12 +1,31 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Button from "@material-ui/core/Button";
 import Switch from "@material-ui/core/Switch";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import { Link } from "react-router-dom";
 import { Context } from "../../../Context";
+import {
+  enable as enableDarkMode,
+  disable as disableDarkMode
+} from "darkreader";
+
+const darkModeHandler = value => {
+  if (value) {
+    enableDarkMode({ brightness: 100, contrast: 90, sepia: 10 });
+  }
+  if (!value) {
+    disableDarkMode();
+  }
+};
 
 const NavigationItems = props => {
+  const [darkMode, setDarkMode] = React.useState(true);
+
   const [language, setLanguage] = useContext(Context);
+
+  useEffect(() => {
+    darkModeHandler(darkMode);
+  }, [darkMode]);
 
   const linksStyle = {
     textDecoration: "none",
@@ -53,6 +72,19 @@ const NavigationItems = props => {
           />
         }
         label={language === "en" ? "EN" : "РУС"}
+        style={linksStyle}
+      />
+      <FormControlLabel
+        control={
+          <Switch
+            checked={darkMode}
+            onClick={() => {
+              setDarkMode(!darkMode);
+            }}
+            value={darkMode}
+          />
+        }
+        label={darkMode ? "Dark Enabled" : "Light Mode"}
         style={linksStyle}
       />
     </div>
