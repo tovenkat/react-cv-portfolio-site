@@ -63,18 +63,18 @@ export default function MainPage() {
         }}
       />
       <div style={{ maxWidth: "600px", margin: "auto" }}>
-        <Typography variant="body1" color="textSecondary" component="p">
+        <Typography variant="body1" color="textPrimary" component="p">
           I'm a multi-talented human. Most of my time I design and build digital
           products. I'm also a multi-disciplinary maker with over 2 years of
           experiences in React and JavaScript.
         </Typography>
-        <Typography variant="body1" color="textSecondary" component="p">
+        <Typography variant="body1" color="textPrimary" component="p">
           I don’t like to define myself by the work I’ve done. I define myself
           by the work I want to do. Skills can be taught, personality is
           inherent. I prefer to keep learning, continue challenging myself, and
           do interesting things that matter.
         </Typography>
-        <Typography variant="body1" color="textSecondary" component="p">
+        <Typography variant="body1" color="textPrimary" component="p">
           Fueled by high energy levels and boundless enthusiasm, I’m easily
           inspired and more then willing to follow my fascinations wherever they
           take me. I’m passionate, expressive, multi-talented spirit with a
@@ -82,7 +82,7 @@ export default function MainPage() {
           come up with ideas. Instead I have an almost impulsive need to act on
           them.
         </Typography>
-        <Typography variant="body1" color="textSecondary" component="p">
+        <Typography variant="body1" color="textPrimary" component="p">
           I’m a people-person with deep emotions and empathy, a natural
           storyteller. I’m able to inspire and am at my best when I’m sharing my
           creative expressions with others. I currently work remotely and have a

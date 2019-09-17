@@ -11,7 +11,7 @@ import Menu from "./components/Menu/Menu";
 import Portfolio from "./components/Portfolio/Portfolio";
 import Footer from "./components/Footer/Footer";
 
-ReactGA.initialize("UA-134625728-1");
+ReactGA.initialize("UA-136820605-1");
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 const App = () => {

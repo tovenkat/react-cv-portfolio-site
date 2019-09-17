@@ -61,7 +61,7 @@ export default function MenuMain(props) {
 
   const classes = useStyles();
 
-  const [language, setLanguage, darkMode] = useContext(Context);
+  const [language, setLanguage, darkMode, setDarkMode] = useContext(Context);
 
   const [modal, setModal] = useState(false);
 
@@ -90,6 +90,7 @@ export default function MenuMain(props) {
         className={classes.menuButton}
         color="inherit"
         aria-label="Menu"
+        aria-checked="false"
         aria-controls="simple-menu"
         aria-haspopup="true"
         onClick={handleClick}
@@ -139,7 +140,10 @@ export default function MenuMain(props) {
     <div className={classes.root}>
       <AppBar
         position="static"
-        style={{ backgroundColor: darkMode ? "black" : config.backgroundColor }}
+        style={{
+          backgroundColor: darkMode ? "black" : config.backgroundColor,
+          transition: "all 1s ease 0s"
+        }}
       >
         <Toolbar>
           {mobileView}
@@ -176,6 +180,7 @@ export default function MenuMain(props) {
         >
           ChangeLanguage
         </MenuItem>
+        <MenuItem onClick={() => setDarkMode(!darkMode)}>Color Mode</MenuItem>
       </Menu>
 
       <About open={modal} Transition={Transition} aboutClose={aboutClose} />
