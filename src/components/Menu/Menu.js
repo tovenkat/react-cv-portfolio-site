@@ -61,7 +61,7 @@ export default function MenuMain(props) {
 
   const classes = useStyles();
 
-  const [language, setLanguage] = useContext(Context);
+  const [language, setLanguage, darkMode] = useContext(Context);
 
   const [modal, setModal] = useState(false);
 
@@ -139,7 +139,7 @@ export default function MenuMain(props) {
     <div className={classes.root}>
       <AppBar
         position="static"
-        style={{ backgroundColor: config.backgroundColor || null }}
+        style={{ backgroundColor: darkMode ? "black" : config.backgroundColor }}
       >
         <Toolbar>
           {mobileView}

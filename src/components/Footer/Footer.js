@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Context } from "../../Context";
 import { makeStyles } from "@material-ui/core/styles";
 import ButtonsGroup from "../UI/ButtonsGroup";
 
@@ -22,9 +23,13 @@ const useStyles = makeStyles({
 });
 
 const Footer = () => {
+  const [, , darkMode] = useContext(Context);
   const classes = useStyles();
   return (
-    <footer className={classes.wrapper}>
+    <footer
+      style={{ backgroundColor: darkMode ? "black" : "" }}
+      className={classes.wrapper}
+    >
       <div className={classes.buttons}>
         <ButtonsGroup color="#ffc107" />
       </div>

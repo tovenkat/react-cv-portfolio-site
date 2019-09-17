@@ -21,7 +21,7 @@ const styles = {
 };
 
 export default function MainPage() {
-  const [language] = useContext(Context);
+  const [language, , darkMode] = useContext(Context);
 
   const mainPicture = (
     <LazyHero
@@ -41,8 +41,8 @@ export default function MainPage() {
           gutterBottom
         >
           {language === "en"
-            ? "React, Redux, Javascript"
-            : "Реакт, Редакс, ДжаваСкрипт"}
+            ? "React, WebComponents, Redux, Javascript"
+            : "Реакт, Веб-компоненты, Редакс, ДжаваСкрипт"}
         </Typography>
       </div>
     </LazyHero>
@@ -114,7 +114,7 @@ export default function MainPage() {
   );
   return (
     <div style={{ width: "100%", backgroundColor: "whitesmoke" }}>
-      {mainPicture}
+      {darkMode ? null : mainPicture}
       <div style={{ textAlign: "center", padding: "30px" }}>{aboutMe}</div>
 
       <div>

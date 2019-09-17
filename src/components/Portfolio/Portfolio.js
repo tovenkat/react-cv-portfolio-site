@@ -4,8 +4,6 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 
 import { react, web } from "./PortfolioData";
-import Fab from "@material-ui/core/Fab";
-import HorizontalCarousel from "../UI/HorizontalCarousel";
 import PortfolioList from "./PortfolioList";
 
 import { Parallax } from "react-parallax";
@@ -15,6 +13,7 @@ const theme = makeStyles({
     textAlign: "center",
     paddingTop: "10vh",
     paddingBottom: "10vh",
+    marginBottom: "30px",
     color: "whitesmoke",
     textShadow: "7px 8px 5px black"
   },
@@ -22,30 +21,14 @@ const theme = makeStyles({
     backgroundColor: "#3f3d56",
     display: "block",
     margin: "30px auto"
+  },
+  items: {
+    marginTop: "30px"
   }
 });
 
-const reactPortfolio = state => {
-  return state ? (
-    <PortfolioList items={react} />
-  ) : (
-    <HorizontalCarousel items={react} />
-  );
-};
-
-const webPortfolio = state => {
-  return state ? (
-    <PortfolioList items={web} />
-  ) : (
-    <HorizontalCarousel items={web} />
-  );
-};
-
 const Portfolio = () => {
   const classes = theme();
-
-  const [detailsReact, setDetailsReact] = useState(true);
-  const [detailsWeb, setDetailsWeb] = useState(true);
 
   const config = {
     img: portfolioImage,
@@ -62,35 +45,18 @@ const Portfolio = () => {
           {config.react}
         </Typography>
       </Parallax>
-
-      <Fab
-        variant="extended"
-        onClick={() => setDetailsReact(!detailsReact)}
-        color="primary"
-        className={classes.button}
-        aria-label="react details"
-      >
-        {detailsReact ? config.labels[0] : config.labels[1]}
-      </Fab>
-      {reactPortfolio(detailsReact)}
-
+      <div className={classes.items}>
+        <PortfolioList items={react} />
+      </div>
       <Parallax bgImage={config.img} strength={config.widthParallax}>
         <Typography className={classes.labelMain} variant="h2">
           {config.web}
         </Typography>
       </Parallax>
 
-      <Fab
-        variant="extended"
-        onClick={() => setDetailsWeb(!detailsWeb)}
-        color="primary"
-        className={classes.button}
-        aria-label="add"
-      >
-        {detailsWeb ? config.labels[0] : config.labels[1]}
-      </Fab>
-
-      {webPortfolio(detailsWeb)}
+      <div className={classes.items}>
+        <PortfolioList items={web} />
+      </div>
     </>
   );
 };

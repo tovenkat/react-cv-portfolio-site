@@ -2,6 +2,9 @@ import React, { useContext, useEffect } from "react";
 import Button from "@material-ui/core/Button";
 import Switch from "@material-ui/core/Switch";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
+import IconButton from "@material-ui/core/IconButton";
+import Brightness2Icon from "@material-ui/icons/Brightness2";
+import WbSunnyIcon from "@material-ui/icons/WbSunny";
 import { Link } from "react-router-dom";
 import { Context } from "../../../Context";
 import {
@@ -19,9 +22,7 @@ const darkModeHandler = value => {
 };
 
 const NavigationItems = props => {
-  const [darkMode, setDarkMode] = React.useState(true);
-
-  const [language, setLanguage] = useContext(Context);
+  const [language, setLanguage, darkMode, setDarkMode] = useContext(Context);
 
   useEffect(() => {
     darkModeHandler(darkMode);
@@ -74,19 +75,20 @@ const NavigationItems = props => {
         label={language === "en" ? "EN" : "РУС"}
         style={linksStyle}
       />
-      <FormControlLabel
-        control={
-          <Switch
-            checked={darkMode}
-            onClick={() => {
-              setDarkMode(!darkMode);
-            }}
-            value={darkMode}
-          />
-        }
-        label={darkMode ? "Dark Enabled" : "Light Mode"}
-        style={linksStyle}
-      />
+      <IconButton
+        edge="start"
+        color="inherit"
+        aria-label="Menu"
+        aria-controls="simple-menu"
+        aria-haspopup="true"
+        onClick={() => setDarkMode(!darkMode)}
+      >
+        {darkMode ? (
+          <WbSunnyIcon style={{ color: "yellow" }} />
+        ) : (
+          <Brightness2Icon />
+        )}
+      </IconButton>
     </div>
   );
   return links;
