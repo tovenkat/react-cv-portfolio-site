@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import portfolioImage from "../../assets/parallax/alex-loian-portfolio.jpg";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
