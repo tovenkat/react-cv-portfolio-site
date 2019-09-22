@@ -11,51 +11,6 @@ import Budget from "../../assets/images/react/alex-loian-budget-calculator.png";
 import Drawer from "../../assets/images/webcomponents/alex-loian-side-drawer-component.png";
 import StencilApi from "../../assets/images/webcomponents/alex-loian-stencil-api-component.png";
 
-const weben = [
-  {
-    title: "Side Drawer Web component",
-    subTitle: "August 25,2019",
-    img: Drawer,
-    demoLink: "https://side-drawer-stenc.firebaseapp.com/",
-    gitHubLink: "https://github.com/AlexLDP/side-drawer-stencil",
-    description: `Side Drawer Web component`,
-    skills: ["Stencil", "JSX", "CSS", "Firebase", "Javascript"]
-  },
-  {
-    title: "Search Stock API",
-    subTitle: "August 25,2019",
-    img: StencilApi,
-    demoLink: "https://advanced-stencil-component.firebaseapp.com/",
-    gitHubLink: "https://github.com/AlexLDP/advanced-stencil-component",
-    description: `Search Stock API web component`,
-    skills: ["Stencil", "JSX", "CSS", "Firebase", "Javascript", "fetch API"]
-  }
-];
-const webru = [
-  {
-    title: "Слайд Меню",
-    subTitle: "Август 25,2019",
-    img: Drawer,
-    demoLink: "https://side-drawer-stenc.firebaseapp.com/",
-    gitHubLink: "https://github.com/AlexLDP/side-drawer-stencil",
-    description: `Веб компонент для создания Слайд Меню`,
-    skills: ["Stencil", "JSX", "CSS", "Firebase", "Javascript"]
-  },
-  {
-    title: "Search Stock API",
-    subTitle: "August 25,2019",
-    img: StencilApi,
-    demoLink: "https://advanced-stencil-component.firebaseapp.com/",
-    gitHubLink: "https://github.com/AlexLDP/advanced-stencil-component",
-    description: `Search Stock API web component`,
-    skills: ["Stencil", "JSX", "CSS", "Firebase", "Javascript", "fetch API"]
-  }
-];
-export const web = {
-  en: weben,
-  ru: webru
-};
-
 const reactEn = [
   {
     title: "React Burger Order App",
@@ -150,6 +105,26 @@ const reactEn = [
     skills: ["React", "Material", "Firebase"]
   }
 ];
+const weben = [
+  {
+    title: "Side Drawer Web component",
+    subTitle: "August 25,2019",
+    img: Drawer,
+    demoLink: "https://side-drawer-stenc.firebaseapp.com/",
+    gitHubLink: "https://github.com/AlexLDP/side-drawer-stencil",
+    description: `Side Drawer Web component`,
+    skills: ["Stencil", "JSX", "CSS", "Firebase", "Javascript"]
+  },
+  {
+    title: "Search Stock API",
+    subTitle: "August 25,2019",
+    img: StencilApi,
+    demoLink: "https://advanced-stencil-component.firebaseapp.com/",
+    gitHubLink: "https://github.com/AlexLDP/advanced-stencil-component",
+    description: `Search Stock API web component`,
+    skills: ["Stencil", "JSX", "CSS", "Firebase"]
+  }
+];
 const reactRu = [
   {
     title: "Заказ Бургера на Реакте",
@@ -206,9 +181,34 @@ const reactRu = [
     skills: ["React", "Material", "AJAX", "REST", "Caspio"]
   }
 ];
+const webru = [
+  {
+    title: "Слайд Меню",
+    subTitle: "Август 25,2019",
+    img: Drawer,
+    demoLink: "https://side-drawer-stenc.firebaseapp.com/",
+    gitHubLink: "https://github.com/AlexLDP/side-drawer-stencil",
+    description: `Веб компонент для создания Слайд Меню`,
+    skills: ["Stencil", "JSX", "CSS", "Firebase", "Javascript"]
+  },
+  {
+    title: "Search Stock API",
+    subTitle: "August 25,2019",
+    img: StencilApi,
+    demoLink: "https://advanced-stencil-component.firebaseapp.com/",
+    gitHubLink: "https://github.com/AlexLDP/advanced-stencil-component",
+    description: `Search Stock API web component`,
+    skills: ["Stencil", "JSX", "CSS", "Firebase", "Javascript", "fetch API"]
+  }
+];
+
 export const react = {
   en: reactEn,
   ru: reactRu
+};
+export const web = {
+  en: weben,
+  ru: webru
 };
 
 /*const Data = {

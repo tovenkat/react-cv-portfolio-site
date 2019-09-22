@@ -13,11 +13,12 @@ import { FaTimes } from "react-icons/fa";
 
 import ButtonsGroup from "../UI/ButtonsGroup";
 
-import Avatar from "../../assets/mainInfo/alex-loian-avatar.JPG";
+import Avatar from "../../assets/mainInfo/alex-loian-avatar.jpg";
 
 const config = {
   name: "Alex Loian",
-  body: "Front-End React Developer. React/JS/NodeJS",
+  subtitle: "Front-End React Developer.",
+  body: "React, Web-Components, JS, CSS, HTML",
   img: Avatar,
   imgHeight: 400,
   colorIcons: "#3f51b5",
@@ -28,10 +29,11 @@ const config = {
 const useStyles = makeStyles({
   card: {
     minHeight: "450px",
-    maxWidth: 400,
+    maxWidth: 500,
     margin: "auto",
     backgroundColor: config.background,
-    color: config.textColor
+    color: config.textColor,
+    fontSize: "16px"
   },
   actionGroup: {
     display: "flex",
@@ -53,12 +55,11 @@ const About = props => {
           title={config.name}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {config.name}
-          </Typography>
-          <Typography variant="body2" component="p">
+          <h2>{config.name}</h2>
+          <p>{config.subtitle}</p>
+          <p variant="body2" component="p">
             {config.body}
-          </Typography>
+          </p>
         </CardContent>
       </CardActionArea>
       <CardActions className={classes.actionGroup}>

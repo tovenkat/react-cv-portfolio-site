@@ -11,7 +11,7 @@ import Skills from "./Skills/Skills";
 import MacImage from "../../assets/parallax/alex-loian-parallax-1.jpg";
 import cv from "../../assets/mainInfo/CV-Alex-Loian-Front-End-Developer-React-Resume.pdf";
 import Avatar from "@material-ui/core/Avatar";
-import mainAvatar from "../../assets/mainInfo/alex-loian-avatar.JPG";
+import mainAvatar from "../../assets/mainInfo/alex-loian-avatar.jpg";
 import Stock5 from "../../assets/parallax/alex-loian-parallax-3.jpg";
 import Developer from "../../assets/parallax/alex-loian-developer.svg";
 
@@ -70,6 +70,24 @@ export default function MainPage() {
         }}
       />
       <div style={{ maxWidth: "600px", margin: "auto" }}>
+        {language === "ru" ? (
+          <>
+            <Typography
+              style={{ color: "rgb(255, 193, 7)" }}
+              variant="h5"
+              gutterBottom
+            >
+              Написано на Ангельском и трудно переводимо!
+            </Typography>
+            <Typography
+              style={{ color: "rgb(255, 193, 7)" }}
+              variant="h6"
+              gutterBottom
+            >
+              Резюме качать ниже.
+            </Typography>
+          </>
+        ) : null}
         <Typography variant="body1" color="textPrimary" component="p">
           I'm a multi-talented human. Most of my time I design and build digital
           products. I'm also a multi-disciplinary maker with over 2 years of

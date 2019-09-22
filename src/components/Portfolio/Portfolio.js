@@ -4,7 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 
 import { react, web } from "./PortfolioData";
-import PortfolioList from "./PortfolioList";
+import PortfolioList from "./PortfolioList/PortfolioList";
 
 import { Parallax } from "react-parallax";
 
@@ -53,7 +53,6 @@ const Portfolio = () => {
           {config.web}
         </Typography>
       </Parallax>
-
       <div className={classes.items}>
         <PortfolioList items={web} />
       </div>
