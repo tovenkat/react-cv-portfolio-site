@@ -7,9 +7,11 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import { makeStyles } from "@material-ui/core/styles";
 import IconButton from "@material-ui/core/IconButton";
+import styles from "./Reccommendations.module.css";
 
 import { FaLinkedin } from "react-icons/fa";
 import Data from "./ReccommendationsData";
+import { StylesContext } from "@material-ui/styles/StylesProvider";
 
 const useStyles = makeStyles({
   bigAvatar: {
@@ -19,6 +21,7 @@ const useStyles = makeStyles({
   },
   card: {
     maxWidth: 500,
+    width: "95%",
     margin: "auto",
     marginBottom: "40px"
   },
@@ -70,18 +73,20 @@ const Recommendations = () => {
     );
   });
 
-  return (
-    <Carousel
-      autoplay
-      withoutControls
-      autoplayInterval={2200}
-      cellAlign="center"
-      wrapAround
-      speed={1400}
-    >
-      {listOfRecommendations}
-    </Carousel>
-  );
+  return <div className={styles.wrapper}>{listOfRecommendations}</div>;
 };
 
 export default Recommendations;
+
+{
+  /* <Carousel
+autoplay
+withoutControls
+autoplayInterval={2800}
+cellAlign="center"
+wrapAround
+speed={1400}
+>
+{listOfRecommendations}
+</Carousel> */
+}

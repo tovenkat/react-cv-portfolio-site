@@ -146,17 +146,11 @@ export default function MainPage() {
         <div style={styles}>
           <div name="Parallax" />
 
-          <Parallax bgImage={Stock5} strength={500}>
-            <div style={{ height: 500 }} />
+          <Parallax bgImage={Stock5} strength={200}>
+            <div style={{ height: 400 }} />
           </Parallax>
+          <Skills />
           {recomendArea}
-
-          <div name="Parallax" />
-          <Parallax bgImage={Developer} strength={500}>
-            <div style={{ height: "700px" }}>
-              <Skills />
-            </div>
-          </Parallax>
         </div>
       </div>
     </div>

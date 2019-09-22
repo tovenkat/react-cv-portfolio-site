@@ -1,0 +1,16 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    color: #ffc107;
+    background-color: #3f3d56;
+    box-shadow: 1px -2px 2px 0px #d0bebe;
+  }
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1rem
+  }
