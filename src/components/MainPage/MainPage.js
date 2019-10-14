@@ -13,7 +13,6 @@ import cv from "../../assets/mainInfo/CV-Alex-Loian-Front-End-Developer-React-Re
 import Avatar from "@material-ui/core/Avatar";
 import mainAvatar from "../../assets/mainInfo/alex-loian-avatar.jpg";
 import Stock5 from "../../assets/parallax/alex-loian-parallax-3.jpg";
-import Developer from "../../assets/parallax/alex-loian-developer.svg";
 
 const styles = {
   fontFamily: "sans-serif",
@@ -32,18 +31,12 @@ export default function MainPage() {
       imageSrc={MacImage}
     >
       <div style={{ color: "#3f3d56", paddingBottom: "38vh" }}>
-        <Typography variant="h4" gutterBottom>
-          {language === "en" ? "Alex Loian" : "Алексей Лоян"}{" "}
-        </Typography>
-        <Typography
-          style={{ color: "#ffc107", textShadow: "3px 3px 2px #f0efef" }}
-          variant="h6"
-          gutterBottom
-        >
+        <h1>{language === "en" ? "Alex Loian" : "Алексей Лоян"} </h1>
+        <h3 style={{ color: "#ffc107", textShadow: "3px 3px 2px #f0efef" }}>
           {language === "en"
             ? "React, WebComponents, Redux, Javascript"
             : "Реакт, Веб-компоненты, Редакс, ДжаваСкрипт"}
-        </Typography>
+        </h3>
       </div>
     </LazyHero>
   );
@@ -51,13 +44,9 @@ export default function MainPage() {
   const aboutMe = (
     <>
       {darkMode ? (
-        <Typography Typography variant="h3" gutterBottom>
-          Alex Loian
-        </Typography>
+        <h1>Alex Loian</h1>
       ) : (
-        <Typography variant="h4" gutterBottom>
-          {language === "en" ? "About" : "Обо мне"}
-        </Typography>
+        <h3>{language === "en" ? "About" : "Обо мне"}</h3>
       )}
 
       <Avatar
@@ -88,33 +77,33 @@ export default function MainPage() {
             </Typography>
           </>
         ) : null}
-        <Typography variant="body1" color="textPrimary" component="p">
+        <p style={{ lineHeight: "24px" }}>
           I'm a multi-talented human. Most of my time I design and build digital
           products. I'm also a multi-disciplinary maker with over 2 years of
           experiences in React and JavaScript.
-        </Typography>
-        <Typography variant="body1" color="textPrimary" component="p">
+        </p>
+        <p style={{ lineHeight: "24px" }}>
           I don’t like to define myself by the work I’ve done. I define myself
           by the work I want to do. Skills can be taught, personality is
           inherent. I prefer to keep learning, continue challenging myself, and
           do interesting things that matter.
-        </Typography>
-        <Typography variant="body1" color="textPrimary" component="p">
+        </p>
+        <p style={{ lineHeight: "24px" }}>
           Fueled by high energy levels and boundless enthusiasm, I’m easily
           inspired and more then willing to follow my fascinations wherever they
           take me. I’m passionate, expressive, multi-talented spirit with a
           natural ability to entertain and inspire. I’m never satisfied to just
           come up with ideas. Instead I have an almost impulsive need to act on
           them.
-        </Typography>
-        <Typography variant="body1" color="textPrimary" component="p">
+        </p>
+        <p style={{ lineHeight: "24px" }}>
           I’m a people-person with deep emotions and empathy, a natural
           storyteller. I’m able to inspire and am at my best when I’m sharing my
           creative expressions with others. I currently work remotely and have a
           full-time commitment at InVision. Outside of my commitments I work
           with a select freelance client base. Feel free to get in touch by any
           means of communication.
-        </Typography>
+        </p>
         <Button
           title="CV Download"
           download="Alex-Loian-CV-React-Developer"

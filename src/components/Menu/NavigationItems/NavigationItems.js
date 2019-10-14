@@ -38,11 +38,11 @@ const NavigationItems = props => {
     {
       label: language === "en" ? "Сareer" : "Опыт Работы",
       to: "/experience"
-    },
-    {
-      label: language === "en" ? "Portfolio" : "Примеры Работ",
-      to: "/portfolio"
     }
+    // {
+    //   label: language === "en" ? "Portfolio" : "Примеры Работ",
+    //   to: "/portfolio"
+    // }
   ];
 
   const links = (
@@ -59,6 +59,9 @@ const NavigationItems = props => {
           </Link>
         </Button>
       ))}
+      <Button style={linksStyle} color="inherit" href="/projects/index.html">
+        {language === "en" ? "Portfolio" : "Примеры Работ"}
+      </Button>
       <Button style={linksStyle} color="inherit" onClick={props.about}>
         {language === "en" ? "Contact" : "Связаться"}
       </Button>

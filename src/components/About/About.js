@@ -8,7 +8,6 @@ import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
 import { FaTimes } from "react-icons/fa";
 
 import ButtonsGroup from "../UI/ButtonsGroup";

@@ -1,7 +1,6 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
 import Avatar from "@material-ui/core/Avatar";
-import Carousel from "nuka-carousel";
+
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
@@ -11,7 +10,6 @@ import styles from "./Reccommendations.module.css";
 
 import { FaLinkedin } from "react-icons/fa";
 import Data from "./ReccommendationsData";
-import { StylesContext } from "@material-ui/styles/StylesProvider";
 
 const useStyles = makeStyles({
   bigAvatar: {
@@ -20,7 +18,7 @@ const useStyles = makeStyles({
     height: 180
   },
   card: {
-    maxWidth: 500,
+    maxWidth: 400,
     width: "95%",
     margin: "auto",
     marginBottom: "40px"
@@ -44,18 +42,12 @@ const Recommendations = () => {
             className={classes.bigAvatar}
           />
           <CardContent>
-            <Typography variant="h5" gutterBottom>
-              {item.name}
-            </Typography>
-            <Typography variant="subtitle1" gutterBottom>
-              {item.major}
-            </Typography>
-            <Typography variant="subtitle1" gutterBottom>
-              {item.type}
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
+            <h2>{item.name}</h2>
+            <h4 style={{ color: "#afadad" }}>{item.major}</h4>
+            <h4 style={{ color: "#afadad" }}>{item.type}</h4>
+            <p style={{ fontSize: "0.9rem", lineHeight: "28px" }}>
               {item.body}
-            </Typography>
+            </p>
           </CardContent>
 
           <CardActions>
@@ -77,16 +69,3 @@ const Recommendations = () => {
 };
 
 export default Recommendations;
-
-{
-  /* <Carousel
-autoplay
-withoutControls
-autoplayInterval={2800}
-cellAlign="center"
-wrapAround
-speed={1400}
->
-{listOfRecommendations}
-</Carousel> */
-}

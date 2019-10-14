@@ -38,11 +38,6 @@ const useStyles = makeStyles(theme => ({
 
 export default function PortfolioItem(props) {
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
-
-  function handleExpandClick() {
-    setExpanded(!expanded);
-  }
 
   return (
     <Card className={classes.card}>

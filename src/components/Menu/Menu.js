@@ -163,9 +163,9 @@ export default function MenuMain(props) {
             Home
           </MenuItem>
         </Link>
-        <Link to="/portfolio" className={classes.links}>
+        <a href="/projects/index.html" className={classes.links}>
           <MenuItem onClick={handleClose}>Portfolio</MenuItem>
-        </Link>
+        </a>
         <Link to="/experience" className={classes.links}>
           <MenuItem onClick={handleClose}>Experience</MenuItem>
         </Link>
